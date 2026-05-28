@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050914" />
+  <title>Radio Stream Keeps Disconnecting? Here's How to Fix It | RadioTech Studio</title>
+  <meta name="description" content="Stream drops, listener timeouts, AutoDJ going silent — the most common causes of radio stream disconnections and how to diagnose and fix each one permanently." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://radiotechstudio.com/blog/fix-radio-stream-disconnecting" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://radiotechstudio.com/blog/fix-radio-stream-disconnecting" />
+  <meta property="og:title" content="Radio Stream Keeps Disconnecting? Here's How to Fix It" />
+  <meta property="og:description" content="Stream drops, listener timeouts, AutoDJ going silent — the most common causes of radio stream disconnections and how to diagnose and fix each one permanently." />
+  <meta property="og:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
+  <meta property="og:site_name" content="RadioTech Studio" />
+    <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="RadioTech Studio — Radio Setup &amp; Streaming Experts" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Radio Stream Keeps Disconnecting? Here's How to Fix It" />
+  <meta name="twitter:description" content="Stream drops, listener timeouts, AutoDJ going silent — the most common causes of radio stream disconnections and how to diagnose and fix each one permanently." />
+  <meta name="twitter:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
+  <meta name="twitter:image:alt" content="RadioTech Studio — Radio Setup &amp; Streaming Experts" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230a0f1e'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%2300d4ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2300d4ff'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../assets/css/blog.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Radio Stream Keeps Disconnecting? Here's How to Fix It",
+    "description": "Stream drops, listener timeouts, AutoDJ going silent — the most common causes of radio stream disconnections and how to diagnose and fix each one permanently.",
+    "author": {"@type": "Organization", "name": "RadioTech Studio", "url": "https://radiotechstudio.com"},
+    "publisher": {"@type": "Organization", "name": "RadioTech Studio", "url": "https://radiotechstudio.com"},
+    "datePublished": "2026-05-29",
+    "dateModified": "2026-05-29",
+    "url": "https://radiotechstudio.com/blog/fix-radio-stream-disconnecting",
+    "mainEntityOfPage": "https://radiotechstudio.com/blog/fix-radio-stream-disconnecting"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="RadioTech Studio Home">
+        <div class="logo-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="url(#lg1)" stroke-width="2"/><circle cx="20" cy="20" r="8" stroke="url(#lg1)" stroke-width="1.5"/><circle cx="20" cy="20" r="3" fill="url(#lg1)"/><line x1="20" y1="2" x2="20" y2="8" stroke="url(#lg1)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="lg1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg></div>
+        <div class="logo-text"><span class="logo-brand">RadioTech</span><span class="logo-sub">Studio</span></div>
+      </a>
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <a href="../index.html#solutions" class="nav-link">Services</a>
+        <a href="../index.html#platforms" class="nav-link">Platforms</a>
+        <a href="../index.html#pricing" class="nav-link">Pricing</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../blog.html" class="nav-link">Blog</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <!-- Language Switcher -->
+      <div class="lang-switcher" role="navigation" aria-label="Language selector">
+        <button class="lang-toggle" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown" aria-label="Current language">
+          <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+          <span class="lang-code">EN</span>
+          <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="lang-dropdown" id="lang-dropdown" role="listbox" hidden aria-label="Select language">
+          <li class="lang-option lang-option--active" role="option" data-lang="en" aria-selected="true" tabindex="0">🇬🇧 English</li>
+          <li class="lang-option" role="option" data-lang="ar" aria-selected="false" tabindex="0">🇸🇦 العربية</li>
+          <li class="lang-option" role="option" data-lang="fr" aria-selected="false" tabindex="0">🇫🇷 Français</li>
+          <li class="lang-option" role="option" data-lang="es" aria-selected="false" tabindex="0">🇪🇸 Español</li>
+          <li class="lang-option" role="option" data-lang="de" aria-selected="false" tabindex="0">🇩🇪 Deutsch</li>
+        </ul>
+      </div>
+
+      <div class="header-actions">
+        <a href="../index.html#contact" class="btn btn-primary header-cta">Start Your Project</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="../index.html#solutions" class="nav-mobile-link">Services</a>
+      <a href="../index.html#platforms" class="nav-mobile-link">Platforms</a>
+      <a href="../index.html#pricing" class="nav-mobile-link">Pricing</a>
+      <a href="../index.html#about" class="nav-mobile-link">About</a>
+      <a href="../blog.html" class="nav-mobile-link">Blog</a>
+      <a href="../index.html#contact" class="nav-mobile-link">Contact</a>
+      <a href="../index.html#contact" class="btn btn-primary nav-mobile-cta">Start Your Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="container article-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../blog.html">Blog</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current">Fix Stream Disconnecting</span>
+        </nav>
+        <div class="article-cat-row">
+          <span class="blog-cat cat-troubleshoot">Troubleshooting</span>
+        </div>
+        <h1 class="article-hero-title">Radio Stream Keeps Disconnecting? Here's How to Fix It</h1>
+        <p class="article-hero-desc">Stream drops, listener timeouts, AutoDJ going silent — the most common causes of radio stream disconnections and how to diagnose and fix each one permanently.</p>
+        <div class="article-meta-row">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> May 29, 2026</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 6 min read</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> RadioTech Studio</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-body-section">
+      <div class="container">
+        <div class="article-layout">
+
+          <article class="article-prose">
+
+            <h2 id="types-of-disconnect">Types of Stream Disconnections</h2>
+            <p>Not all disconnections are the same, and correctly identifying the type leads you straight to the fix. There are three distinct patterns: the source client loses connection to the streaming server (your encoder drops, the stream goes offline from the source side), listeners get disconnected from an otherwise healthy stream (the server is running but clients are being cut off), or the stream goes silent without disconnecting (audio stops but the connection stays open — the worst kind because monitoring tools miss it).</p>
+            <p>The first step is always to check Icecast's status page (<code>http://yourserver:8000/status.xsl</code>) or Shoutcast's admin page. If your mount point doesn't appear there, the source client has disconnected — go to the encoder-side fixes. If the mount point is there but listeners are disconnecting, the problem is on the server or network side. If the mount point is there, listeners are connected, but there's no audio, the source is sending silence or the audio pipeline has stalled.</p>
+            <div class="info-box">
+              <div><strong>Start with the logs:</strong> Icecast's error log at <code>/var/log/icecast2/error.log</code> and access log at <code>/var/log/icecast2/access.log</code> tell you exactly what's happening. Access logs show connect/disconnect events with timestamps. Error logs show rejected connections and server-side errors. Check these before anything else.</div>
+            </div>
+
+            <h2 id="encoder-issues">Encoder-Side Problems</h2>
+            <p>The encoder is the source client — whether it's RadioBOSS, RadioDJ, BUTT, Liquidsoap, or another tool. If the encoder loses its connection to the streaming server, the stream goes offline until reconnection. Here are the main encoder-side causes:</p>
+            <p><strong>Wrong connection settings:</strong> A typo in the server address, wrong port, or incorrect password will cause immediate connection failure. Double-check all settings character by character. The source password in the encoder must match exactly what's in the Icecast <code>icecast.xml</code> — it's case-sensitive.</p>
+            <p><strong>Auto-reconnect not configured:</strong> Most encoders have an auto-reconnect setting. If it's disabled, a single network blip will permanently disconnect the stream until you manually reconnect. Enable auto-reconnect everywhere — in your encoder, set it to retry every 5–10 seconds with unlimited retries.</p>
+            <p><strong>Encoder crash due to track errors:</strong> A corrupted MP3 file can cause some encoders to crash when they attempt to decode it. If your stream disconnects at a consistent pattern (every time a specific track plays, or at similar intervals), the cause is likely a bad audio file. Check your automation software's error log for file read errors around the disconnect times.</p>
+            <pre><code># Find corrupted MP3 files using ffmpeg
+ffmpeg -v error -i badfile.mp3 -f null - 2>&amp;1 | head -20</code></pre>
+            <p>Run this against suspect files — any output indicates a damaged file that should be re-encoded or replaced. Many automation platforms have a built-in file verification tool that scans the entire library for corrupt files.</p>
+
+            <h2 id="server-issues">Streaming Server Configuration Issues</h2>
+            <p>Even when the encoder is working perfectly, Icecast or Shoutcast misconfigurations can cause listeners to disconnect or streams to drop. The most common server-side culprits:</p>
+            <p><strong>Timeout values too low:</strong> Icecast has a <code>queue-size</code> and burst buffer setting. If these are too small, listeners on slow connections fall behind the buffer and get disconnected. In <code>icecast.xml</code>, increase the burst size:</p>
+            <pre><code>&lt;limits&gt;
+  &lt;clients&gt;500&lt;/clients&gt;
+  &lt;sources&gt;10&lt;/sources&gt;
+  &lt;queue-size&gt;524288&lt;/queue-size&gt;
+  &lt;client-timeout&gt;30&lt;/client-timeout&gt;
+  &lt;header-timeout&gt;15&lt;/header-timeout&gt;
+  &lt;source-timeout&gt;10&lt;/source-timeout&gt;
+  &lt;burst-size&gt;65536&lt;/burst-size&gt;
+&lt;/limits&gt;</code></pre>
+            <p><strong>Source timeout too aggressive:</strong> The <code>source-timeout</code> setting in Icecast controls how long the server waits after losing contact with the source before killing the stream. The default of 10 seconds is reasonable, but if your encoder has momentary network gaps longer than this, Icecast will drop the stream. Increasing to 30 seconds gives more recovery time without affecting listener experience.</p>
+            <p><strong>Max listener limit reached:</strong> If <code>&lt;clients&gt;</code> is set too low and your station is popular, new listeners will receive a "503 Too many listeners" error, and existing listeners may experience unstable connections. Check your Icecast status page for the current listener count versus your configured maximum.</p>
+
+            <h2 id="network-issues">Network and VPS Issues</h2>
+            <p>Network problems are often intermittent and difficult to diagnose because they don't show up in the application logs — they manifest as TCP connection resets that both sides interpret as the other side disconnecting.</p>
+            <p><strong>ISP or VPS provider packet loss:</strong> Even 1–2% packet loss on a streaming connection causes buffering and eventual disconnection for listeners. Run a continuous ping test from your encoder machine to the VPS: on Linux, <code>ping -i 0.2 your-server-ip</code>. On Windows, <code>ping -t your-server-ip</code>. Watch for non-sequential ICMP responses or high variance in ping times — these indicate network instability.</p>
+            <pre><code># Better network quality test from Linux
+mtr --report --report-cycles 100 your-server-ip</code></pre>
+            <p><code>mtr</code> shows packet loss at every hop between you and the server, making it easy to identify whether the problem is on your local connection, in the network path, or at the VPS provider's data center.</p>
+            <p><strong>VPS resource exhaustion:</strong> If your VPS is running out of RAM and swapping to disk, Icecast becomes slow and starts dropping connections. Check with <code>free -h</code> and <code>top</code>. If memory usage is consistently above 85%, upgrade your VPS or reduce the number of concurrent streams.</p>
+            <p><strong>Firewall or security group issues:</strong> Some cloud providers (AWS, DigitalOcean, Hetzner) have separate firewall or security group rules in addition to the server's own firewall. If these rules reset periodically (unusual but possible after provider maintenance), streaming connections will drop. Check your cloud panel for any scheduled maintenance windows that correspond to your disconnect times.</p>
+
+            <div class="article-inline-cta">
+              <div class="article-inline-cta-text">
+                <h3>Need this fixed by an expert?</h3>
+                <p>RadioTech Studio diagnoses and fixes radio issues fast — usually same day. Send us your details.</p>
+              </div>
+              <a href="../index.html#contact" class="btn btn-primary">Get Help Now →</a>
+            </div>
+
+            <h2 id="autodj-silence">AutoDJ Going Silent</h2>
+            <p>A silent stream — where the connection stays open but no audio plays — is its own category of problem. Listeners see the stream as "online" and their player shows it as connected, but they hear nothing. This is the hardest type to detect without monitoring tools.</p>
+            <p>For AzuraCast: silence usually means Liquidsoap's audio pipeline stalled. The most common causes are: the music library has no eligible tracks (all tracks are excluded by rotation rules or the library is empty), a track file is corrupt and Liquidsoap crashed trying to decode it, or the Liquidsoap process itself crashed silently. Go to your station panel → Restart Broadcasting. Then check the Liquidsoap logs under Administration → Logs → Liquidsoap for error messages.</p>
+            <p>For standalone Icecast with RadioBOSS or RadioDJ: silence means the automation software stopped sending audio but maintained the TCP connection. This happens when the automation software freezes on a file operation, runs out of eligible tracks, or encounters a database error. Check the automation software's own log for errors around the time silence began.</p>
+            <div class="warn-box">
+              <div><strong>Silence detection:</strong> Pure silence is hard to detect from the outside — your stream URL responds with HTTP 200, the mount point shows active in Icecast, but there's just no sound. Set up a silence detector: several stream monitoring services (like StreamAlive or your own Nagios plugin) can detect streams that are technically "up" but carrying silence and alert you immediately.</div>
+            </div>
+
+            <h2 id="source-client">Source Client Disconnecting</h2>
+            <p>When the source client (your automation software) disconnects cleanly, Icecast marks the mount point as inactive and listeners receive a "Stream offline" or connection reset. When the source reconnects, Icecast makes the stream available again — but listeners need to reconnect manually unless they're using a player with auto-reconnect.</p>
+            <p>To handle source disconnects gracefully, configure a fallback mount in Icecast. This is a secondary mount point — typically a looping "station offline" message or hold music — that Icecast serves automatically when the primary source is unavailable:</p>
+            <pre><code>&lt;mount type="normal"&gt;
+  &lt;mount-name&gt;/stream&lt;/mount-name&gt;
+  &lt;fallback-mount&gt;/fallback&lt;/fallback-mount&gt;
+  &lt;fallback-override&gt;1&lt;/fallback-override&gt;
+&lt;/mount&gt;
+
+&lt;mount type="normal"&gt;
+  &lt;mount-name&gt;/fallback&lt;/mount-name&gt;
+  &lt;hidden&gt;1&lt;/hidden&gt;
+&lt;/mount&gt;</code></pre>
+            <p>Configure a second encoder in your automation software pointing to <code>/fallback</code> that plays a looping "We'll be right back" audio file. When the primary encoder drops, listeners seamlessly hear the fallback rather than getting disconnected. When the primary reconnects, <code>fallback-override&gt;1</code> causes Icecast to automatically move listeners back to the live stream.</p>
+
+            <h2 id="monitoring">Setting Up Stream Monitoring</h2>
+            <p>The most effective long-term solution to stream disconnection issues is monitoring that alerts you the moment something goes wrong — before listeners complain. Options range from free to paid:</p>
+            <p><strong>UptimeRobot (free):</strong> Set up a keyword monitor on your stream URL that checks for the stream title or a specific string in the Icecast status page. If the keyword disappears, you get an email or SMS alert within 5 minutes. Not perfect for detecting silent streams, but catches offline streams reliably.</p>
+            <p><strong>Custom monitoring script:</strong> A simple bash script on your VPS can check stream health every minute and alert via email if it detects an issue:</p>
+            <pre><code>#!/bin/bash
+STREAM="http://localhost:8000/stream"
+STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$STREAM")
+if [ "$STATUS" != "200" ]; then
+  echo "Stream offline at $(date)" | mail -s "ALERT: Stream Down" you@example.com
+fi</code></pre>
+            <p>Add this to cron to run every minute: <code>* * * * * /home/radio/check-stream.sh</code></p>
+            <p><strong>AzuraCast built-in monitoring:</strong> AzuraCast's administration panel includes a system log and service health dashboard. Under Administration → Services, you can see whether each component (Icecast, Liquidsoap) is running and restart individual services without restarting the entire station.</p>
+            <p>Beyond monitoring, the single most impactful stability improvement for any streaming setup is a reliable encoder machine with a stable internet connection. Consumer ISP connections with dynamic IPs are a common source of recurring disconnects — a business-grade connection with a static IP and an SLA dramatically reduces encoder-side drops.</p>
+
+          </article>
+
+          <aside>
+            <nav class="article-toc" aria-label="Table of contents">
+              <p class="article-toc-title">In This Guide</p>
+              <ul class="toc-list">
+                <li><a href="#types-of-disconnect">Types of Disconnections</a></li>
+                <li><a href="#encoder-issues">Encoder Problems</a></li>
+                <li><a href="#server-issues">Server Config Issues</a></li>
+                <li><a href="#network-issues">Network & VPS Issues</a></li>
+                <li><a href="#autodj-silence">AutoDJ Silence</a></li>
+                <li><a href="#source-client">Source Client Drops</a></li>
+                <li><a href="#monitoring">Stream Monitoring</a></li>
+              </ul>
+            </nav>
+            <div class="article-cta-box">
+              <span class="cta-icon">🔧</span>
+              <h4>Need Professional Help?</h4>
+              <p>RadioTech Studio fixes and builds radio systems worldwide. Fast, reliable, no jargon.</p>
+              <a href="../index.html#contact" class="btn btn-primary">Start Your Project</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-section">
+      <div class="container">
+        <span class="section-tag">Keep Reading</span>
+        <div class="related-grid">
+          <a href="azuracast-vps-docker-install.html" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat">Cloud Radio</span></div>
+            <h3 class="blog-card-title">How to Install AzuraCast on a Linux VPS with Docker</h3>
+            <p class="blog-card-desc">Complete step-by-step guide to deploying AzuraCast — from blank server to live radio with SSL and AutoDJ.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+          <a href="fix-radio-metadata-now-playing.html" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-troubleshoot">Troubleshooting</span></div>
+            <h3 class="blog-card-title">Radio Metadata Not Showing? How to Fix Now-Playing</h3>
+            <p class="blog-card-desc">Diagnose and fix now-playing metadata across every layer of your radio stack.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+          <a href="radioboss-scheduler-fix.html" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-troubleshoot">Troubleshooting</span></div>
+            <h3 class="blog-card-title">RadioBOSS Scheduler Not Working? 7 Fixes</h3>
+            <p class="blog-card-desc">The 7 most common RadioBOSS scheduler problems and exactly how to fix them.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo" aria-label="RadioTech Studio">
+            <div class="logo-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" stroke="url(#footerGradA)" stroke-width="2"/>
+                <circle cx="20" cy="20" r="8" stroke="url(#footerGradA)" stroke-width="1.5"/>
+                <circle cx="20" cy="20" r="3" fill="url(#footerGradA)"/>
+                <line x1="20" y1="2" x2="20" y2="8" stroke="url(#footerGradA)" stroke-width="2" stroke-linecap="round"/>
+                <defs><linearGradient id="footerGradA" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+              </svg>
+            </div>
+            <div class="logo-text"><span class="logo-brand">RadioTech</span><span class="logo-sub">Studio</span></div>
+          </a>
+          <p>Complete end-to-end solutions for online radio stations, broadcasters, DJs, media companies, and radio hosting businesses worldwide.</p>
+          <div class="footer-badges"><span>🌍 Worldwide</span><span>⚡ Fast Delivery</span><span>🔒 Secure</span></div>
+        </div>
+        <nav class="footer-col" aria-label="Services">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../index.html#solutions">Radio Automation</a></li>
+            <li><a href="../index.html#solutions">Cloud Platforms</a></li>
+            <li><a href="../index.html#solutions">Streaming Servers</a></li>
+            <li><a href="../index.html#pricing">Pricing</a></li>
+            <li><a href="../blog.html">Knowledge Base</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Contact">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@radiotechstudio.com">hello@radiotechstudio.com</a></li>
+            <li><a href="https://wa.me/8801718020102" target="_blank" rel="noopener">WhatsApp: +880 1718 020102</a></li>
+            <li><a href="../index.html#faq">FAQ</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#contact">Start a Project</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> RadioTech Studio. All rights reserved.</p>
+        <p>Built for radio professionals worldwide. · <a href="mailto:hello@radiotechstudio.com">hello@radiotechstudio.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

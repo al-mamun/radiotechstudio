@@ -8,25 +8,30 @@
 
   <!-- Primary SEO -->
   <title>RadioTech Studio | Online Radio Setup, Streaming &amp; Automation Experts</title>
-  <meta name="description" content="We build, configure, and fix complete online radio platforms — automation software, streaming servers, websites, mobile apps, VPS, Docker, and ongoing support. Serving stations worldwide." />
-  <meta name="keywords" content="online radio setup, radio automation expert, RadioBOSS support, RadioDJ setup, AzuraCast setup, LibreTime setup, Rivendell, Mixxx, Icecast server, Shoutcast, Centova Cast, Everest Cast, Linux VPS radio, Docker AzuraCast, FFmpeg streaming, OBS radio, WHMCS radio hosting, WordPress radio website, mobile app radio, radio hosting business" />
+  <meta name="description" content="We build, configure, and fix complete online radio platforms — automation software, streaming servers, websites, mobile apps, VPS, Docker, and ongoing support. Trusted by stations in 15+ countries." />
+  <meta name="keywords" content="online radio setup, radio automation expert, RadioBOSS support, RadioDJ setup, AzuraCast setup, LibreTime setup, Rivendell, Mixxx, Icecast server, Shoutcast server, Centova Cast setup, Everest Cast setup, Linux VPS radio, Docker AzuraCast, FFmpeg streaming, OBS radio streaming, WHMCS radio hosting, WordPress radio website, mobile app radio station, radio hosting business, streaming server setup, radio station website" />
   <meta name="author" content="RadioTech Studio" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <link rel="canonical" href="https://radiotechstudio.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://radiotechstudio.com/" />
   <meta property="og:title" content="RadioTech Studio | Online Radio Setup, Streaming &amp; Automation Experts" />
-  <meta property="og:description" content="We build and fix complete online radio platforms — automation, streaming, websites, mobile apps, VPS, and ongoing support. Trusted by stations worldwide." />
+  <meta property="og:description" content="We build and fix complete online radio platforms — automation, streaming servers, websites, mobile apps, VPS, and ongoing support. Trusted by stations in 15+ countries worldwide." />
   <meta property="og:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="RadioTech Studio — Online Radio Setup &amp; Streaming Experts" />
   <meta property="og:site_name" content="RadioTech Studio" />
+  <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="RadioTech Studio | Online Radio &amp; Streaming Experts" />
-  <meta name="twitter:description" content="End-to-end radio automation, streaming, websites, mobile apps, VPS, Docker, and 24/7 support." />
+  <meta name="twitter:description" content="End-to-end radio automation, streaming, websites, mobile apps, VPS, Docker, and 24/7 support. Trusted by stations worldwide." />
   <meta name="twitter:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
+  <meta name="twitter:image:alt" content="RadioTech Studio — Online Radio Setup &amp; Streaming Experts" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230a0f1e'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%2300d4ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2300d4ff'/%3E%3C/svg%3E" />
@@ -36,21 +41,72 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
+  <!-- Critical resource preloads (Core Web Vitals) -->
+  <link rel="preload" href="assets/css/style.css" as="style" />
+  <link rel="preload" href="assets/js/i18n.js" as="script" />
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/responsive.css" />
 
-  <!-- Schema Markup -->
+  <!-- Schema: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "RadioTech Studio",
+    "url": "https://radiotechstudio.com",
+    "description": "Complete online radio setup, automation, streaming, and support services worldwide.",
+    "inLanguage": ["en", "ar", "fr", "es", "de"]
+  }
+  </script>
+
+  <!-- Schema: ProfessionalService + AggregateRating -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "RadioTech Studio",
-    "description": "Complete online radio solutions including radio automation, streaming servers, websites, mobile apps, VPS setup, and monthly support.",
+    "description": "Complete online radio solutions including radio automation, streaming servers, websites, mobile apps, VPS setup, and monthly support. Trusted by stations in 15+ countries.",
     "url": "https://radiotechstudio.com",
     "email": "hello@radiotechstudio.com",
-    "serviceType": ["Radio Automation", "Streaming Server Setup", "Website Development", "Mobile App Development", "VPS Server Setup"],
-    "areaServed": "Worldwide",
+    "logo": "https://radiotechstudio.com/assets/images/og-image.png",
+    "image": "https://radiotechstudio.com/assets/images/og-image.png",
+    "priceRange": "$50 - $2000",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "PayPal, Bank Transfer, Wise",
+    "serviceType": ["Radio Automation Setup", "Streaming Server Configuration", "Radio Website Development", "Mobile App Development", "VPS Server Setup", "Docker Deployment", "Monthly Radio Support"],
+    "areaServed": {
+      "@type": "Place",
+      "name": "Worldwide"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "3",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "David M."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Very professional and fast with our RadioBOSS setup. The scheduler was a mess — jingles looping at wrong hours, playlists conflicting. Everything resolved within a day. Highly recommended."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Sarah R."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Fixed our streaming and metadata issue in hours. The now-playing wasn't updating anywhere. Everything resolved and live the same day. Exceptional work."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Kwame A."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Reliable support month after month. AzuraCast VPS setup was clean, Docker configured properly, and always available when something needs attention. A true long-term technical partner."
+      }
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "RadioTech Studio Services",
@@ -63,6 +119,76 @@
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Monthly Maintenance"}, "price": "100", "priceCurrency": "USD"}
       ]
     }
+  }
+  </script>
+
+  <!-- Schema: FAQPage (enables rich results / expandable Q&A in Google SERPs) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can you fix RadioBOSS and RadioBOSS Cloud?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. We have extensive experience with both RadioBOSS desktop and RadioBOSS Cloud. We fix scheduler issues, playlist conflicts, jingle loops, metadata problems, encoder settings, and automation logic. Whether it's a minor adjustment or a full reconfiguration, we can help."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can you work with RadioDJ?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. RadioDJ is a platform we work with regularly. We handle full setup including database configuration, rotation rules, jingle scheduling, encoder setup, and broadcast configuration. We also fix existing RadioDJ installations."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can you install AzuraCast on a VPS?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. We deploy AzuraCast on Linux VPS using Docker regularly. This includes VPS preparation, Docker installation, AzuraCast setup, SSL certificate, AutoDJ configuration, Liquidsoap, Icecast/Shoutcast integration, remote DJ access, and ongoing maintenance."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can you configure Icecast or Shoutcast?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. We set up and configure both Icecast and Shoutcast servers — mountpoint configuration, bitrate settings, fallback streams, relay setup, metadata passing, SSL/HTTPS streams, source authentication, and listener testing."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can you build a radio website?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. We build professional radio websites using WordPress or custom HTML/CSS. Features include live audio player, now-playing metadata, program schedule, DJ profiles, podcast section, mobile responsiveness, SEO optimisation, contact forms, and advertising pages."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can you create a mobile app for my radio station?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. We develop Android and iOS radio apps with live stream playback, station branding, program schedule, push notifications, contact forms, podcast sections, and full integration with your website and streaming server."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can you set up YouTube or Facebook 24/7 streaming?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. We configure OBS Studio and/or FFmpeg for continuous 24/7 visual radio streaming to YouTube Live and Facebook Live — including overlays, auto-restart scripts, RDP/VPS workflow setup, and stream monitoring."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can you set up Centova Cast or Everest Cast?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. We install and configure both Centova Cast and Everest Cast hosting panels, including AutoDJ setup, DJ account creation, playlist management, SSL integration, listener statistics, and stream package configuration."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can you help build a radio hosting business?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. We provide the full infrastructure for radio hosting businesses — VPS setup, Centova/Everest Cast, Icecast/Shoutcast, WHMCS billing, hosting packages, business website, payment gateway, SSL, Cloudflare, monitoring, and backups."}
+      },
+      {
+        "@type": "Question",
+        "name": "Can you fix metadata and now-playing issues?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. Metadata and now-playing issues are among the most common problems we fix — including metadata passing from automation software through the streaming server to website player, CharSet encoding issues, and cross-platform metadata flows."}
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer monthly support plans?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. We offer flexible monthly maintenance plans from $100/month, covering ongoing monitoring, emergency fixes, playlist updates, website updates, server security, and technical improvements based on your needs."}
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with Linux VPS, Docker, FFmpeg, and Liquidsoap?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Yes. These are core parts of our technical skill set. We work with Linux VPS administration, Docker container management, FFmpeg audio/video processing, and Liquidsoap scripting for advanced radio automation and failover systems on a regular basis."}
+      }
+    ]
   }
   </script>
 </head>
@@ -103,6 +229,7 @@
         <a href="#pricing" class="nav-link" data-i18n="nav.pricing">Pricing</a>
         <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
         <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+        <a href="blog.html" class="nav-link">Blog</a>
         <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
       </nav>
 
@@ -138,6 +265,7 @@
       <a href="#pricing" class="nav-mobile-link" data-i18n="nav.pricing">Pricing</a>
       <a href="#about" class="nav-mobile-link" data-i18n="nav.about">About</a>
       <a href="#faq" class="nav-mobile-link" data-i18n="nav.faq">FAQ</a>
+      <a href="blog.html" class="nav-mobile-link">Blog</a>
       <a href="#contact" class="nav-mobile-link" data-i18n="nav.contact">Contact</a>
       <a href="#contact" class="btn btn-primary nav-mobile-cta" data-i18n="nav.cta">Start Your Project</a>
     </nav>
@@ -605,6 +733,30 @@
             </div>
             <h3 data-i18n="platforms.p9_name">Everest Cast</h3>
             <p data-i18n="platforms.p9_desc">Streaming hosting panel setup, station management, AutoDJ, user accounts, stream packages, and server configuration.</p>
+          </article>
+
+          <article class="platform-card" data-aos="zoom-in" data-aos-delay="300" role="listitem">
+            <div class="platform-logo" aria-hidden="true">
+              <div class="platform-icon platform-icon--radioboss">RBS</div>
+            </div>
+            <h3 data-i18n="platforms.p10_name">RadioBOSS</h3>
+            <p data-i18n="platforms.p10_desc">Professional Windows radio automation — playlist scheduling, jingle logic, live assist, encoder setup, and 24/7 unattended broadcast configuration.</p>
+          </article>
+
+          <article class="platform-card" data-aos="zoom-in" data-aos-delay="60" role="listitem">
+            <div class="platform-logo" aria-hidden="true">
+              <div class="platform-icon platform-icon--sam">SAM</div>
+            </div>
+            <h3 data-i18n="platforms.p11_name">SAM Broadcaster</h3>
+            <p data-i18n="platforms.p11_desc">Professional Windows broadcasting suite — automation, live mixing, jingle carts, voice tracking, multi-destination streaming, and listener statistics.</p>
+          </article>
+
+          <article class="platform-card" data-aos="zoom-in" data-aos-delay="120" role="listitem">
+            <div class="platform-logo" aria-hidden="true">
+              <div class="platform-icon platform-icon--butt">BUT</div>
+            </div>
+            <h3 data-i18n="platforms.p12_name">BUTT</h3>
+            <p data-i18n="platforms.p12_desc">The most popular free live encoder — simple, cross-platform, and rock-solid for broadcasting from any computer to Icecast or Shoutcast in minutes.</p>
           </article>
 
         </div>

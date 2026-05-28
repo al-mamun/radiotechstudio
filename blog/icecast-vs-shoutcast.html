@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050914" />
+  <title>Icecast vs Shoutcast: Which Streaming Server Should You Use in 2026? | RadioTech Studio</title>
+  <meta name="description" content="A clear, honest comparison of Icecast and Shoutcast — licensing, features, metadata handling, performance, and which one is right for your station." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://radiotechstudio.com/blog/icecast-vs-shoutcast" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://radiotechstudio.com/blog/icecast-vs-shoutcast" />
+  <meta property="og:title" content="Icecast vs Shoutcast: Which Streaming Server Should You Use in 2026?" />
+  <meta property="og:description" content="A clear, honest comparison of Icecast and Shoutcast — licensing, features, metadata handling, performance, and which one is right for your station." />
+  <meta property="og:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
+  <meta property="og:site_name" content="RadioTech Studio" />
+    <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="RadioTech Studio — Radio Setup &amp; Streaming Experts" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Icecast vs Shoutcast: Which Streaming Server Should You Use in 2026?" />
+  <meta name="twitter:description" content="A clear, honest comparison of Icecast and Shoutcast — licensing, features, metadata handling, performance, and which one is right for your station." />
+  <meta name="twitter:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
+  <meta name="twitter:image:alt" content="RadioTech Studio — Radio Setup &amp; Streaming Experts" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230a0f1e'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%2300d4ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2300d4ff'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../assets/css/blog.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Icecast vs Shoutcast: Which Streaming Server Should You Use in 2026?",
+    "description": "A clear, honest comparison of Icecast and Shoutcast — licensing, features, metadata handling, performance, and which one is right for your station.",
+    "author": {"@type": "Organization", "name": "RadioTech Studio", "url": "https://radiotechstudio.com"},
+    "publisher": {"@type": "Organization", "name": "RadioTech Studio", "url": "https://radiotechstudio.com"},
+    "datePublished": "2026-05-29",
+    "dateModified": "2026-05-29",
+    "url": "https://radiotechstudio.com/blog/icecast-vs-shoutcast",
+    "mainEntityOfPage": "https://radiotechstudio.com/blog/icecast-vs-shoutcast"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo" aria-label="RadioTech Studio Home">
+        <div class="logo-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="url(#lg1)" stroke-width="2"/><circle cx="20" cy="20" r="8" stroke="url(#lg1)" stroke-width="1.5"/><circle cx="20" cy="20" r="3" fill="url(#lg1)"/><line x1="20" y1="2" x2="20" y2="8" stroke="url(#lg1)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="lg1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg></div>
+        <div class="logo-text"><span class="logo-brand">RadioTech</span><span class="logo-sub">Studio</span></div>
+      </a>
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <a href="../index.html#solutions" class="nav-link">Services</a>
+        <a href="../index.html#platforms" class="nav-link">Platforms</a>
+        <a href="../index.html#pricing" class="nav-link">Pricing</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../blog.html" class="nav-link">Blog</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <!-- Language Switcher -->
+      <div class="lang-switcher" role="navigation" aria-label="Language selector">
+        <button class="lang-toggle" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown" aria-label="Current language">
+          <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+          <span class="lang-code">EN</span>
+          <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="lang-dropdown" id="lang-dropdown" role="listbox" hidden aria-label="Select language">
+          <li class="lang-option lang-option--active" role="option" data-lang="en" aria-selected="true" tabindex="0">🇬🇧 English</li>
+          <li class="lang-option" role="option" data-lang="ar" aria-selected="false" tabindex="0">🇸🇦 العربية</li>
+          <li class="lang-option" role="option" data-lang="fr" aria-selected="false" tabindex="0">🇫🇷 Français</li>
+          <li class="lang-option" role="option" data-lang="es" aria-selected="false" tabindex="0">🇪🇸 Español</li>
+          <li class="lang-option" role="option" data-lang="de" aria-selected="false" tabindex="0">🇩🇪 Deutsch</li>
+        </ul>
+      </div>
+
+      <div class="header-actions">
+        <a href="../index.html#contact" class="btn btn-primary header-cta">Start Your Project</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="../index.html#solutions" class="nav-mobile-link">Services</a>
+      <a href="../index.html#platforms" class="nav-mobile-link">Platforms</a>
+      <a href="../index.html#pricing" class="nav-mobile-link">Pricing</a>
+      <a href="../index.html#about" class="nav-mobile-link">About</a>
+      <a href="../blog.html" class="nav-mobile-link">Blog</a>
+      <a href="../index.html#contact" class="nav-mobile-link">Contact</a>
+      <a href="../index.html#contact" class="btn btn-primary nav-mobile-cta">Start Your Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="container article-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="../blog.html">Blog</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current">Icecast vs Shoutcast</span>
+        </nav>
+        <div class="article-cat-row">
+          <span class="blog-cat cat-streaming">Streaming</span>
+        </div>
+        <h1 class="article-hero-title">Icecast vs Shoutcast: Which Streaming Server Should You Use in 2026?</h1>
+        <p class="article-hero-desc">A clear, honest comparison of Icecast and Shoutcast — licensing, features, metadata handling, performance, and which one is right for your station.</p>
+        <div class="article-meta-row">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> May 29, 2026</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 6 min read</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> RadioTech Studio</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-body-section">
+      <div class="container">
+        <div class="article-layout">
+
+          <article class="article-prose">
+
+            <h2 id="overview">What Are They and How Do They Differ?</h2>
+            <p>Icecast and Shoutcast are both streaming media server applications — their job is to accept an audio stream from a source (your automation software or encoder) and relay that audio out to listeners. Both have been around for over two decades and both work well for internet radio, but they have fundamentally different philosophies.</p>
+            <p>Icecast is open-source software maintained by the Xiph.Org Foundation. It supports multiple simultaneous mount points, a wide range of audio formats, and has no listener limits in the software itself. Shoutcast (now owned by Radionomy/Triton Digital) was the dominant streaming server of the early 2000s and still has a large installed base, particularly in commercial radio hosting environments. Shoutcast v2 (DNAS 2.x) is proprietary freeware — free to use, but closed-source.</p>
+            <div class="info-box">
+              <div><strong>Quick answer:</strong> For most new stations in 2026, Icecast 2 is the better default choice. It's free, well-documented, supported by every major automation platform, and has no artificial limitations. Shoutcast is worth considering if you specifically need Shoutcast directory listings or are working with legacy infrastructure that requires it.</div>
+            </div>
+
+            <h2 id="licensing">Licensing: Open Source vs Proprietary</h2>
+            <p>Icecast 2 is released under the GNU General Public License (GPL). This means you can run it on any server, modify the source code, redistribute it, and there are zero licensing fees regardless of how many listeners you serve or how many streams you run. This is a significant practical advantage for radio hosting businesses — you can spin up as many Icecast instances as you need without any per-server costs.</p>
+            <p>Shoutcast DNAS 2.x is free to download and use, but it's proprietary freeware. You cannot modify the binary or redistribute it. More importantly, the legacy free tier had listener caps (typically 25 or 32 simultaneous listeners per instance) that required a paid upgrade to remove. While Triton Digital has changed licensing terms several times over the years, the core limitation remains: Shoutcast's feature roadmap and terms are controlled by a corporation with commercial interests, not an open community.</p>
+            <p>For a hosting business, this difference matters enormously. A hosting provider running Icecast has no licensing overhead regardless of growth. A provider on Shoutcast may face terms that change unfavorably as their business scales.</p>
+
+            <h2 id="features">Feature Comparison</h2>
+            <p>Both servers handle the core job of streaming audio reliably. The differences are in the details:</p>
+            <p><strong>Mount points:</strong> Icecast natively supports multiple mount points per server — you can run 50 different radio stations on a single Icecast instance, each on its own <code>/mount</code> path. Shoutcast handles this differently, requiring separate DNAS instances per station, which adds complexity to large hosting setups.</p>
+            <p><strong>Audio formats:</strong> Icecast supports MP3, AAC, AAC+, OGG Vorbis, OGG Opus, FLAC, and WebM. Shoutcast DNAS 2.x supports MP3 and AAC/AAC+. If you need to serve OGG for bandwidth efficiency or FLAC for audiophile streams, Icecast is your only real option.</p>
+            <p><strong>Admin interface:</strong> Icecast has a minimal but functional built-in web admin at <code>/admin</code>. Shoutcast has a slightly more polished admin panel. Neither is particularly impressive — most operators manage their servers through their automation software (AzuraCast, Centova Cast) rather than the raw server admin.</p>
+            <p><strong>Directory listing:</strong> Shoutcast has its own listener directory (formerly Shoutcast.com) where stations are listed for discovery. Icecast connects to the Icecast YP directory. Neither directory drives significant traffic for most stations in 2026 — discovery happens through apps, social media, and radio aggregators like TuneIn and Radio.garden.</p>
+
+            <h2 id="metadata">Metadata Handling</h2>
+            <p>This is where the two servers diverge most practically. Icecast and Shoutcast use different mechanisms for transmitting "now playing" metadata to listeners, and your automation software needs to be compatible with whichever server you run.</p>
+            <p>Icecast uses ICY metadata headers embedded in the stream — the same standard used by Shoutcast historically, but with cleaner implementation. It also supports IcyDemux metadata updates. All major automation platforms (RadioBOSS, RadioDJ, Liquidsoap, Butt) can send metadata to Icecast without any extra configuration beyond specifying the server type.</p>
+            <p>Shoutcast uses the ICY protocol originally developed by Nullsoft. SHOUTcast v1 metadata is sent inline in the stream. SHOUTcast v2 introduced a separate XML-based metadata system via the DNAS admin port, which is more powerful (supports album art, custom fields) but requires explicit v2 support in your encoder.</p>
+            <div class="tip-box">
+              <div><strong>Metadata tip:</strong> If you're having metadata display issues with Shoutcast, check whether your encoder is configured for DNAS v1 protocol or v2 protocol. Mixing a v1 encoder with a v2 server (or vice versa) causes metadata to not update or show stale titles. Set both encoder and server to the same protocol version.</div>
+            </div>
+
+            <h2 id="performance">Performance and Listener Capacity</h2>
+            <p>Both servers are extremely lightweight. A properly configured Icecast instance running on a single CPU core with 512MB RAM can serve several hundred simultaneous listeners without breaking a sweat — the bottleneck is always network bandwidth, not server CPU. At 128kbps MP3, 100 listeners consume about 12.8 Mbps of outbound bandwidth.</p>
+            <p>Shoutcast performance is comparable at similar listener counts. Neither server requires high-end hardware for typical community or commercial radio deployments. For very large deployments (1,000+ simultaneous listeners), you'd use a CDN relay in front of either server regardless of which you chose.</p>
+            <p>Icecast has a slight operational advantage in that it handles source client disconnects more gracefully — when your encoder drops, Icecast can play a fallback stream from a secondary source automatically via its fallback mount configuration. Shoutcast's fallback behavior is less configurable without additional tooling.</p>
+            <pre><code>&lt;!-- Icecast fallback mount configuration --&gt;
+&lt;mount type="normal"&gt;
+  &lt;mount-name&gt;/live&lt;/mount-name&gt;
+  &lt;fallback-mount&gt;/autodj&lt;/fallback-mount&gt;
+  &lt;fallback-override&gt;1&lt;/fallback-override&gt;
+&lt;/mount&gt;</code></pre>
+
+            <h2 id="which-to-choose">Which Should You Choose?</h2>
+            <p><strong>Choose Icecast if:</strong> you're building a new station from scratch, running on Linux, using AzuraCast or another modern automation platform, need multiple streams or formats, or running a hosting business. It's the industry default in 2026 for good reasons.</p>
+            <p><strong>Choose Shoutcast if:</strong> you're specifically targeting the Shoutcast directory for listener discovery, your existing automation software only supports Shoutcast protocol, or you're integrating with a commercial hosting platform that is built around DNAS. Some commercial products like Centova Cast and Steamcast support both, so even in these scenarios you often have the option of either.</p>
+            <p>If you're already running Shoutcast and it works for your station, there is no urgent reason to migrate. If you're starting fresh or rebuilding infrastructure, Icecast is the pragmatic choice — better community support, no licensing concerns, and compatibility with the widest range of modern tools.</p>
+
+            <div class="article-inline-cta">
+              <div class="article-inline-cta-text">
+                <h3>Need this fixed by an expert?</h3>
+                <p>RadioTech Studio diagnoses and fixes radio issues fast — usually same day. Send us your details.</p>
+              </div>
+              <a href="../index.html#contact" class="btn btn-primary">Get Help Now →</a>
+            </div>
+
+            <h2 id="setup-tips">Setup Tips for Both</h2>
+            <p><strong>Icecast setup tips:</strong> Edit <code>/etc/icecast2/icecast.xml</code> carefully — the default configuration has placeholder passwords that must be changed before exposing the server to the internet. Always set unique <code>source-password</code>, <code>relay-password</code>, and <code>admin-password</code> values. Bind to <code>0.0.0.0</code> for external access, or a specific IP if running behind a proxy.</p>
+            <pre><code>apt install icecast2 -y
+# Edit /etc/icecast2/icecast.xml
+# Then start the service:
+systemctl enable icecast2
+systemctl start icecast2</code></pre>
+            <p><strong>Shoutcast setup tips:</strong> Download the DNAS binary for your platform from the official site. Create a <code>sc_serv.conf</code> configuration file. Key settings to check: <code>portbase</code> (default 8000), <code>password</code> for source connection, and <code>maxlisteners</code>. Run Shoutcast as a non-root service user for security.</p>
+            <p>For both servers, put Nginx in front as a reverse proxy — this lets you serve the stream on port 80 or 443 (HTTPS) for listeners who are behind restrictive firewalls, and gives you access logging without touching the streaming server config directly.</p>
+            <div class="warn-box">
+              <div><strong>Security reminder:</strong> Never leave default passwords on either Icecast or Shoutcast. Both servers' admin panels are accessible over the internet once the port is open. Default credentials are publicly known and will be found by scanners within hours of deployment.</div>
+            </div>
+
+          </article>
+
+          <aside>
+            <nav class="article-toc" aria-label="Table of contents">
+              <p class="article-toc-title">In This Guide</p>
+              <ul class="toc-list">
+                <li><a href="#overview">What Are They?</a></li>
+                <li><a href="#licensing">Licensing</a></li>
+                <li><a href="#features">Feature Comparison</a></li>
+                <li><a href="#metadata">Metadata Handling</a></li>
+                <li><a href="#performance">Performance & Capacity</a></li>
+                <li><a href="#which-to-choose">Which to Choose?</a></li>
+                <li><a href="#setup-tips">Setup Tips</a></li>
+              </ul>
+            </nav>
+            <div class="article-cta-box">
+              <span class="cta-icon">🔧</span>
+              <h4>Need Professional Help?</h4>
+              <p>RadioTech Studio fixes and builds radio systems worldwide. Fast, reliable, no jargon.</p>
+              <a href="../index.html#contact" class="btn btn-primary">Start Your Project</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-section">
+      <div class="container">
+        <span class="section-tag">Keep Reading</span>
+        <div class="related-grid">
+          <a href="azuracast-vps-docker-install.html" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat">Cloud Radio</span></div>
+            <h3 class="blog-card-title">How to Install AzuraCast on a Linux VPS with Docker</h3>
+            <p class="blog-card-desc">Complete step-by-step guide to deploying AzuraCast — from blank server to live radio with SSL and AutoDJ.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+          <a href="fix-radio-stream-disconnecting.html" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-troubleshoot">Troubleshooting</span></div>
+            <h3 class="blog-card-title">Radio Stream Keeps Disconnecting? Here's How to Fix It</h3>
+            <p class="blog-card-desc">The most common causes of stream drops and how to fix them permanently.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+          <a href="fix-radio-metadata-now-playing.html" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-troubleshoot">Troubleshooting</span></div>
+            <h3 class="blog-card-title">Radio Metadata Not Showing? How to Fix Now-Playing</h3>
+            <p class="blog-card-desc">Diagnose and fix now-playing metadata across every layer of your radio stack.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo footer-logo" aria-label="RadioTech Studio">
+            <div class="logo-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" stroke="url(#footerGradA)" stroke-width="2"/>
+                <circle cx="20" cy="20" r="8" stroke="url(#footerGradA)" stroke-width="1.5"/>
+                <circle cx="20" cy="20" r="3" fill="url(#footerGradA)"/>
+                <line x1="20" y1="2" x2="20" y2="8" stroke="url(#footerGradA)" stroke-width="2" stroke-linecap="round"/>
+                <defs><linearGradient id="footerGradA" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+              </svg>
+            </div>
+            <div class="logo-text"><span class="logo-brand">RadioTech</span><span class="logo-sub">Studio</span></div>
+          </a>
+          <p>Complete end-to-end solutions for online radio stations, broadcasters, DJs, media companies, and radio hosting businesses worldwide.</p>
+          <div class="footer-badges"><span>🌍 Worldwide</span><span>⚡ Fast Delivery</span><span>🔒 Secure</span></div>
+        </div>
+        <nav class="footer-col" aria-label="Services">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../index.html#solutions">Radio Automation</a></li>
+            <li><a href="../index.html#solutions">Cloud Platforms</a></li>
+            <li><a href="../index.html#solutions">Streaming Servers</a></li>
+            <li><a href="../index.html#pricing">Pricing</a></li>
+            <li><a href="../blog.html">Knowledge Base</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Contact">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@radiotechstudio.com">hello@radiotechstudio.com</a></li>
+            <li><a href="https://wa.me/8801718020102" target="_blank" rel="noopener">WhatsApp: +880 1718 020102</a></li>
+            <li><a href="../index.html#faq">FAQ</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="../index.html#contact">Start a Project</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> RadioTech Studio. All rights reserved.</p>
+        <p>Built for radio professionals worldwide. · <a href="mailto:hello@radiotechstudio.com">hello@radiotechstudio.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

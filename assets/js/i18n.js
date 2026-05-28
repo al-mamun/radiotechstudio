@@ -117,7 +117,13 @@ const RadioTechI18n = (() => {
       p8_name: 'Centova Cast',
       p8_desc: 'Radio hosting panel setup, AutoDJ, DJ accounts, playlists, SSL, statistics, and customer hosting workflows.',
       p9_name: 'Everest Cast',
-      p9_desc: 'Streaming hosting panel setup, station management, AutoDJ, user accounts, stream packages, and server configuration.'
+      p9_desc: 'Streaming hosting panel setup, station management, AutoDJ, user accounts, stream packages, and server configuration.',
+      p10_name: 'RadioBOSS',
+      p10_desc: 'Professional Windows radio automation — playlist scheduling, jingle logic, live assist, encoder setup, and 24/7 unattended broadcast configuration.',
+      p11_name: 'SAM Broadcaster',
+      p11_desc: 'Professional Windows broadcasting suite — automation, live mixing, jingle carts, voice tracking, multi-destination streaming, and listener statistics.',
+      p12_name: 'BUTT',
+      p12_desc: 'The most popular free live encoder — simple, cross-platform, and rock-solid for broadcasting from any computer to Icecast or Shoutcast in minutes.'
     },
     websites: {
       tag: 'Digital Presence',
@@ -430,7 +436,13 @@ const RadioTechI18n = (() => {
       p8_name: 'Centova Cast',
       p8_desc: 'إعداد لوحة استضافة الراديو وAutoDJ وحسابات DJ وقوائم التشغيل وSSL والإحصائيات وسير عمل استضافة العملاء.',
       p9_name: 'Everest Cast',
-      p9_desc: 'إعداد لوحة استضافة البث وإدارة المحطة وAutoDJ وحسابات المستخدمين وحزم البث وضبط الخادم.'
+      p9_desc: 'إعداد لوحة استضافة البث وإدارة المحطة وAutoDJ وحسابات المستخدمين وحزم البث وضبط الخادم.',
+      p10_name: 'RadioBOSS',
+      p10_desc: 'أتمتة راديو احترافية على ويندوز — جدولة قوائم التشغيل، منطق الجنقل، المساعدة المباشرة، إعداد المشفر، والبث المستمر 24/7.',
+      p11_name: 'SAM Broadcaster',
+      p11_desc: 'برنامج بث راديوي احترافي — أتمتة، مزج مباشر، عربات الجنقل، تسجيل الصوت، البث متعدد الوجهات، وإحصائيات المستمعين.',
+      p12_name: 'BUTT',
+      p12_desc: 'أشهر مشفر مباشر مجاني — بسيط ومتعدد المنصات وموثوق لبدء البث من أي جهاز إلى Icecast أو Shoutcast في دقائق.'
     },
     websites: {
       tag: 'الحضور الرقمي',
@@ -743,7 +755,9 @@ const RadioTechI18n = (() => {
       p8_name: 'Centova Cast',
       p8_desc: 'Configuration panneau hébergement radio, AutoDJ, comptes DJ, playlists, SSL, statistiques et flux de travail clients.',
       p9_name: 'Everest Cast',
-      p9_desc: 'Configuration panneau hébergement streaming, gestion stations, AutoDJ, comptes utilisateurs et configuration serveur.'
+      p9_desc: 'Configuration panneau hébergement streaming, gestion stations, AutoDJ, comptes utilisateurs et configuration serveur.',
+      p10_name: 'RadioBOSS',
+      p10_desc: 'Automatisation radio professionnelle Windows — planification playlists, logique jingles, diffusion en direct, configuration encodeur et broadcast 24/7.'
     },
     websites: {
       tag: 'Présence Numérique',
@@ -1056,7 +1070,9 @@ const RadioTechI18n = (() => {
       p8_name: 'Centova Cast',
       p8_desc: 'Configuración panel alojamiento radio, AutoDJ, cuentas DJ, playlists, SSL, estadísticas y flujos de trabajo de clientes.',
       p9_name: 'Everest Cast',
-      p9_desc: 'Configuración panel alojamiento streaming, gestión estaciones, AutoDJ, cuentas usuarios y configuración servidor.'
+      p9_desc: 'Configuración panel alojamiento streaming, gestión estaciones, AutoDJ, cuentas usuarios y configuración servidor.',
+      p10_name: 'RadioBOSS',
+      p10_desc: 'Automatización radio profesional Windows — programación playlists, lógica jingles, asistencia en vivo, configuración encoder y transmisión continua 24/7.'
     },
     websites: {
       tag: 'Presencia Digital',
@@ -1369,7 +1385,9 @@ const RadioTechI18n = (() => {
       p8_name: 'Centova Cast',
       p8_desc: 'Radio-Hosting-Panel-Setup, AutoDJ, DJ-Konten, Playlists, SSL, Statistiken und Kunden-Hosting-Workflows.',
       p9_name: 'Everest Cast',
-      p9_desc: 'Streaming-Hosting-Panel-Setup, Stations-Management, AutoDJ, Benutzerkonten, Stream-Pakete und Server-Konfiguration.'
+      p9_desc: 'Streaming-Hosting-Panel-Setup, Stations-Management, AutoDJ, Benutzerkonten, Stream-Pakete und Server-Konfiguration.',
+      p10_name: 'RadioBOSS',
+      p10_desc: 'Professionelle Windows-Radio-Automatisierung — Playlist-Planung, Jingle-Logik, Live-Assist, Encoder-Setup und unterbrechungsfreier 24/7-Sendebetrieb.'
     },
     websites: {
       tag: 'Digitale Präsenz',
