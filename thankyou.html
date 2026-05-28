@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You — RadioTech Studio</title>
+  <meta name="description" content="Thank you for contacting RadioTech Studio. We'll get back to you within 2–4 hours." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230a0f1e'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%2300d4ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2300d4ff'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+<body class="page-thankyou">
+
+  <!-- Background -->
+  <div class="bg-wrap" aria-hidden="true">
+    <canvas id="particles"></canvas>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo" aria-label="RadioTech Studio Home">
+      <div class="logo-icon">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" stroke="url(#lg)" stroke-width="2"/>
+          <circle cx="20" cy="20" r="8" stroke="url(#lg)" stroke-width="1.5"/>
+          <circle cx="20" cy="20" r="3" fill="url(#lg)"/>
+          <line x1="20" y1="2" x2="20" y2="8" stroke="url(#lg)" stroke-width="2" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00d4ff"/><stop offset="1" stop-color="#7c3aed"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div>
+        <span class="logo-brand">RadioTech</span>
+        <span class="logo-sub">Studio</span>
+      </div>
+    </a>
+    <a href="index.html" class="header-home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Back to Home
+    </a>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="ty-card">
+
+      <!-- Animated checkmark -->
+      <div class="check-wrap" aria-hidden="true">
+        <div class="check-ring"></div>
+        <div class="check-ring-2"></div>
+        <div class="check-circle">
+          <svg class="check-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polyline class="check-path" points="10,26 20,36 38,14" stroke="url(#cg)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="cg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#00d4ff"/><stop offset="1" stop-color="#7c3aed"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Tag -->
+      <div class="ty-tag">
+        <span class="ty-dot"></span>
+        Message Received
+      </div>
+
+      <!-- Heading -->
+      <h1 class="ty-title">
+        Thank You —<br />
+        <span class="grad">I'll Be In Touch Soon!</span>
+      </h1>
+
+      <!-- Wave -->
+      <div class="ty-wave" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+
+      <!-- Description -->
+      <p class="ty-desc">
+        Your project details have been received. I review every message personally and will reply with a clear technical plan and honest quote as fast as possible.
+      </p>
+
+      <!-- Response badge -->
+      <div class="ty-response">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Typical response time: 2–4 hours
+      </div>
+
+      <!-- Next steps -->
+      <div class="ty-steps" role="list" aria-label="What happens next">
+        <div class="ty-step" role="listitem">
+          <span class="ty-step-num">01</span>
+          <h4>Message Reviewed</h4>
+          <p>I personally read every project request and assess your exact needs</p>
+        </div>
+        <div class="ty-step" role="listitem">
+          <span class="ty-step-num">02</span>
+          <h4>Clear Plan Sent</h4>
+          <p>I reply with a tailored technical solution and transparent pricing</p>
+        </div>
+        <div class="ty-step" role="listitem">
+          <span class="ty-step-num">03</span>
+          <h4>Work Begins</h4>
+          <p>Once confirmed, I start building or fixing your radio system right away</p>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="ty-actions">
+        <a href="index.html" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Back to Home
+        </a>
+        <a href="index.html#solutions" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          View All Services
+        </a>
+      </div>
+
+      <!-- Auto-redirect countdown -->
+      <p class="ty-countdown">
+        Returning to homepage in <span id="countdownNum">15</span> seconds
+      </p>
+
+      <!-- Trust row -->
+      <div class="ty-trust" role="list">
+        <span class="ty-trust-item" role="listitem">🌍 Worldwide Service</span>
+        <span class="ty-trust-item" role="listitem">⚡ Fast Response</span>
+        <span class="ty-trust-item" role="listitem">🔒 Secure &amp; Reliable</span>
+        <span class="ty-trust-item" role="listitem">💬 Clear Communication</span>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="yr"></span> RadioTech Studio — <a href="index.html">radiotechstudio.com</a></p>
+  </footer>
+
+  <script>
+    /* ── Footer year ── */
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    /* ── Particle canvas ── */
+    (function () {
+      const canvas = document.getElementById('particles');
+      const ctx    = canvas.getContext('2d');
+      let W, H, particles = [];
+
+      function resize() {
+        W = canvas.width  = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      }
+
+      function Particle() {
+        this.reset();
+      }
+      Particle.prototype.reset = function () {
+        this.x  = Math.random() * W;
+        this.y  = Math.random() * H;
+        this.r  = Math.random() * 1.5 + 0.5;
+        this.vx = (Math.random() - 0.5) * 0.3;
+        this.vy = (Math.random() - 0.5) * 0.3;
+        this.alpha = Math.random() * 0.5 + 0.1;
+        this.color = Math.random() > 0.5 ? '#00d4ff' : '#7c3aed';
+      };
+      Particle.prototype.update = function () {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0 || this.x > W || this.y < 0 || this.y > H) this.reset();
+      };
+      Particle.prototype.draw = function () {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.globalAlpha = this.alpha;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+      };
+
+      function init() {
+        particles = Array.from({ length: 80 }, () => new Particle());
+      }
+
+      function loop() {
+        ctx.clearRect(0, 0, W, H);
+        particles.forEach(p => { p.update(); p.draw(); });
+        requestAnimationFrame(loop);
+      }
+
+      resize();
+      init();
+      loop();
+      window.addEventListener('resize', () => { resize(); init(); });
+    })();
+
+    /* ── Auto-redirect countdown (only when arrived via form submission) ── */
+    (function () {
+      const countdown = document.querySelector('.ty-countdown');
+      const el        = document.getElementById('countdownNum');
+
+      // Only run countdown if user came from this site (form submission)
+      const fromSite = document.referrer && (
+        document.referrer.includes(location.hostname) ||
+        document.referrer.includes('radiotechstudio.com')
+      );
+
+      if (!fromSite) {
+        // Direct URL visit — hide countdown entirely
+        if (countdown) countdown.style.display = 'none';
+        return;
+      }
+
+      let secs = 15;
+      const iv = setInterval(() => {
+        secs--;
+        el.textContent = secs;
+        if (secs <= 0) {
+          clearInterval(iv);
+          window.location.href = 'index.html';
+        }
+      }, 1000);
+
+      /* Cancel countdown if user interacts */
+      ['mousemove','keydown','touchstart','click'].forEach(evt => {
+        window.addEventListener(evt, () => {
+          clearInterval(iv);
+          if (countdown) countdown.style.display = 'none';
+        }, { once: true });
+      });
+    })();
+  </script>
+</body>
+</html>
