@@ -2962,15 +2962,22 @@ canvas#particles {
 
 /* Header */
 .is-rtl .header-inner    { direction: rtl; }
-.is-rtl .logo            { flex-direction: row-reverse; }
+.is-rtl .logo            { flex-direction: row; }
 .is-rtl .nav-desktop     { direction: rtl; }
-.is-rtl .header-actions  { flex-direction: row-reverse; }
+.is-rtl .header-actions  { flex-direction: row; }
+.is-rtl .header-cta      { order: 1; }
+.is-rtl .hamburger       { order: 0; }
 
 /* Hero */
 .is-rtl .hero-inner      { direction: rtl; }
 .is-rtl .hero-actions    { flex-direction: row-reverse; }
 .is-rtl .trust-badges    { flex-direction: row-reverse; flex-wrap: wrap; }
 .is-rtl .hero-badge      { flex-direction: row-reverse; }
+
+/* Fix bidi: keep inline punctuation at correct end of text */
+.is-rtl .hero-title span,
+.is-rtl .hero-desc,
+.is-rtl .section-title span { unicode-bidi: isolate; }
 
 /* Cards */
 .is-rtl .service-card,
