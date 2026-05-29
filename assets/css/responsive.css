@@ -32,6 +32,7 @@
   /* Footer */
   .footer-top        { grid-template-columns: 1fr 1fr; }
   .footer-brand      { grid-column: 1 / -1; }
+  .footer-col:nth-child(4) { display: none; }
 
   /* Hosting */
   .hosting-grid      { grid-template-columns: 1fr; }
@@ -100,7 +101,7 @@
   .process-step     { flex-direction: row; text-align: left; }
 
   /* Footer */
-  .footer-top    { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .footer-top    { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
   .footer-brand  { grid-column: 1 / -1; }
   .footer-bottom { flex-direction: column; text-align: center; }
 

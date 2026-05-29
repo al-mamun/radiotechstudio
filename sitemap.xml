@@ -16,66 +16,115 @@
   </url>
 
   <url>
-    <loc>https://radiotechstudio.com/blog/azuracast-vps-docker-install</loc>
+    <loc>https://radiotechstudio.com/blog/azuracast-vps-docker-install/</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://radiotechstudio.com/blog/radioboss-scheduler-fix</loc>
+    <loc>https://radiotechstudio.com/blog/radioboss-scheduler-fix/</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://radiotechstudio.com/blog/icecast-vs-shoutcast</loc>
+    <loc>https://radiotechstudio.com/blog/icecast-vs-shoutcast/</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://radiotechstudio.com/blog/fix-radio-metadata-now-playing</loc>
+    <loc>https://radiotechstudio.com/blog/fix-radio-metadata-now-playing/</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://radiotechstudio.com/blog/youtube-24-7-radio-streaming-obs-ffmpeg</loc>
+    <loc>https://radiotechstudio.com/blog/youtube-24-7-radio-streaming-obs-ffmpeg/</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://radiotechstudio.com/blog/radio-hosting-business-setup-guide</loc>
+    <loc>https://radiotechstudio.com/blog/radio-hosting-business-setup-guide/</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://radiotechstudio.com/blog/radiodj-complete-setup-guide</loc>
+    <loc>https://radiotechstudio.com/blog/radiodj-complete-setup-guide/</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://radiotechstudio.com/blog/fix-radio-stream-disconnecting</loc>
+    <loc>https://radiotechstudio.com/blog/fix-radio-stream-disconnecting/</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://radiotechstudio.com/blog/live-dj-broadcasting-butt-mixxx-sam-broadcaster</loc>
+    <loc>https://radiotechstudio.com/blog/live-dj-broadcasting-butt-mixxx-sam-broadcaster/</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+
+  <url>
+    <loc>https://radiotechstudio.com/case-studies/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://radiotechstudio.com/case-studies/sunset-sol-radio/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://radiotechstudio.com/case-studies/enjoy-radio-scheduler/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://radiotechstudio.com/case-studies/azuracast-vps-deployment/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://radiotechstudio.com/case-studies/icecast-streaming-infrastructure/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://radiotechstudio.com/case-studies/radio-website-mobile-app/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://radiotechstudio.com/case-studies/nostalgie-fm-haitian-radio/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
