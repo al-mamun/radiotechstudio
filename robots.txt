@@ -4,36 +4,3 @@ Disallow: /thankyou
 Disallow: /thankyou.html
 
 Sitemap: https://radiotechstudio.com/sitemap.xml
-
-# Google
-User-agent: Googlebot
-Allow: /
-
-# Bing
-User-agent: Bingbot
-Allow: /
-
-# AI Crawlers — allow for visibility in AI-generated answers
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: YouBot
-Allow: /
-
-User-agent: Amazonbot
-Allow: /
-
-User-agent: cohere-ai
-Allow: /
