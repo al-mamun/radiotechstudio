@@ -348,14 +348,16 @@ window.RadioTechI18n = (function() {
   let _pendingLang = null;
 
   function loadFullI18n(lang) {
-    if (_fullLoaded) { setLangInternal(lang); return; }
+    if (_fullLoaded) { window.RadioTechI18n.setLang(lang); return; }
     _pendingLang = lang;
+    window._rtsLangRequest = lang;
     const s = document.createElement('script');
     s.src = (window.__i18nBase || '') + 'assets/js/i18n-full.min.js';
-    s.onload = () => {
+    s.onload = function() {
       _fullLoaded = true;
-      if (window.RadioTechI18nFull) {
-        if(window.RadioTechI18n)window.RadioTechI18n.setLang(_pendingLang);
+      if (window.RadioTechI18n && window._rtsLangRequest) {
+        window.RadioTechI18n.setLang(window._rtsLangRequest);
+        window._rtsLangRequest = null;
       }
     };
     document.head.appendChild(s);

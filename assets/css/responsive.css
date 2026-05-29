@@ -190,11 +190,13 @@
    8. Language switcher — hide on very small screens, collapse on mobile
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-  .lang-switcher { order: -1; }
+  .header-inner { gap: 0.5rem; }
+  .logo { margin-right: auto; }
+  .lang-switcher { order: 0; }
   .lang-code { display: none; }
   .lang-chevron { display: none; }
   .lang-toggle { padding: 0.35rem 0.5rem; }
-  .lang-dropdown { right: auto; left: 0; }
+  .lang-dropdown { right: 0; left: auto; }
 }
 
 @media (max-width: 480px) {
