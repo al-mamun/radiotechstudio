@@ -183,6 +183,8 @@ function initAOS() {
    8. Hero Wave Canvas Animation
    ========================================================================== */
 function initWaveCanvas() {
+  // Skip heavy canvas animation on mobile to save CPU/TBT
+  if (window.innerWidth < 768) return;
   const canvas = qs('#waveCanvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
