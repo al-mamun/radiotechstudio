@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050914" />
+  <title>Live DJ Broadcasting: BUTT, Mixxx &amp; SAM Setup | RadioTech Studio</title>
+  <meta name="description" content="Go live on your radio station from any computer. Set up BUTT, Mixxx, or SAM Broadcaster to stream directly to Icecast, Shoutcast, or AzuraCast." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://radiotechstudio.com/blog/live-dj-broadcasting-butt-mixxx-sam-broadcaster/" />
+  <link rel="alternate" hreflang="x-default" href="https://radiotechstudio.com/blog/live-dj-broadcasting-butt-mixxx-sam-broadcaster/" />
+  <link rel="alternate" hreflang="en" href="https://radiotechstudio.com/blog/live-dj-broadcasting-butt-mixxx-sam-broadcaster/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://radiotechstudio.com/blog/live-dj-broadcasting-butt-mixxx-sam-broadcaster/" />
+  <meta property="og:title" content="Live DJ Broadcasting Setup: BUTT, Mixxx & SAM Broadcaster Guide" />
+  <meta property="og:description" content="Go live on your radio station from any computer. Set up BUTT, Mixxx, or SAM Broadcaster to stream directly to Icecast, Shoutcast, or AzuraCast." />
+  <meta property="og:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
+  <meta property="og:site_name" content="RadioTech Studio" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="RadioTech Studio — Radio Setup &amp; Streaming Experts" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Live DJ Broadcasting Setup: BUTT, Mixxx & SAM Broadcaster Guide" />
+  <meta name="twitter:description" content="Go live on your radio station from any computer. Set up BUTT, Mixxx, or SAM Broadcaster to stream directly to Icecast, Shoutcast, or AzuraCast." />
+  <meta name="twitter:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
+  <meta name="twitter:image:alt" content="RadioTech Studio — Radio Setup &amp; Streaming Experts" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230a0f1e'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%2300d4ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2300d4ff'/%3E%3C/svg%3E" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../../assets/css/blog.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Live DJ Broadcasting Setup: BUTT, Mixxx & SAM Broadcaster Guide",
+    "description": "Step-by-step guide to going live on your radio station from your computer. Set up BUTT, Mixxx, or SAM Broadcaster to stream directly to Icecast, Shoutcast, or AzuraCast.",
+    "author": {"@type": "Organization", "name": "RadioTech Studio", "url": "https://radiotechstudio.com"},
+    "publisher": {"@type": "Organization", "name": "RadioTech Studio", "url": "https://radiotechstudio.com"},
+    "datePublished": "2026-05-29",
+    "dateModified": "2026-05-29",
+    "url": "https://radiotechstudio.com/blog/live-dj-broadcasting-butt-mixxx-sam-broadcaster",
+    "mainEntityOfPage": "https://radiotechstudio.com/blog/live-dj-broadcasting-butt-mixxx-sam-broadcaster",
+    "image": "https://radiotechstudio.com/assets/images/og-image.png",
+    "inLanguage": "en",
+    "articleSection": "Streaming",
+    "wordCount": 1800,
+    "keywords": "live DJ broadcasting, BUTT encoder, Mixxx streaming, SAM Broadcaster, live radio streaming"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://radiotechstudio.com"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://radiotechstudio.com/blog"},
+      {"@type": "ListItem", "position": 3, "name": "Live DJ Broadcasting: BUTT, Mixxx & SAM", "item": "https://radiotechstudio.com/blog/live-dj-broadcasting-butt-mixxx-sam-broadcaster"}
+    ]
+  }
+  </script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6FRJEZZ4P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S6FRJEZZ4P');
+  </script>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="RadioTech Studio Home">
+        <div class="logo-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="url(#lg1)" stroke-width="2"/><circle cx="20" cy="20" r="8" stroke="url(#lg1)" stroke-width="1.5"/><circle cx="20" cy="20" r="3" fill="url(#lg1)"/><line x1="20" y1="2" x2="20" y2="8" stroke="url(#lg1)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="lg1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg></div>
+        <div class="logo-text"><span class="logo-brand">RadioTech</span><span class="logo-sub">Studio</span></div>
+      </a>
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <a href="../#solutions" class="nav-link" data-i18n="nav.services">Services</a>
+        <a href="../#platforms" class="nav-link" data-i18n="nav.platforms">Platforms</a>
+        <a href="../#pricing" class="nav-link" data-i18n="nav.pricing">Pricing</a>
+        <a href="../#about" class="nav-link" data-i18n="nav.about">About</a>
+        <a href="/blog/" class="nav-link" data-i18n="nav.blog">Blog</a>
+        <a href="../#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <!-- Language Switcher -->
+      <div class="lang-switcher" role="navigation" aria-label="Language selector">
+        <button class="lang-toggle" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown" aria-label="Current language">
+          <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+          <span class="lang-code">EN</span>
+          <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="lang-dropdown" id="lang-dropdown" role="listbox" hidden aria-label="Select language">
+          <li class="lang-option lang-option--active" role="option" data-lang="en" aria-selected="true" tabindex="0">🇬🇧 English</li>
+          <li class="lang-option" role="option" data-lang="ar" aria-selected="false" tabindex="0">🇸🇦 العربية</li>
+          <li class="lang-option" role="option" data-lang="fr" aria-selected="false" tabindex="0">🇫🇷 Français</li>
+          <li class="lang-option" role="option" data-lang="es" aria-selected="false" tabindex="0">🇪🇸 Español</li>
+          <li class="lang-option" role="option" data-lang="de" aria-selected="false" tabindex="0">🇩🇪 Deutsch</li>
+        </ul>
+      </div>
+
+      <div class="header-actions">
+        <a href="../#contact" class="btn btn-primary header-cta" data-i18n="nav.cta">Start Your Project</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="../#solutions" class="nav-mobile-link" data-i18n="nav.services">Services</a>
+      <a href="../#platforms" class="nav-mobile-link" data-i18n="nav.platforms">Platforms</a>
+      <a href="../#pricing" class="nav-mobile-link" data-i18n="nav.pricing">Pricing</a>
+      <a href="../#about" class="nav-mobile-link" data-i18n="nav.about">About</a>
+      <a href="/blog/" class="nav-mobile-link" data-i18n="nav.blog">Blog</a>
+      <a href="../#contact" class="nav-mobile-link" data-i18n="nav.contact">Contact</a>
+      <a href="../#contact" class="btn btn-primary nav-mobile-cta" data-i18n="nav.cta">Start Your Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="container article-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/" data-i18n="blog.home">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="/blog/" data-i18n="nav.blog">Blog</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current">Live DJ Broadcasting Setup</span>
+        </nav>
+        <div class="article-cat-row">
+          <span class="blog-cat cat-streaming">Streaming</span>
+        </div>
+        <h1 class="article-hero-title">Live DJ Broadcasting Setup: BUTT, Mixxx &amp; SAM Broadcaster Guide</h1>
+        <p class="article-hero-desc">Step-by-step guide to going live on your radio station from your computer — set up BUTT, Mixxx, or SAM Broadcaster to stream directly to Icecast, Shoutcast, or AzuraCast in minutes.</p>
+        <div class="article-meta-row">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> May 29, 2026</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 8 min read</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> RadioTech Studio</span>
+          <a href="youtube-24-7-radio-streaming-obs-ffmpeg" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-streaming">Streaming</span></div>
+            <h3 class="blog-card-title">YouTube 24/7 Radio Streaming with OBS &amp; FFmpeg</h3>
+            <p class="blog-card-desc">Extend your live DJ shows into a 24/7 visual stream on YouTube or Facebook using OBS Studio and FFmpeg.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-body-section">
+      <div class="container">
+        <div class="article-layout">
+
+          <article class="article-prose">
+
+            <h2 id="how-live-broadcasting-works">How Live DJ Broadcasting Works</h2>
+            <p>When you want to broadcast live as a DJ — mixing tracks, taking calls, or hosting a show — you need a <strong>source encoder</strong> running on your computer. The encoder captures your audio (from a microphone, DJ mixer, or virtual audio cable), compresses it in real time, and pushes it to your streaming server (Icecast, Shoutcast, or AzuraCast).</p>
+            <p>The three most popular free source encoders for DJs and radio hosts are BUTT (Broadcast Using This Tool), Mixxx, and SAM Broadcaster. Each targets a slightly different workflow: BUTT is the simplest and most reliable for dedicated encoder use, Mixxx combines DJ mixing with built-in encoding, and SAM Broadcaster is a professional-grade Windows application combining automation with live broadcasting.</p>
+            <div class="info-box">
+              <div><strong>Before you start:</strong> You need a working Icecast or Shoutcast server (or an AzuraCast installation) and your server credentials ready — server hostname/IP, port number, mount point (for Icecast), and source password. If you're using AzuraCast, find these under your station's <em>Broadcasting</em> panel → <em>Connection Information</em>.</div>
+            </div>
+
+            <h2 id="butt-setup">Broadcasting with BUTT (Broadcast Using This Tool)</h2>
+            <p>BUTT is a lightweight, cross-platform (Windows, macOS, Linux) encoder that does one job: take audio from a device and push it to a streaming server. It supports Icecast and Shoutcast, handles MP3 and AAC encoding, and has built-in auto-reconnect. For DJs who already have a hardware or software mixer and just need a reliable encoder, BUTT is the best choice.</p>
+            <p><strong>Step 1 — Download and install BUTT</strong> from <code>danielnoethen.de/butt</code>. Launch it and you'll see a minimal interface with a big record/stream button and a settings icon.</p>
+            <p><strong>Step 2 — Add a server.</strong> Click the settings gear → <em>Main</em> tab → <em>Server</em> section → click the <em>+</em> button to add a new server. Fill in the details:</p>
+            <pre><code>Type:     Icecast  (or Shoutcast)
+Address:  your-server-ip-or-hostname
+Port:     8000
+Password: your_source_password
+Mount:    /stream  (Icecast only — must match your mount name)
+Name:     My Radio Station</code></pre>
+            <p>Click <em>Add</em> to save. For Shoutcast, leave the Mount field empty and use the Shoutcast DJ password instead of the source password.</p>
+            <p><strong>Step 3 — Configure audio.</strong> Still in settings, go to the <em>Audio</em> tab. Set <em>Primary audio device</em> to whatever your DJ mixer or microphone is connected to. If you're mixing in software (in DJ software, DAW, or Voicemeeter), set the device to your virtual audio cable output.</p>
+            <p><strong>Step 4 — Set encode quality.</strong> Under the <em>Stream</em> tab, set format to MP3, bitrate to 128 kbps (or 192 kbps for higher quality), and sample rate to 44100 Hz. Check <em>Reconnect on connection loss</em> with a 5-second retry interval.</p>
+            <p>Back on the main screen, click the <em>Play</em> button — BUTT connects to your server and starts streaming your audio immediately. The VU meter shows the incoming audio level; keep it in the green-to-yellow range, avoiding red clipping.</p>
+            <div class="tip-box">
+              <div><strong>Using a virtual audio cable:</strong> If you want to mix in Traktor, Serato, or Rekordbox and stream the output, route your DJ software's master output to a virtual audio cable (VB-Audio Virtual Cable on Windows, BlackHole on macOS), then set BUTT's input device to that same virtual cable. This gives you clean, latency-free streaming of your mix without any hardware loopback.</div>
+            </div>
+
+            <h2 id="mixxx-setup">Broadcasting with Mixxx</h2>
+            <p>Mixxx is a free, open-source DJ application for Windows, macOS, and Linux. It includes a built-in live broadcasting feature, meaning you don't need a separate encoder — you mix and stream from the same application. This makes it ideal for DJs who don't already have a mixing application.</p>
+            <p><strong>Step 1 — Install Mixxx</strong> from <code>mixxx.org</code>. Open Preferences → <em>Live Broadcasting</em>.</p>
+            <p><strong>Step 2 — Configure the server.</strong> In the Live Broadcasting panel:</p>
+            <pre><code>Type:       Icecast 2  (or Shoutcast 1/2)
+Host:       your-server-ip
+Port:       8000
+Mount:      /stream
+Login:      source
+Password:   your_source_password
+Stream name: Your Station Name
+Stream website: https://yoursite.com</code></pre>
+            <p><strong>Step 3 — Set encoder settings.</strong> Choose MP3 at 128 kbps (Mixxx uses libmp3lame). If you need AAC/OGG, select those formats instead — AzuraCast and Icecast 2.4+ support all three.</p>
+            <p><strong>Step 4 — Enable broadcasting.</strong> In the Mixxx toolbar, click the broadcast icon (antenna symbol) to connect. The icon turns green when connected. Mixxx will now stream your master mix to the server in real time as you DJ.</p>
+            <p>Mixxx automatically sends track metadata (artist and title) to Icecast, so your now-playing information updates as you cue tracks. This is a significant advantage over BUTT, which requires manual metadata updates.</p>
+
+            <h2 id="sam-broadcaster-setup">Broadcasting with SAM Broadcaster</h2>
+            <p>SAM Broadcaster (by Spacial Audio) is a professional Windows-only application combining radio automation, live mixing, and streaming. It's not free, but it offers the most complete feature set: track scheduling, jingle carts, voice tracking, listener statistics, and multi-destination streaming. It's the right choice for stations that need both automation and live broadcasting in one tool.</p>
+            <p><strong>Step 1 — Set up an encoder.</strong> In SAM Broadcaster, go to the <em>Encoders</em> panel (bottom of the screen) and click the <em>+</em> button to add a new encoder. Choose <em>MP3 (Lame)</em> and set bitrate to 128 kbps.</p>
+            <p><strong>Step 2 — Add a DSP plugin for streaming.</strong> Inside the encoder settings, click <em>Add DSP</em> → <em>Winamp DSP</em> or use SAM's built-in output plugin. Select <em>SC/IC Broadcaster</em> from the list, then configure your server:</p>
+            <pre><code>Protocol: Icecast 2
+Server:   your-server-ip
+Port:     8000
+Password: your_source_password
+Mount:    /stream</code></pre>
+            <p><strong>Step 3 — Connect and go live.</strong> Click <em>Start</em> in the encoder panel. SAM connects to the server and begins streaming. You can now use SAM's main interface to play tracks from the cart system, run scheduled playlists, or broadcast your microphone — everything goes out through the same encoder in real time.</p>
+            <div class="warn-box">
+              <div><strong>SAM Broadcaster and Windows Firewall:</strong> On a fresh Windows installation, the first time SAM Broadcaster connects to an external server, Windows Firewall may prompt you to allow the connection. Click <em>Allow Access</em>. If the connection fails silently, check Windows Defender Firewall → <em>Allow an app through firewall</em> and ensure SAM Broadcaster is listed with both Private and Public access enabled.</div>
+            </div>
+
+            <h2 id="azuracast-live-dj">Going Live on AzuraCast</h2>
+            <p>AzuraCast has a dedicated live DJ system that works differently from a regular Icecast source connection. Instead of connecting directly to Icecast, DJs connect to AzuraCast's Liquidsoap input, which then manages the transition between AutoDJ and live broadcasting automatically.</p>
+            <p>In your AzuraCast station panel, go to <em>Broadcasting</em> → <em>DJ/Streamer Accounts</em> → <em>Add Streamer</em>. Create a DJ account with a username and password. AzuraCast will show you the exact connection details for that streamer.</p>
+            <p>In BUTT, use these settings:</p>
+            <pre><code>Address:  your-azuracast-domain.com
+Port:     8090  (AzuraCast's live DJ port — different from the listener port)
+Password: the DJ streamer password
+Mount:    /live  (AzuraCast's default live mount)</code></pre>
+            <p>When you connect, AzuraCast automatically pauses the AutoDJ playlist and switches to your live feed. When you disconnect, AutoDJ resumes seamlessly within a few seconds. Listener count, metadata, and stream history are all tracked under that DJ account in the AzuraCast panel.</p>
+            <div class="info-box">
+              <div><strong>AzuraCast live DJ priority:</strong> You can set each DJ streamer account's priority level in the Streamer settings. If two DJs try to connect at the same time, the one with higher priority takes the live feed. Lower-priority connections are queued and take over automatically if the higher-priority DJ disconnects.</div>
+            </div>
+
+            <div class="article-inline-cta">
+              <div class="article-inline-cta-text">
+                <h3>Need a live broadcasting setup done for you?</h3>
+                <p>RadioTech Studio configures live DJ systems, encoder software, and AzuraCast setups from scratch. Fast turnaround, no technical jargon.</p>
+              </div>
+              <a href="../#contact" class="btn btn-primary">Get Set Up Today →</a>
+            </div>
+
+            <h2 id="audio-quality-tips">Audio Quality and Bitrate Tips</h2>
+            <p>Bitrate is the most impactful setting for audio quality. For music-heavy radio, 128 kbps MP3 is the standard for casual listening — it sounds fine on phones and earbuds. For high-quality music stations targeting audiophiles or desktop listeners, use 192 kbps MP3 or 128 kbps AAC (which sounds noticeably better than 128 kbps MP3 due to more efficient compression). Avoid going below 96 kbps for music — compression artifacts become clearly audible.</p>
+            <p>Sample rate should always be 44100 Hz (44.1 kHz) for music content, matching the standard CD audio sample rate. Using a different sample rate causes your encoder to resample on the fly, which slightly degrades quality and adds CPU load. Stereo is almost always preferable over mono for music — it doubles the bitrate but the stereo image is worth it for music content. Use mono only for pure talk/speech stations where stereo adds no value.</p>
+            <p>Monitor your levels before going live. Clipping (signal above 0 dBFS) causes harsh digital distortion that listeners will immediately notice. Aim for peaks around -3 to -6 dBFS on the encoder's input meter. If you're using a hardware DJ mixer, set its master output to about 80% and fine-tune in the encoder or a software gain stage.</p>
+
+            <h2 id="stable-live-broadcast">Tips for a Stable Live Broadcast</h2>
+            <p>A live broadcast has no room for technical problems — listeners hear every glitch in real time and won't wait for you to fix it. These habits eliminate the most common live broadcast failures:</p>
+            <p><strong>Use a wired internet connection.</strong> Wi-Fi introduces packet loss, variable latency, and occasional signal drops — all of which cause audible stutters or full stream disconnections. For live broadcasting, always use Ethernet directly from your router. If that's not possible, a powerline Ethernet adapter is far more reliable than Wi-Fi.</p>
+            <p><strong>Test 30 minutes before going live.</strong> Connect to your server, play some music, and listen on a separate device (phone on mobile data, not the same Wi-Fi) to confirm the stream sounds good end-to-end. Check your metadata is updating correctly and that the bitrate you configured matches what the server reports.</p>
+            <p><strong>Enable auto-reconnect everywhere.</strong> In BUTT: Settings → Stream → check <em>Reconnect on connection loss</em>. In Mixxx: it reconnects automatically. In SAM Broadcaster: set retry attempts to unlimited in the encoder settings. A brief internet hiccup should recover in 5–10 seconds without you needing to intervene.</p>
+            <p><strong>Close unnecessary applications.</strong> Video calls, large file downloads, and video streaming compete for bandwidth with your encoder. Before going live, close anything that uses significant upload bandwidth and set your encoding bitrate to no more than 50% of your available upload speed.</p>
+            <p><strong>Keep a backup encoder ready.</strong> Have a second computer or phone with a mobile data connection and BUTT configured to the same server. If your primary setup fails catastrophically, you can start broadcasting from the backup within 60 seconds while you diagnose the primary issue.</p>
+
+          </article>
+
+          <aside>
+            <nav class="article-toc" aria-label="Table of contents">
+              <p class="article-toc-title">In This Guide</p>
+              <ul class="toc-list">
+                <li><a href="/#how-live-broadcasting-works">How It Works</a></li>
+                <li><a href="/#butt-setup">BUTT Setup</a></li>
+                <li><a href="/#mixxx-setup">Mixxx Setup</a></li>
+                <li><a href="/#sam-broadcaster-setup">SAM Broadcaster</a></li>
+                <li><a href="/#azuracast-live-dj">AzuraCast Live DJ</a></li>
+                <li><a href="/#audio-quality-tips">Audio Quality Tips</a></li>
+                <li><a href="/#stable-live-broadcast">Stability Tips</a></li>
+              </ul>
+            </nav>
+            <div class="article-cta-box">
+              <span class="cta-icon">🎙️</span>
+              <h4>Ready to Go Live?</h4>
+              <p>RadioTech Studio sets up live DJ systems, AzuraCast, and encoder software for stations worldwide.</p>
+              <a href="../#contact" class="btn btn-primary">Start Your Project</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-section">
+      <div class="container">
+        <span class="section-tag" data-i18n="blog.keep_reading">Keep Reading</span>
+        <div class="related-grid">
+          <a href="azuracast-vps-docker-install" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat">Cloud Radio</span></div>
+            <h3 class="blog-card-title">How to Install AzuraCast on a Linux VPS with Docker</h3>
+            <p class="blog-card-desc">Complete step-by-step guide to deploying AzuraCast — from blank server to live radio with SSL and AutoDJ.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+          <a href="icecast-vs-shoutcast" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-streaming">Streaming</span></div>
+            <h3 class="blog-card-title">Icecast vs Shoutcast: Which Streaming Server Should You Use?</h3>
+            <p class="blog-card-desc">A direct comparison of Icecast and Shoutcast across licensing, features, compatibility, and real-world performance.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+          <a href="fix-radio-stream-disconnecting" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-troubleshoot">Troubleshooting</span></div>
+            <h3 class="blog-card-title">Radio Stream Keeps Disconnecting? Here's How to Fix It</h3>
+            <p class="blog-card-desc">Stream drops, listener timeouts, AutoDJ going silent — the most common causes and how to fix each one permanently.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+          <a href="youtube-24-7-radio-streaming-obs-ffmpeg" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-streaming">Streaming</span></div>
+            <h3 class="blog-card-title">YouTube 24/7 Radio Streaming with OBS &amp; FFmpeg</h3>
+            <p class="blog-card-desc">Extend your live DJ shows into a 24/7 visual stream on YouTube or Facebook using OBS Studio and FFmpeg.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo footer-logo" aria-label="RadioTech Studio">
+            <div class="logo-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" stroke="url(#footerGradA)" stroke-width="2"/>
+                <circle cx="20" cy="20" r="8" stroke="url(#footerGradA)" stroke-width="1.5"/>
+                <circle cx="20" cy="20" r="3" fill="url(#footerGradA)"/>
+                <line x1="20" y1="2" x2="20" y2="8" stroke="url(#footerGradA)" stroke-width="2" stroke-linecap="round"/>
+                <defs><linearGradient id="footerGradA" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+              </svg>
+            </div>
+            <div class="logo-text"><span class="logo-brand">RadioTech</span><span class="logo-sub">Studio</span></div>
+          </a>
+          <p>Complete end-to-end solutions for online radio stations, broadcasters, DJs, media companies, and radio hosting businesses worldwide.</p>
+          <div class="footer-badges"><span>🌍 Worldwide</span><span>⚡ Fast Delivery</span><span>🔒 Secure</span></div>
+        </div>
+                <nav class="footer-col" aria-label="Services">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#solutions">Radio Automation</a></li>
+            <li><a href="/#solutions">Cloud Platforms</a></li>
+            <li><a href="/#solutions">Streaming Servers</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/blog/">Knowledge Base</a></li>
+            <li><a href="/#solutions">Hosting Business</a></li>
+            <li><a href="/#pricing">Monthly Support</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Contact">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@radiotechstudio.com">hello@radiotechstudio.com</a></li>
+            <li><a href="https://wa.me/8801718020102" target="_blank" rel="noopener">WhatsApp: +880 1718 020102</a></li>
+            <li><a href="https://www.facebook.com/radiotechstudio/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" style="vertical-align:middle;margin-right:4px"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              Facebook Page
+            </a></li>
+            <li><a href="/#faq">FAQ</a></li>
+            <li><a href="/#about">About Us</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/#contact">Start a Project</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> RadioTech Studio. All rights reserved.</p>
+        <p class="footer-tagline">Built for radio professionals worldwide. · <a href="mailto:hello@radiotechstudio.com">hello@radiotechstudio.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CHAT BUTTONS ===== -->
+  <div class="chat-buttons" aria-label="Chat with us">
+    <a href="https://wa.me/8801718020102?text=Hi%2C%20I%20need%20help%20with%20my%20radio%20setup"
+       class="chat-btn chat-btn--wa"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp"
+       data-tooltip="WhatsApp Us">
+      <span class="pulse-ring" aria-hidden="true"></span>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.528 5.845L0 24l6.335-1.508A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.897 0-3.678-.487-5.227-1.341l-.374-.214-3.762.895.952-3.648-.238-.384A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+    </a>
+    <a href="https://m.me/radiotechstudio"
+       class="chat-btn chat-btn--fb"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Chat on Facebook Messenger"
+       data-tooltip="Message Us">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 0C5.373 0 0 5.04 0 11.267c0 3.455 1.707 6.532 4.375 8.562V24l3.994-2.195c1.068.297 2.2.458 3.374.458C18.627 22.263 24 17.226 24 11.267 24 5.04 18.627 0 12 0zm1.193 15.197l-3.032-3.23-5.924 3.23 6.517-6.92 3.104 3.23 5.85-3.23-6.515 6.92z"/>
+      </svg>
+    </a>
+  </div>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <script src="../../assets/js/i18n.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

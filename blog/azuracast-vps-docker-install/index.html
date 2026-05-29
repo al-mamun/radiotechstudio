@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050914" />
+  <title>Install AzuraCast on Linux VPS with Docker | RadioTech Studio</title>
+  <meta name="description" content="Step-by-step guide to installing AzuraCast on a Linux VPS using Docker. Covers VPS prep, Docker install, SSL, AutoDJ, Liquidsoap, and remote DJ access." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://radiotechstudio.com/blog/azuracast-vps-docker-install/" />
+  <link rel="alternate" hreflang="x-default" href="https://radiotechstudio.com/blog/azuracast-vps-docker-install/" />
+  <link rel="alternate" hreflang="en" href="https://radiotechstudio.com/blog/azuracast-vps-docker-install/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://radiotechstudio.com/blog/azuracast-vps-docker-install/" />
+  <meta property="og:title" content="How to Install AzuraCast on a Linux VPS with Docker (2026 Guide)" />
+  <meta property="og:description" content="Complete step-by-step guide to deploying AzuraCast on any Linux VPS with Docker — SSL, AutoDJ, Liquidsoap, and remote DJ access." />
+  <meta property="og:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
+  <meta property="og:site_name" content="RadioTech Studio" />
+    <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="RadioTech Studio — Radio Setup &amp; Streaming Experts" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Install AzuraCast on a Linux VPS with Docker (2026 Guide)" />
+  <meta name="twitter:description" content="Step-by-step guide to installing AzuraCast on a Linux VPS using Docker. Covers VPS prep, Docker install, SSL, AutoDJ, Liquidsoap, and remote DJ access." />
+  <meta name="twitter:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
+  <meta name="twitter:image:alt" content="RadioTech Studio — Radio Setup &amp; Streaming Experts" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230a0f1e'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%2300d4ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2300d4ff'/%3E%3C/svg%3E" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../../assets/css/blog.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Install AzuraCast on a Linux VPS with Docker (2026 Guide)",
+    "description": "Step-by-step guide to installing AzuraCast on a Linux VPS using Docker, including SSL, AutoDJ, Liquidsoap, and remote DJ access.",
+    "author": {"@type": "Organization", "name": "RadioTech Studio", "url": "https://radiotechstudio.com"},
+    "publisher": {"@type": "Organization", "name": "RadioTech Studio", "url": "https://radiotechstudio.com"},
+    "datePublished": "2026-05-29",
+    "dateModified": "2026-05-29",
+    "url": "https://radiotechstudio.com/blog/azuracast-vps-docker-install",
+    "mainEntityOfPage": "https://radiotechstudio.com/blog/azuracast-vps-docker-install",
+    "image": "https://radiotechstudio.com/assets/images/og-image.png",
+    "inLanguage": "en",
+    "articleSection": "Cloud Radio",
+    "wordCount": 1800,
+    "keywords": "AzuraCast, Docker, Linux VPS, radio setup, streaming server, AutoDJ, Liquidsoap"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://radiotechstudio.com"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://radiotechstudio.com/blog"},
+      {"@type": "ListItem", "position": 3, "name": "Install AzuraCast on Linux VPS with Docker", "item": "https://radiotechstudio.com/blog/azuracast-vps-docker-install"}
+    ]
+  }
+  </script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6FRJEZZ4P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S6FRJEZZ4P');
+  </script>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="RadioTech Studio Home">
+        <div class="logo-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="url(#lg1)" stroke-width="2"/><circle cx="20" cy="20" r="8" stroke="url(#lg1)" stroke-width="1.5"/><circle cx="20" cy="20" r="3" fill="url(#lg1)"/><line x1="20" y1="2" x2="20" y2="8" stroke="url(#lg1)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="lg1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg></div>
+        <div class="logo-text"><span class="logo-brand">RadioTech</span><span class="logo-sub">Studio</span></div>
+      </a>
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <a href="../#solutions" class="nav-link" data-i18n="nav.services">Services</a>
+        <a href="../#platforms" class="nav-link" data-i18n="nav.platforms">Platforms</a>
+        <a href="../#pricing" class="nav-link" data-i18n="nav.pricing">Pricing</a>
+        <a href="../#about" class="nav-link" data-i18n="nav.about">About</a>
+        <a href="/blog/" class="nav-link" data-i18n="nav.blog">Blog</a>
+        <a href="../#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <!-- Language Switcher -->
+      <div class="lang-switcher" role="navigation" aria-label="Language selector">
+        <button class="lang-toggle" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown" aria-label="Current language">
+          <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+          <span class="lang-code">EN</span>
+          <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="lang-dropdown" id="lang-dropdown" role="listbox" hidden aria-label="Select language">
+          <li class="lang-option lang-option--active" role="option" data-lang="en" aria-selected="true" tabindex="0">🇬🇧 English</li>
+          <li class="lang-option" role="option" data-lang="ar" aria-selected="false" tabindex="0">🇸🇦 العربية</li>
+          <li class="lang-option" role="option" data-lang="fr" aria-selected="false" tabindex="0">🇫🇷 Français</li>
+          <li class="lang-option" role="option" data-lang="es" aria-selected="false" tabindex="0">🇪🇸 Español</li>
+          <li class="lang-option" role="option" data-lang="de" aria-selected="false" tabindex="0">🇩🇪 Deutsch</li>
+        </ul>
+      </div>
+
+      <div class="header-actions">
+        <a href="../#contact" class="btn btn-primary header-cta" data-i18n="nav.cta">Start Your Project</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="../#solutions" class="nav-mobile-link" data-i18n="nav.services">Services</a>
+      <a href="../#platforms" class="nav-mobile-link" data-i18n="nav.platforms">Platforms</a>
+      <a href="../#pricing" class="nav-mobile-link" data-i18n="nav.pricing">Pricing</a>
+      <a href="../#about" class="nav-mobile-link" data-i18n="nav.about">About</a>
+      <a href="/blog/" class="nav-mobile-link" data-i18n="nav.blog">Blog</a>
+      <a href="../#contact" class="nav-mobile-link" data-i18n="nav.contact">Contact</a>
+      <a href="../#contact" class="btn btn-primary nav-mobile-cta" data-i18n="nav.cta">Start Your Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="container article-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/" data-i18n="blog.home">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="/blog/" data-i18n="nav.blog">Blog</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current">AzuraCast VPS Docker Install</span>
+        </nav>
+        <div class="article-cat-row">
+          <span class="blog-cat">Cloud Radio</span>
+        </div>
+        <h1 class="article-hero-title">How to Install AzuraCast on a Linux VPS with Docker</h1>
+        <p class="article-hero-desc">The complete step-by-step guide to deploying a fully working AzuraCast instance on any Linux VPS — from a blank server to a live radio station with SSL, AutoDJ, and remote DJ access.</p>
+        <div class="article-meta-row">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> May 29, 2026</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 8 min read</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> RadioTech Studio</span>
+          <a href="live-dj-broadcasting-butt-mixxx-sam-broadcaster" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-streaming">Streaming</span></div>
+            <h3 class="blog-card-title">Live DJ Broadcasting Setup: BUTT, Mixxx &amp; SAM Broadcaster</h3>
+            <p class="blog-card-desc">Step-by-step guide to going live on your station using BUTT, Mixxx, or SAM Broadcaster with AzuraCast or Icecast.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-body-section">
+      <div class="container">
+        <div class="article-layout">
+
+          <!-- Main content -->
+          <article class="article-prose">
+
+            <h2 id="what-is-azuracast">What is AzuraCast and Why Use Docker?</h2>
+            <p>AzuraCast is a free, open-source, self-hosted web radio management suite. It bundles everything a radio station needs — Liquidsoap for automation, Icecast or SHOUTcast for streaming, a built-in web player, AutoDJ, scheduling, listener statistics, and a clean web dashboard — into a single platform you control completely.</p>
+            <p>Docker is the recommended install method because it isolates every AzuraCast component into its own container, making updates, backups, and troubleshooting significantly easier. It also means AzuraCast will run identically whether your VPS uses Ubuntu, Debian, or Rocky Linux.</p>
+            <div class="info-box">
+              <div><strong>Requirements before you start</strong> A Linux VPS with at least 2GB RAM and 20GB disk (4GB RAM recommended for stable 24/7 operation). Ubuntu 22.04 LTS or Debian 12 are the safest choices. Root or sudo access is required.</div>
+            </div>
+
+            <h2 id="prepare-vps">Step 1 — Prepare Your VPS</h2>
+            <p>Connect to your VPS over SSH and run a full system update first. On Ubuntu or Debian:</p>
+            <pre><code>apt update && apt upgrade -y</code></pre>
+            <p>Set your server hostname. Replace <code>radio.yourdomain.com</code> with your actual domain pointing to this VPS:</p>
+            <pre><code>hostnamectl set-hostname radio.yourdomain.com</code></pre>
+            <p>Make sure ports 80, 443, and 8000 (or your chosen streaming port) are open in your VPS firewall. On Ubuntu with UFW:</p>
+            <pre><code>ufw allow 80/tcp
+ufw allow 443/tcp
+ufw allow 8000/tcp
+ufw enable</code></pre>
+
+            <h2 id="install-docker">Step 2 — Install Docker</h2>
+            <p>AzuraCast requires Docker and Docker Compose. The fastest way is using the official Docker convenience script:</p>
+            <pre><code>curl -fsSL https://get.docker.com | sh</code></pre>
+            <p>Verify Docker is running:</p>
+            <pre><code>docker --version
+docker compose version</code></pre>
+            <p>Both commands should return version numbers. If Docker Compose is missing, install it separately:</p>
+            <pre><code>apt install docker-compose-plugin -y</code></pre>
+
+            <h2 id="install-azuracast">Step 3 — Install AzuraCast</h2>
+            <p>Create a dedicated directory for AzuraCast and run the official installer:</p>
+            <pre><code>mkdir -p /var/azuracast
+cd /var/azuracast
+curl -fsSL https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/docker.sh > docker.sh
+chmod a+x docker.sh
+./docker.sh install</code></pre>
+            <p>The installer will ask you a few questions — accept the defaults unless you have specific needs. It will pull all required Docker images and start the containers. This typically takes 5–10 minutes depending on your server speed.</p>
+            <div class="tip-box">
+              <div><strong>Tip:</strong> During install, choose "LetsEncrypt" when asked about SSL. The installer will automatically request and configure a free SSL certificate for your domain — as long as your domain's DNS A record is already pointing to your VPS IP.</div>
+            </div>
+
+            <h2 id="initial-setup">Step 4 — Initial Web Setup</h2>
+            <p>Once installation finishes, open a browser and navigate to <code>https://radio.yourdomain.com</code>. You will see the AzuraCast setup wizard. Create your administrator account, set up your first radio station, and configure your station's name, description, and genre.</p>
+            <p>At the "Broadcasting" step, choose between Icecast (recommended for most stations) or SHOUTcast. Set your bitrate — 128kbps MP3 is the standard for quality streaming with reasonable bandwidth use.</p>
+
+            <div class="article-inline-cta">
+              <div class="article-inline-cta-text">
+                <h3>Need this set up for you?</h3>
+                <p>We deploy AzuraCast on VPS daily — including Docker, SSL, AutoDJ, and remote DJ access. Usually done same day.</p>
+              </div>
+              <a href="../#contact" class="btn btn-primary">Get It Done For Me →</a>
+            </div>
+
+            <h2 id="autodj-liquidsoap">Step 5 — Configure AutoDJ and Liquidsoap</h2>
+            <p>AzuraCast uses Liquidsoap as its AutoDJ engine. To configure it, go to your station → <strong>Media</strong> and upload your music files. Then go to <strong>Playlists</strong> and create a playlist. Assign tracks to it and set the rotation type — General Rotation plays randomly with weights, Scheduled plays only during specific time blocks.</p>
+            <p>For jingles, create a separate playlist and set it to "Once per X Songs" under the Advanced Playlist settings. This ensures jingles fire automatically between tracks at the interval you specify.</p>
+            <p>Enable AutoDJ under <strong>Station → Profile → Edit</strong> and make sure "Enable AutoDJ" is checked. Save and restart the station — your radio should now be broadcasting automatically.</p>
+
+            <h2 id="remote-dj">Step 6 — Set Up Remote DJ Access</h2>
+            <p>To allow live DJs to broadcast into your station, go to <strong>Station → Streamers / DJs</strong> and create a DJ account. Give it a username and password. The DJ will connect using broadcasting software like BUTT, Mixxx, or SAM Broadcaster using these settings:</p>
+            <ul>
+              <li>Host: <code>radio.yourdomain.com</code></li>
+              <li>Port: <code>8000</code> (or your configured port)</li>
+              <li>Mount: <code>/live</code></li>
+              <li>Username and password from the DJ account</li>
+            </ul>
+            <p>When a DJ connects, AzuraCast automatically switches from AutoDJ to the live source and switches back when the DJ disconnects.</p>
+
+            <h2 id="updates-backups">Step 7 — Updates and Backups</h2>
+            <p>To update AzuraCast in the future, run:</p>
+            <pre><code>cd /var/azuracast && ./docker.sh update</code></pre>
+            <p>For backups, AzuraCast has a built-in backup system under <strong>Administration → Backups</strong>. You can schedule automatic backups and download them, or configure them to upload directly to cloud storage. Always keep a backup before any major update.</p>
+            <div class="warn-box">
+              <div><strong>Common mistake:</strong> Never update AzuraCast while a live DJ is broadcasting. Always schedule updates during low-listener hours and notify your DJs beforehand. The update process restarts all containers briefly.</div>
+            </div>
+
+            <h2 id="troubleshooting">Common Issues and Fixes</h2>
+            <p><strong>SSL certificate not working:</strong> Make sure your domain's DNS is fully propagated before running the installer. Use <code>dig radio.yourdomain.com</code> to confirm the A record points to your VPS IP.</p>
+            <p><strong>Stream not playing in the web player:</strong> Check that port 8000 is open in your firewall and that your browser isn't blocking mixed content. HTTPS player requires HTTPS stream — ensure SSL is correctly configured.</p>
+            <p><strong>AutoDJ playing silence:</strong> This almost always means your music library hasn't been fully processed yet. Go to Media → run "Process All" and wait for the analysis to complete before testing.</p>
+            <p><strong>Containers not starting after reboot:</strong> Run <code>cd /var/azuracast && docker compose up -d</code> to restart all containers manually. To make this automatic, ensure Docker is enabled as a system service: <code>systemctl enable docker</code>.</p>
+
+          </article>
+
+          <!-- Sidebar -->
+          <aside>
+            <nav class="article-toc" aria-label="Table of contents">
+              <p class="article-toc-title">In This Guide</p>
+              <ul class="toc-list">
+                <li><a href="/#what-is-azuracast">What is AzuraCast?</a></li>
+                <li><a href="/#prepare-vps">1. Prepare Your VPS</a></li>
+                <li><a href="/#install-docker">2. Install Docker</a></li>
+                <li><a href="/#install-azuracast">3. Install AzuraCast</a></li>
+                <li><a href="/#initial-setup">4. Initial Web Setup</a></li>
+                <li><a href="/#autodj-liquidsoap">5. AutoDJ & Liquidsoap</a></li>
+                <li><a href="/#remote-dj">6. Remote DJ Access</a></li>
+                <li><a href="/#updates-backups">7. Updates & Backups</a></li>
+                <li><a href="/#troubleshooting">Troubleshooting</a></li>
+              </ul>
+            </nav>
+            <div class="article-cta-box">
+              <span class="cta-icon">📡</span>
+              <h4>Need AzuraCast Set Up Professionally?</h4>
+              <p>We handle the full deployment — VPS prep, Docker, SSL, AutoDJ, DJ access, and monitoring. Done same day.</p>
+              <a href="../#contact" class="btn btn-primary">Start Your Project</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related articles -->
+    <section class="related-section">
+      <div class="container">
+        <span class="section-tag" data-i18n="blog.keep_reading">Keep Reading</span>
+        <div class="related-grid">
+          <a href="icecast-vs-shoutcast" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-streaming">Streaming</span></div>
+            <h3 class="blog-card-title">Icecast vs Shoutcast: Which Should You Use?</h3>
+            <p class="blog-card-desc">A clear comparison to help you pick the right streaming server for your station.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+          <a href="fix-radio-metadata-now-playing" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-troubleshoot">Troubleshooting</span></div>
+            <h3 class="blog-card-title">Radio Metadata Not Showing? How to Fix It</h3>
+            <p class="blog-card-desc">Diagnose and fix now-playing metadata across every layer of your radio stack.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+          <a href="fix-radio-stream-disconnecting" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-troubleshoot">Troubleshooting</span></div>
+            <h3 class="blog-card-title">Radio Stream Keeps Disconnecting?</h3>
+            <p class="blog-card-desc">The most common causes of stream drops and how to fix them permanently.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+          <a href="live-dj-broadcasting-butt-mixxx-sam-broadcaster" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-streaming">Streaming</span></div>
+            <h3 class="blog-card-title">Live DJ Broadcasting: BUTT, Mixxx &amp; SAM Broadcaster</h3>
+            <p class="blog-card-desc">Once AzuraCast is running, go live as a DJ — configure BUTT, Mixxx, or SAM Broadcaster to stream directly to your station.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo footer-logo" aria-label="RadioTech Studio">
+            <div class="logo-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" stroke="url(#footerGradA)" stroke-width="2"/>
+                <circle cx="20" cy="20" r="8" stroke="url(#footerGradA)" stroke-width="1.5"/>
+                <circle cx="20" cy="20" r="3" fill="url(#footerGradA)"/>
+                <line x1="20" y1="2" x2="20" y2="8" stroke="url(#footerGradA)" stroke-width="2" stroke-linecap="round"/>
+                <defs><linearGradient id="footerGradA" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+              </svg>
+            </div>
+            <div class="logo-text"><span class="logo-brand">RadioTech</span><span class="logo-sub">Studio</span></div>
+          </a>
+          <p>Complete end-to-end solutions for online radio stations, broadcasters, DJs, media companies, and radio hosting businesses worldwide.</p>
+          <div class="footer-badges"><span>🌍 Worldwide</span><span>⚡ Fast Delivery</span><span>🔒 Secure</span></div>
+        </div>
+                <nav class="footer-col" aria-label="Services">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#solutions">Radio Automation</a></li>
+            <li><a href="/#solutions">Cloud Platforms</a></li>
+            <li><a href="/#solutions">Streaming Servers</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/blog/">Knowledge Base</a></li>
+            <li><a href="/#solutions">Hosting Business</a></li>
+            <li><a href="/#pricing">Monthly Support</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Contact">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@radiotechstudio.com">hello@radiotechstudio.com</a></li>
+            <li><a href="https://wa.me/8801718020102" target="_blank" rel="noopener">WhatsApp: +880 1718 020102</a></li>
+            <li><a href="https://www.facebook.com/radiotechstudio/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" style="vertical-align:middle;margin-right:4px"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              Facebook Page
+            </a></li>
+            <li><a href="/#faq">FAQ</a></li>
+            <li><a href="/#about">About Us</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/#contact">Start a Project</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> RadioTech Studio. All rights reserved.</p>
+        <p class="footer-tagline">Built for radio professionals worldwide. · <a href="mailto:hello@radiotechstudio.com">hello@radiotechstudio.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CHAT BUTTONS ===== -->
+  <div class="chat-buttons" aria-label="Chat with us">
+    <a href="https://wa.me/8801718020102?text=Hi%2C%20I%20need%20help%20with%20my%20radio%20setup"
+       class="chat-btn chat-btn--wa"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp"
+       data-tooltip="WhatsApp Us">
+      <span class="pulse-ring" aria-hidden="true"></span>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.528 5.845L0 24l6.335-1.508A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.897 0-3.678-.487-5.227-1.341l-.374-.214-3.762.895.952-3.648-.238-.384A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+    </a>
+    <a href="https://m.me/radiotechstudio"
+       class="chat-btn chat-btn--fb"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Chat on Facebook Messenger"
+       data-tooltip="Message Us">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 0C5.373 0 0 5.04 0 11.267c0 3.455 1.707 6.532 4.375 8.562V24l3.994-2.195c1.068.297 2.2.458 3.374.458C18.627 22.263 24 17.226 24 11.267 24 5.04 18.627 0 12 0zm1.193 15.197l-3.032-3.23-5.924 3.23 6.517-6.92 3.104 3.23 5.85-3.23-6.515 6.92z"/>
+      </svg>
+    </a>
+  </div>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <script src="../../assets/js/i18n.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050914" />
+  <title>RadioDJ Setup: Installation &amp; Rotation Rules | RadioTech Studio</title>
+  <meta name="description" content="From fresh install to live broadcast — set up RadioDJ with database configuration, rotation rules, jingle scheduling, and encoder setup." />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://radiotechstudio.com/blog/radiodj-complete-setup-guide/" />
+  <link rel="alternate" hreflang="x-default" href="https://radiotechstudio.com/blog/radiodj-complete-setup-guide/" />
+  <link rel="alternate" hreflang="en" href="https://radiotechstudio.com/blog/radiodj-complete-setup-guide/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://radiotechstudio.com/blog/radiodj-complete-setup-guide/" />
+  <meta property="og:title" content="RadioDJ Complete Setup Guide: Installation, Database & Rotation Rules" />
+  <meta property="og:description" content="From fresh install to live broadcast — set up RadioDJ with database configuration, rotation rules, jingle scheduling, and encoder setup." />
+  <meta property="og:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
+  <meta property="og:site_name" content="RadioTech Studio" />
+    <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="RadioTech Studio — Radio Setup &amp; Streaming Experts" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RadioDJ Complete Setup Guide: Installation, Database & Rotation Rules" />
+  <meta name="twitter:description" content="From fresh install to live broadcast — how to set up RadioDJ including database configuration, music categories, rotation rules, jingle scheduling, and encoder " />
+  <meta name="twitter:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
+  <meta name="twitter:image:alt" content="RadioTech Studio — Radio Setup &amp; Streaming Experts" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230a0f1e'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%2300d4ff' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2300d4ff'/%3E%3C/svg%3E" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../../assets/css/blog.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "RadioDJ Complete Setup Guide: Installation, Database & Rotation Rules",
+    "description": "From fresh install to live broadcast — how to set up RadioDJ including database configuration, music categories, rotation rules, jingle scheduling, and encoder setup.",
+    "author": {"@type": "Organization", "name": "RadioTech Studio", "url": "https://radiotechstudio.com"},
+    "publisher": {"@type": "Organization", "name": "RadioTech Studio", "url": "https://radiotechstudio.com"},
+    "datePublished": "2026-05-29",
+    "dateModified": "2026-05-29",
+    "url": "https://radiotechstudio.com/blog/radiodj-complete-setup-guide",
+    "mainEntityOfPage": "https://radiotechstudio.com/blog/radiodj-complete-setup-guide",
+    "image": "https://radiotechstudio.com/assets/images/og-image.png",
+    "inLanguage": "en",
+    "articleSection": "Automation",
+    "wordCount": 1800,
+    "keywords": "RadioDJ setup, RadioDJ installation, radio automation, RadioDJ database, rotation rules"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://radiotechstudio.com"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://radiotechstudio.com/blog"},
+      {"@type": "ListItem", "position": 3, "name": "RadioDJ Setup Guide: Installation & Rotation", "item": "https://radiotechstudio.com/blog/radiodj-complete-setup-guide"}
+    ]
+  }
+  </script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6FRJEZZ4P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S6FRJEZZ4P');
+  </script>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="/" class="logo" aria-label="RadioTech Studio Home">
+        <div class="logo-icon"><svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="url(#lg1)" stroke-width="2"/><circle cx="20" cy="20" r="8" stroke="url(#lg1)" stroke-width="1.5"/><circle cx="20" cy="20" r="3" fill="url(#lg1)"/><line x1="20" y1="2" x2="20" y2="8" stroke="url(#lg1)" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="lg1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs></svg></div>
+        <div class="logo-text"><span class="logo-brand">RadioTech</span><span class="logo-sub">Studio</span></div>
+      </a>
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <a href="../#solutions" class="nav-link" data-i18n="nav.services">Services</a>
+        <a href="../#platforms" class="nav-link" data-i18n="nav.platforms">Platforms</a>
+        <a href="../#pricing" class="nav-link" data-i18n="nav.pricing">Pricing</a>
+        <a href="../#about" class="nav-link" data-i18n="nav.about">About</a>
+        <a href="/blog/" class="nav-link" data-i18n="nav.blog">Blog</a>
+        <a href="../#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <!-- Language Switcher -->
+      <div class="lang-switcher" role="navigation" aria-label="Language selector">
+        <button class="lang-toggle" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown" aria-label="Current language">
+          <span class="lang-flag" aria-hidden="true">🇬🇧</span>
+          <span class="lang-code">EN</span>
+          <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <ul class="lang-dropdown" id="lang-dropdown" role="listbox" hidden aria-label="Select language">
+          <li class="lang-option lang-option--active" role="option" data-lang="en" aria-selected="true" tabindex="0">🇬🇧 English</li>
+          <li class="lang-option" role="option" data-lang="ar" aria-selected="false" tabindex="0">🇸🇦 العربية</li>
+          <li class="lang-option" role="option" data-lang="fr" aria-selected="false" tabindex="0">🇫🇷 Français</li>
+          <li class="lang-option" role="option" data-lang="es" aria-selected="false" tabindex="0">🇪🇸 Español</li>
+          <li class="lang-option" role="option" data-lang="de" aria-selected="false" tabindex="0">🇩🇪 Deutsch</li>
+        </ul>
+      </div>
+
+      <div class="header-actions">
+        <a href="../#contact" class="btn btn-primary header-cta" data-i18n="nav.cta">Start Your Project</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="../#solutions" class="nav-mobile-link" data-i18n="nav.services">Services</a>
+      <a href="../#platforms" class="nav-mobile-link" data-i18n="nav.platforms">Platforms</a>
+      <a href="../#pricing" class="nav-mobile-link" data-i18n="nav.pricing">Pricing</a>
+      <a href="../#about" class="nav-mobile-link" data-i18n="nav.about">About</a>
+      <a href="/blog/" class="nav-mobile-link" data-i18n="nav.blog">Blog</a>
+      <a href="../#contact" class="nav-mobile-link" data-i18n="nav.contact">Contact</a>
+      <a href="../#contact" class="btn btn-primary nav-mobile-cta" data-i18n="nav.cta">Start Your Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <div class="container article-hero-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/" data-i18n="blog.home">Home</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <a href="/blog/" data-i18n="nav.blog">Blog</a>
+          <span class="breadcrumb-sep" aria-hidden="true">›</span>
+          <span class="breadcrumb-current">RadioDJ Setup Guide</span>
+        </nav>
+        <div class="article-cat-row">
+          <span class="blog-cat cat-automation">Automation</span>
+        </div>
+        <h1 class="article-hero-title">RadioDJ Complete Setup Guide: Installation, Database &amp; Rotation Rules</h1>
+        <p class="article-hero-desc">From fresh install to live broadcast — how to set up RadioDJ including database configuration, music categories, rotation rules, jingle scheduling, and encoder setup.</p>
+        <div class="article-meta-row">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> May 29, 2026</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 8 min read</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4"/><circle cx="12" cy="7" r="4"/></svg> RadioTech Studio</span>
+          <a href="live-dj-broadcasting-butt-mixxx-sam-broadcaster" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-streaming">Streaming</span></div>
+            <h3 class="blog-card-title">Live DJ Broadcasting Setup: BUTT, Mixxx &amp; SAM Broadcaster</h3>
+            <p class="blog-card-desc">Once RadioDJ is running, go live with BUTT or SAM Broadcaster — configure your encoder and stream to Icecast or Shoutcast.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-body-section">
+      <div class="container">
+        <div class="article-layout">
+
+          <article class="article-prose">
+
+            <h2 id="why-radiodj">Why RadioDJ? Features and Use Cases</h2>
+            <p>RadioDJ is a free Windows-based radio automation platform that punches significantly above its price point. Despite being freeware, it delivers features that match or exceed paid competitors: a full music scheduler, category rotation engine, jingle scheduler, crossfade and overlap settings, timed events, encoder integration, and a plugin system for extending functionality.</p>
+            <p>RadioDJ is particularly well-suited for small to medium internet radio stations that don't need an enterprise solution but do need something more robust than manually managing playlists. Its database-driven approach — all track metadata and rotation history stored in MySQL — makes it resilient and scalable for libraries up to tens of thousands of tracks.</p>
+            <div class="info-box">
+              <div><strong>System requirements:</strong> Windows 7 or later (Windows 10/11 recommended), .NET Framework 4.8, 2GB RAM minimum (4GB recommended for large libraries), and MySQL 5.7+ or MariaDB 10.x. RadioDJ is not available for Linux or macOS natively — Linux users should consider AzuraCast/Liquidsoap instead.</div>
+            </div>
+
+            <h2 id="install">Installation and First Launch</h2>
+            <p>Download the latest RadioDJ installer from radiodj.ro. Run the installer as administrator. RadioDJ does not install as a Windows service by default — it runs as a regular desktop application. For unattended 24/7 operation, you'll need to configure Windows to auto-login and launch RadioDJ at startup.</p>
+            <p>On first launch, RadioDJ will prompt you to configure a database connection. Do not skip this step. RadioDJ requires a database to store its music library — without it, the software cannot function. You have two options: MySQL (recommended) or the embedded H2 database (acceptable for small setups but not recommended for libraries over 5,000 tracks).</p>
+            <p>Create a Windows Task Scheduler entry to launch RadioDJ at system startup: open Task Scheduler → Create Basic Task → name it "RadioDJ Autostart" → Trigger: When computer starts → Action: Start a program → point it to the RadioDJ executable. Check "Run only when user is logged on" and configure Windows to auto-login so the station keeps running after a reboot.</p>
+
+            <h2 id="database">Database Configuration (MySQL vs Embedded)</h2>
+            <p>For any serious station, use MySQL or MariaDB. The embedded H2 database is fragile — it doesn't handle concurrent access well and tends to corrupt after unexpected shutdowns. MySQL is free, stable, and easily installable on Windows via XAMPP or the official MySQL installer.</p>
+            <p>Install MySQL or XAMPP. Open MySQL Workbench or phpMyAdmin and create a new database and user for RadioDJ:</p>
+            <pre><code>CREATE DATABASE radiodj CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE USER 'radiodj'@'localhost' IDENTIFIED BY 'strongpassword';
+GRANT ALL PRIVILEGES ON radiodj.* TO 'radiodj'@'localhost';
+FLUSH PRIVILEGES;</code></pre>
+            <p>In RadioDJ's database configuration screen, enter: Host = localhost, Port = 3306, Database = radiodj, Username = radiodj, Password = your password. Click "Test Connection" — it should confirm success. RadioDJ will then create all required tables automatically on first connection.</p>
+            <div class="tip-box">
+              <div><strong>UTF-8 charset matters:</strong> The <code>utf8mb4</code> charset in the CREATE DATABASE statement is important. If you use the default <code>latin1</code>, tracks with international characters (accented letters, non-Latin scripts) will have corrupted artist and title fields in the library. This causes metadata display issues downstream.</div>
+            </div>
+
+            <h2 id="categories">Setting Up Music Categories</h2>
+            <p>Categories are the foundation of RadioDJ's rotation system. Every track in your library must be assigned to a category, and the category settings control how and how often tracks from that group are played. Think of categories as buckets — Top 40 Hits, Classic Rock, Current Hits, Slow Songs, Jingles, Station IDs, etc.</p>
+            <p>Go to <strong>Settings → Categories</strong> and create your first categories. For each category, configure:</p>
+            <p><strong>Minimum time between track repeats:</strong> How many hours must pass before the same track can play again. For a large current hits category, 3–4 hours is standard. For a small jingle category, set this to 0 or 1.</p>
+            <p><strong>Maximum tracks per hour:</strong> How many tracks from this category can play in a single hour. Useful for limiting how often any single category dominates the hour.</p>
+            <p><strong>Use in rotation:</strong> Check this for all main music categories. Uncheck it for categories you want to control manually (e.g., a special event category).</p>
+            <p>After creating categories, import your music: <strong>Library → Add Tracks → Browse</strong> to your music folder. RadioDJ scans all MP3 files, reads their ID3 tags, and imports them into the database. Mass-assign newly imported tracks to categories via <strong>Library → Assign Category</strong> with filters.</p>
+
+            <h2 id="rotation">Configuring Rotation Rules</h2>
+            <p>RadioDJ uses a "Clock" system to define what plays in each hour. A clock is a template that specifies the sequence of category slots for one hour — for example: Slot 1 (Current Hits), Slot 2 (Current Hits), Slot 3 (Classic Hits), Slot 4 (Station ID), Slot 5 (Current Hits), etc. The clock repeats every hour unless overridden by a scheduled event.</p>
+            <p>Go to <strong>Settings → Clocks</strong> and create a clock. Add slots in the order you want them to play. Each slot specifies a category — RadioDJ picks the best eligible track from that category based on your minimum repeat rules. You can add multiple clocks for different day parts (Morning Show, Afternoon Drive, Overnight).</p>
+            <p>Assign clocks to hours in the weekly schedule grid: <strong>Settings → Schedule</strong>. Click each cell (day + hour) and assign the appropriate clock. You can assign the same clock to multiple cells at once by drag-selecting. At minimum, fill the entire grid with your default clock — any uncovered hour will fall back to sequential playback, which ignores rotation rules.</p>
+            <p>Test your rotation by running RadioDJ for a few minutes and watching the Now Playing area. Check that: the same track doesn't repeat within your minimum repeat window, categories rotate in the sequence you defined in the clock, and no hour runs out of eligible tracks (watch for "No eligible track" errors in the log).</p>
+
+            <h2 id="jingles">Scheduling Jingles and Station IDs</h2>
+            <p>RadioDJ handles jingles through its category and clock system. Create separate categories for each type of audio ID you use: Station ID (short "You're listening to..." clips), Sweepers (longer bumper audio), Time announcements, etc.</p>
+            <p>Add jingle slots to your clock at the positions you want them to fire — typically between music tracks. For a jingle every 3 songs, add one jingle slot after every 3 music slots in your clock template. RadioDJ will pick a different jingle each time based on the category's rotation rules.</p>
+            <p>For more precise jingle control, use the <strong>Timed Events</strong> feature: <strong>Settings → Timed Events</strong>. Create an event that fires at a specific time (e.g., top of every hour) and plays a specific track or category. This is ideal for mandatory hourly station IDs or time-sensitive announcements. Set the event's "Interrupt" setting to determine whether it interrupts the current track or waits for it to finish.</p>
+            <div class="warn-box">
+              <div><strong>Common jingle mistake:</strong> Importing jingles into the same category as music. Always give jingles their own dedicated category. If jingles are mixed with music, the rotation engine treats them the same as songs — they'll appear at random in the rotation rather than at controlled intervals, and the minimum repeat rules will be applied to them the same as full tracks.</div>
+            </div>
+
+            <div class="article-inline-cta">
+              <div class="article-inline-cta-text">
+                <h3>Need this fixed by an expert?</h3>
+                <p>RadioTech Studio diagnoses and fixes radio issues fast — usually same day. Send us your details.</p>
+              </div>
+              <a href="../#contact" class="btn btn-primary" data-i18n="nav.cta">Get Help Now →</a>
+            </div>
+
+            <h2 id="encoder">Encoder Setup: Streaming to Icecast/Shoutcast</h2>
+            <p>RadioDJ has a built-in encoder system that sends your broadcast directly to an Icecast or Shoutcast server. Go to <strong>Settings → Encoders</strong> and click Add to create a new encoder.</p>
+            <p>For Icecast, configure:</p>
+            <pre><code>Server Type: Icecast
+Server: your-server-ip-or-hostname
+Port: 8000
+Mount Point: /stream
+Username: source
+Password: your-source-password
+Bitrate: 128 (or your chosen rate)
+Format: MP3
+Metadata: enabled, format "%artist% - %title%"</code></pre>
+            <p>For Shoutcast DNAS 2, change Server Type to Shoutcast and use the SID (stream ID) instead of a mount point. The password format for Shoutcast v2 is <code>your-password:streamid</code> — for example, <code>hackme:1</code> for stream 1.</p>
+            <p>Click "Test" to verify the connection. If the test fails, check: firewall rules on the server (port 8000 must be open), correct source password (not admin password), and whether the mount point exists in Icecast's config. Enable "Auto-reconnect" so RadioDJ reconnects automatically if the connection drops.</p>
+            <p>You can configure multiple encoders — for example, one 128kbps MP3 and one 64kbps AAC — to serve different listener needs simultaneously. Each encoder requires a separate mount point on the Icecast server.</p>
+
+            <h2 id="tips">Pro Tips for Stable Operation</h2>
+            <p><strong>Set RadioDJ to high process priority.</strong> In Windows Task Manager, right-click the RadioDJ process → Set Priority → High. This prevents Windows from throttling RadioDJ when other applications compete for CPU, which can cause audio stuttering or missed crossfades.</p>
+            <p><strong>Disable Windows Update automatic restarts</strong> while RadioDJ is running. Configure Windows Update to "Notify to schedule restart" rather than restarting automatically. An unplanned reboot during a live broadcast is preventable.</p>
+            <p><strong>Back up your RadioDJ database regularly.</strong> The entire station setup — tracks, categories, clocks, rotation history — lives in MySQL. A database backup is a few MB and takes seconds. Schedule a daily mysqldump to a backup folder and copy it offsite weekly.</p>
+            <pre><code>mysqldump -u radiodj -p radiodj &gt; C:\backup\radiodj_%date%.sql</code></pre>
+            <p><strong>Monitor disk space.</strong> RadioDJ writes detailed logs — these grow over time. Check the RadioDJ logs folder periodically and archive or delete old logs. Running out of disk space causes RadioDJ to fail silently on log writes, which can obscure the real error when something else goes wrong.</p>
+            <p><strong>Use a dedicated machine or VM for RadioDJ.</strong> Running RadioDJ on a general-purpose workstation alongside a web browser, office software, and other tools increases the risk of interference. A dedicated low-power PC (or a Windows VM on a server) provides a stable, controlled environment with no competing processes.</p>
+
+          </article>
+
+          <aside>
+            <nav class="article-toc" aria-label="Table of contents">
+              <p class="article-toc-title">In This Guide</p>
+              <ul class="toc-list">
+                <li><a href="/#why-radiodj">Why RadioDJ?</a></li>
+                <li><a href="/#install">Installation</a></li>
+                <li><a href="/#database">Database Config</a></li>
+                <li><a href="/#categories">Music Categories</a></li>
+                <li><a href="/#rotation">Rotation Rules</a></li>
+                <li><a href="/#jingles">Jingles & Station IDs</a></li>
+                <li><a href="/#encoder">Encoder Setup</a></li>
+                <li><a href="/#tips">Pro Tips</a></li>
+              </ul>
+            </nav>
+            <div class="article-cta-box">
+              <span class="cta-icon">🔧</span>
+              <h4>Need Professional Help?</h4>
+              <p>RadioTech Studio fixes and builds radio systems worldwide. Fast, reliable, no jargon.</p>
+              <a href="../#contact" class="btn btn-primary">Start Your Project</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-section">
+      <div class="container">
+        <span class="section-tag" data-i18n="blog.keep_reading">Keep Reading</span>
+        <div class="related-grid">
+          <a href="radioboss-scheduler-fix" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-troubleshoot">Troubleshooting</span></div>
+            <h3 class="blog-card-title">RadioBOSS Scheduler Not Working? 7 Fixes</h3>
+            <p class="blog-card-desc">The 7 most common RadioBOSS scheduler problems and exactly how to fix them.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+          <a href="fix-radio-metadata-now-playing" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-troubleshoot">Troubleshooting</span></div>
+            <h3 class="blog-card-title">Radio Metadata Not Showing? How to Fix Now-Playing</h3>
+            <p class="blog-card-desc">Diagnose and fix now-playing metadata across every layer of your radio stack.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+          <a href="azuracast-vps-docker-install" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat">Cloud Radio</span></div>
+            <h3 class="blog-card-title">How to Install AzuraCast on a Linux VPS with Docker</h3>
+            <p class="blog-card-desc">Complete step-by-step guide to deploying AzuraCast — from blank server to live radio with SSL and AutoDJ.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+          <a href="live-dj-broadcasting-butt-mixxx-sam-broadcaster" class="blog-card">
+            <div class="blog-card-meta"><span class="blog-cat cat-streaming">Streaming</span></div>
+            <h3 class="blog-card-title">Live DJ Broadcasting: BUTT, Mixxx &amp; SAM Broadcaster</h3>
+            <p class="blog-card-desc">Once RadioDJ is running, go live with BUTT or SAM Broadcaster — connect your encoder and stream to Icecast or Shoutcast.</p>
+            <div class="blog-card-footer"><span class="blog-card-link">Read →</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo footer-logo" aria-label="RadioTech Studio">
+            <div class="logo-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20" cy="20" r="18" stroke="url(#footerGradA)" stroke-width="2"/>
+                <circle cx="20" cy="20" r="8" stroke="url(#footerGradA)" stroke-width="1.5"/>
+                <circle cx="20" cy="20" r="3" fill="url(#footerGradA)"/>
+                <line x1="20" y1="2" x2="20" y2="8" stroke="url(#footerGradA)" stroke-width="2" stroke-linecap="round"/>
+                <defs><linearGradient id="footerGradA" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+              </svg>
+            </div>
+            <div class="logo-text"><span class="logo-brand">RadioTech</span><span class="logo-sub">Studio</span></div>
+          </a>
+          <p>Complete end-to-end solutions for online radio stations, broadcasters, DJs, media companies, and radio hosting businesses worldwide.</p>
+          <div class="footer-badges"><span>🌍 Worldwide</span><span>⚡ Fast Delivery</span><span>🔒 Secure</span></div>
+        </div>
+                <nav class="footer-col" aria-label="Services">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#solutions">Radio Automation</a></li>
+            <li><a href="/#solutions">Cloud Platforms</a></li>
+            <li><a href="/#solutions">Streaming Servers</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/blog/">Knowledge Base</a></li>
+            <li><a href="/#solutions">Hosting Business</a></li>
+            <li><a href="/#pricing">Monthly Support</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Contact">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@radiotechstudio.com">hello@radiotechstudio.com</a></li>
+            <li><a href="https://wa.me/8801718020102" target="_blank" rel="noopener">WhatsApp: +880 1718 020102</a></li>
+            <li><a href="https://www.facebook.com/radiotechstudio/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true" style="vertical-align:middle;margin-right:4px"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              Facebook Page
+            </a></li>
+            <li><a href="/#faq">FAQ</a></li>
+            <li><a href="/#about">About Us</a></li>
+            <li><a href="/#pricing">Pricing</a></li>
+            <li><a href="/#contact">Start a Project</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> RadioTech Studio. All rights reserved.</p>
+        <p class="footer-tagline">Built for radio professionals worldwide. · <a href="mailto:hello@radiotechstudio.com">hello@radiotechstudio.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== CHAT BUTTONS ===== -->
+  <div class="chat-buttons" aria-label="Chat with us">
+    <a href="https://wa.me/8801718020102?text=Hi%2C%20I%20need%20help%20with%20my%20radio%20setup"
+       class="chat-btn chat-btn--wa"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp"
+       data-tooltip="WhatsApp Us">
+      <span class="pulse-ring" aria-hidden="true"></span>
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.528 5.845L0 24l6.335-1.508A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.897 0-3.678-.487-5.227-1.341l-.374-.214-3.762.895.952-3.648-.238-.384A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+      </svg>
+    </a>
+    <a href="https://m.me/radiotechstudio"
+       class="chat-btn chat-btn--fb"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Chat on Facebook Messenger"
+       data-tooltip="Message Us">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 0C5.373 0 0 5.04 0 11.267c0 3.455 1.707 6.532 4.375 8.562V24l3.994-2.195c1.068.297 2.2.458 3.374.458C18.627 22.263 24 17.226 24 11.267 24 5.04 18.627 0 12 0zm1.193 15.197l-3.032-3.23-5.924 3.23 6.517-6.92 3.104 3.23 5.85-3.23-6.515 6.92z"/>
+      </svg>
+    </a>
+  </div>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <script src="../../assets/js/i18n.js"></script>
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>
