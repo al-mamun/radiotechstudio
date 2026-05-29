@@ -2,6 +2,33 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
+<style>
+:root{--clr-bg:#050914;--clr-bg-2:#080e1e;--clr-bg-card:rgba(10,18,38,.8);--clr-border:rgba(0,212,255,.12);--clr-blue:#00d4ff;--clr-violet:#7c3aed;--clr-text:#e2e8f0;--clr-text-muted:#94a3b8;--grad-primary:linear-gradient(135deg,#00d4ff 0%,#7c3aed 100%);--font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--font-display:'Space Grotesk','Inter',sans-serif;--fs-sm:.875rem;--fs-base:1rem;--fs-md:1.125rem;--fs-xl:1.5rem;--radius-md:12px;--radius-lg:18px;--radius-full:9999px;--transition-base:.3s ease;--header-h:70px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-sans);background-color:var(--clr-bg);color:var(--clr-text);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+ul,ol{list-style:none}
+.container{width:100%;max-width:1280px;margin:0 auto;padding:0 1.5rem}
+.header{position:fixed;top:0;left:0;right:0;width:100%;z-index:1000;height:var(--header-h);display:flex;align-items:center;transition:all .3s ease}
+.header-inner{display:flex;align-items:center;justify-content:space-between;width:100%;height:var(--header-h)}
+.logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.logo-icon{width:40px;height:40px;flex-shrink:0}
+.logo-brand{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;display:block}
+.logo-sub{font-size:.7rem;color:var(--clr-blue);letter-spacing:.08em;text-transform:uppercase;display:block}
+.skip-link{position:absolute;top:-100%;left:1rem;background:var(--clr-blue);color:#000;padding:.5rem 1rem;border-radius:0 0 8px 8px;font-weight:600;z-index:9999}
+.skip-link:focus{top:0}
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:var(--header-h)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-sans);font-size:var(--fs-sm);font-weight:600;padding:.7em 1.5em;border-radius:var(--radius-md);border:1.5px solid transparent;transition:all var(--transition-base);cursor:pointer;text-decoration:none;white-space:nowrap;position:relative;overflow:hidden}
+.btn-primary{background:var(--grad-primary);color:#fff;box-shadow:0 4px 20px rgba(0,212,255,.25)}
+.btn-outline{background:transparent;color:var(--clr-blue);border-color:rgba(0,212,255,.4)}
+.bg-wrap{position:fixed;inset:0;z-index:-1;background:var(--clr-bg)}
+[data-aos]{opacity:0;transition:opacity .7s ease,transform .7s ease}
+[data-aos="fade-up"]{transform:translateY(30px)}
+[data-aos].aos-animate{opacity:1;transform:none}
+</style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="theme-color" content="#050914" />
@@ -50,8 +77,10 @@
   <link rel="preload" href="assets/js/i18n.js" as="script" />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="assets/css/style.css" /></noscript>
+  <link rel="preload" href="assets/css/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="assets/css/responsive.css" /></noscript>
 
   <!-- Schema: WebSite -->
   <script type="application/ld+json">
@@ -198,9 +227,7 @@
     ]
   }
   </script>
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6FRJEZZ4P"></script>
-  <script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -1690,5 +1717,24 @@
 
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <!-- Google Analytics 4 --><!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6FRJEZZ4P"></script>
+
+
+  <!-- Facebook Pixel --><!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2148571879254112');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2148571879254112&ev=PageView&noscript=1" alt=""
+  /></noscript>
+
 </body>
 </html>
