@@ -1,0 +1,31 @@
+# RadioTech Studio
+> Complete online radio setup, automation, streaming, and support services worldwide.
+
+RadioTech Studio is a specialist service that builds and fixes complete online radio platforms — from automation software and streaming servers to websites, mobile apps, VPS infrastructure, and 24/7 support. Trusted by stations in 15+ countries.
+
+## Services
+- Radio automation setup (RadioBOSS, RadioDJ, SAM Broadcaster, AzuraCast, LibreTime, Rivendell, Mixxx)
+- Streaming server configuration (Icecast, Shoutcast, Liquidsoap)
+- Cloud radio platforms (AzuraCast VPS, Docker, SSL, AutoDJ)
+- Radio websites and mobile apps (WordPress, custom HTML, Android, iOS)
+- Radio hosting panels (Centova Cast, Everest Cast, WHMCS)
+- OBS and video streaming (YouTube 24/7, Facebook Live, FFmpeg)
+- VPS and server setup (Linux, Docker, Nginx, SSL, Cloudflare)
+- SaaS and custom platforms (PHP, Laravel, React, Next.js)
+- Monthly maintenance and emergency support
+
+## Contact
+- Website: https://radiotechstudio.com
+- WhatsApp: +8801718020102
+- Response time: 2–4 hours
+
+## Blog / Knowledge Base
+- https://radiotechstudio.com/blog/azuracast-vps-docker-install
+- https://radiotechstudio.com/blog/radioboss-scheduler-fix
+- https://radiotechstudio.com/blog/icecast-vs-shoutcast
+- https://radiotechstudio.com/blog/fix-radio-metadata-now-playing
+- https://radiotechstudio.com/blog/fix-radio-stream-disconnecting
+- https://radiotechstudio.com/blog/live-dj-broadcasting-butt-mixxx-sam-broadcaster
+- https://radiotechstudio.com/blog/radio-hosting-business-setup-guide
+- https://radiotechstudio.com/blog/radiodj-complete-setup-guide
+- https://radiotechstudio.com/blog/youtube-24-7-radio-streaming-obs-ffmpeg
