@@ -649,7 +649,9 @@ function initPricingPackageLinks() {
    22. i18n Initialisation
    ========================================================================== */
 function initI18n() {
-  if (typeof RadioTechI18n !== 'undefined') {
+  // i18n.js self-initialises via its own DOMContentLoaded listener.
+  // Nothing extra needed here — guard exists only to avoid errors if script missing.
+  if (typeof RadioTechI18n !== 'undefined' && typeof RadioTechI18n.init === 'function') {
     RadioTechI18n.init();
   }
 }

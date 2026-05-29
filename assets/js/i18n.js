@@ -27,7 +27,15 @@ const RadioTechI18n = (() => {
       about: 'About',
       faq: 'FAQ',
       contact: 'Contact',
+      blog: 'Blog',
       cta: 'Start Your Project'
+    },
+    blog: {
+      tag: 'Knowledge Base',
+      read_more: 'Read guide →',
+      keep_reading: 'Keep Reading',
+      home: 'Home',
+      back: '← Back to Blog'
     },
     lang_switcher: {
       label: 'Select language',
@@ -123,7 +131,13 @@ const RadioTechI18n = (() => {
       p11_name: 'SAM Broadcaster',
       p11_desc: 'Professional Windows broadcasting suite — automation, live mixing, jingle carts, voice tracking, multi-destination streaming, and listener statistics.',
       p12_name: 'BUTT',
-      p12_desc: 'The most popular free live encoder — simple, cross-platform, and rock-solid for broadcasting from any computer to Icecast or Shoutcast in minutes.'
+      p12_desc: 'The most popular free live encoder — simple, cross-platform, and rock-solid for broadcasting from any computer to Icecast or Shoutcast in minutes.',
+      p13_name: 'Live365',
+      p13_desc: 'Managed internet radio hosting — fully hosted stations, built-in music licensing, AutoDJ, mobile apps, and worldwide listener distribution.',
+      p14_name: 'OBS Studio',
+      p14_desc: 'Free open-source streaming and recording — 24/7 visual radio on YouTube/Facebook, live show production, scene switching, and audio mixing.',
+      p15_name: 'Liquidsoap',
+      p15_desc: 'Powerful audio scripting engine behind AzuraCast and LibreTime — advanced playlists, crossfades, live input handling, and custom stream logic.'
     },
     websites: {
       tag: 'Digital Presence',
@@ -346,7 +360,15 @@ const RadioTechI18n = (() => {
       about: 'عن الاستوديو',
       faq: 'الأسئلة الشائعة',
       contact: 'تواصل معنا',
+      blog: 'المدونة',
       cta: 'ابدأ مشروعك'
+    },
+    blog: {
+      tag: 'قاعدة المعرفة',
+      read_more: 'اقرأ الدليل ←',
+      keep_reading: 'اقرأ المزيد',
+      home: 'الرئيسية',
+      back: '← العودة إلى المدونة'
     },
     lang_switcher: {
       label: 'اختر اللغة',
@@ -442,7 +464,13 @@ const RadioTechI18n = (() => {
       p11_name: 'SAM Broadcaster',
       p11_desc: 'برنامج بث راديوي احترافي — أتمتة، مزج مباشر، عربات الجنقل، تسجيل الصوت، البث متعدد الوجهات، وإحصائيات المستمعين.',
       p12_name: 'BUTT',
-      p12_desc: 'أشهر مشفر مباشر مجاني — بسيط ومتعدد المنصات وموثوق لبدء البث من أي جهاز إلى Icecast أو Shoutcast في دقائق.'
+      p12_desc: 'أشهر مشفر مباشر مجاني — بسيط ومتعدد المنصات وموثوق لبدء البث من أي جهاز إلى Icecast أو Shoutcast في دقائق.',
+      p13_name: 'Live365',
+      p13_desc: 'استضافة راديو إنترنت مُدارة بالكامل — محطات جاهزة، ترخيص موسيقى مدمج، AutoDJ، تطبيقات جوال، وتوزيع على المستمعين حول العالم.',
+      p14_name: 'OBS Studio',
+      p14_desc: 'بث وتسجيل مجاني مفتوح المصدر — راديو مرئي 24/7 على يوتيوب وفيسبوك، إنتاج برامج مباشرة، تبديل المشاهد، ومزج الصوت.',
+      p15_name: 'Liquidsoap',
+      p15_desc: 'محرك برمجة صوتي قوي يشغّل AzuraCast وLibreTime — قوائم تشغيل متقدمة، تلاشي، إدخال مباشر، ومنطق بث مخصص.'
     },
     websites: {
       tag: 'الحضور الرقمي',
@@ -665,7 +693,15 @@ const RadioTechI18n = (() => {
       about: 'À Propos',
       faq: 'FAQ',
       contact: 'Contact',
+      blog: 'Blog',
       cta: 'Démarrer Mon Projet'
+    },
+    blog: {
+      tag: 'Base de Connaissances',
+      read_more: 'Lire le guide →',
+      keep_reading: 'Continuer à lire',
+      home: 'Accueil',
+      back: '← Retour au Blog'
     },
     lang_switcher: {
       label: 'Choisir la langue',
@@ -757,7 +793,17 @@ const RadioTechI18n = (() => {
       p9_name: 'Everest Cast',
       p9_desc: 'Configuration panneau hébergement streaming, gestion stations, AutoDJ, comptes utilisateurs et configuration serveur.',
       p10_name: 'RadioBOSS',
-      p10_desc: 'Automatisation radio professionnelle Windows — planification playlists, logique jingles, diffusion en direct, configuration encodeur et broadcast 24/7.'
+      p10_desc: 'Automatisation radio professionnelle Windows — planification playlists, logique jingles, diffusion en direct, configuration encodeur et broadcast 24/7.',
+      p11_name: 'SAM Broadcaster',
+      p11_desc: 'Suite de diffusion Windows professionnelle — automatisation, mixage live, jingles, voice tracking, streaming multi-destinations et statistiques auditeurs.',
+      p12_name: 'BUTT',
+      p12_desc: 'L\'encodeur live gratuit le plus populaire — simple, multiplateforme et fiable pour diffuser depuis n\'importe quel PC vers Icecast ou Shoutcast.',
+      p13_name: 'Live365',
+      p13_desc: 'Hébergement radio internet géré — stations clé en main, licences musicales intégrées, AutoDJ, applications mobiles et diffusion mondiale.',
+      p14_name: 'OBS Studio',
+      p14_desc: 'Streaming et enregistrement open source gratuit — radio visuelle 24/7 sur YouTube/Facebook, production de shows en direct et mixage audio.',
+      p15_name: 'Liquidsoap',
+      p15_desc: 'Moteur de scripting audio derrière AzuraCast et LibreTime — playlists avancées, transitions, entrées live et logique de stream personnalisée.'
     },
     websites: {
       tag: 'Présence Numérique',
@@ -980,7 +1026,15 @@ const RadioTechI18n = (() => {
       about: 'Acerca de',
       faq: 'FAQ',
       contact: 'Contacto',
+      blog: 'Blog',
       cta: 'Iniciar Mi Proyecto'
+    },
+    blog: {
+      tag: 'Base de Conocimientos',
+      read_more: 'Leer guía →',
+      keep_reading: 'Seguir leyendo',
+      home: 'Inicio',
+      back: '← Volver al Blog'
     },
     lang_switcher: {
       label: 'Seleccionar idioma',
@@ -1072,7 +1126,17 @@ const RadioTechI18n = (() => {
       p9_name: 'Everest Cast',
       p9_desc: 'Configuración panel alojamiento streaming, gestión estaciones, AutoDJ, cuentas usuarios y configuración servidor.',
       p10_name: 'RadioBOSS',
-      p10_desc: 'Automatización radio profesional Windows — programación playlists, lógica jingles, asistencia en vivo, configuración encoder y transmisión continua 24/7.'
+      p10_desc: 'Automatización radio profesional Windows — programación playlists, lógica jingles, asistencia en vivo, configuración encoder y transmisión continua 24/7.',
+      p11_name: 'SAM Broadcaster',
+      p11_desc: 'Suite de difusión Windows profesional — automatización, mezcla en vivo, jingles, grabación de voz, streaming multi-destino y estadísticas de oyentes.',
+      p12_name: 'BUTT',
+      p12_desc: 'El encoder en vivo gratuito más popular — simple, multiplataforma y fiable para emitir desde cualquier PC a Icecast o Shoutcast en minutos.',
+      p13_name: 'Live365',
+      p13_desc: 'Alojamiento de radio internet gestionado — estaciones listas, licencias musicales integradas, AutoDJ, apps móviles y distribución de oyentes mundial.',
+      p14_name: 'OBS Studio',
+      p14_desc: 'Streaming y grabación gratuitos open source — radio visual 24/7 en YouTube/Facebook, producción de shows en directo y mezcla de audio.',
+      p15_name: 'Liquidsoap',
+      p15_desc: 'Motor de scripting de audio detrás de AzuraCast y LibreTime — playlists avanzadas, transiciones, entrada en vivo y lógica de stream personalizada.'
     },
     websites: {
       tag: 'Presencia Digital',
@@ -1295,7 +1359,15 @@ const RadioTechI18n = (() => {
       about: 'Über uns',
       faq: 'FAQ',
       contact: 'Kontakt',
+      blog: 'Blog',
       cta: 'Mein Projekt starten'
+    },
+    blog: {
+      tag: 'Wissensdatenbank',
+      read_more: 'Leitfaden lesen →',
+      keep_reading: 'Weiterlesen',
+      home: 'Startseite',
+      back: '← Zurück zum Blog'
     },
     lang_switcher: {
       label: 'Sprache wählen',
@@ -1387,7 +1459,17 @@ const RadioTechI18n = (() => {
       p9_name: 'Everest Cast',
       p9_desc: 'Streaming-Hosting-Panel-Setup, Stations-Management, AutoDJ, Benutzerkonten, Stream-Pakete und Server-Konfiguration.',
       p10_name: 'RadioBOSS',
-      p10_desc: 'Professionelle Windows-Radio-Automatisierung — Playlist-Planung, Jingle-Logik, Live-Assist, Encoder-Setup und unterbrechungsfreier 24/7-Sendebetrieb.'
+      p10_desc: 'Professionelle Windows-Radio-Automatisierung — Playlist-Planung, Jingle-Logik, Live-Assist, Encoder-Setup und unterbrechungsfreier 24/7-Sendebetrieb.',
+      p11_name: 'SAM Broadcaster',
+      p11_desc: 'Professionelle Windows-Broadcast-Suite — Automatisierung, Live-Mixing, Jingle-Carts, Voice-Tracking, Multi-Ziel-Streaming und Hörerstatistiken.',
+      p12_name: 'BUTT',
+      p12_desc: 'Der beliebteste kostenlose Live-Encoder — einfach, plattformübergreifend und zuverlässig für die Ausstrahlung von jedem PC zu Icecast oder Shoutcast.',
+      p13_name: 'Live365',
+      p13_desc: 'Verwaltetes Internetradio-Hosting — vollständig gehostete Stationen, integrierte Musiklizenzen, AutoDJ, mobile Apps und weltweite Hörerverteilung.',
+      p14_name: 'OBS Studio',
+      p14_desc: 'Kostenloser Open-Source-Streaming- und Aufnahme-Client — 24/7-Visual-Radio auf YouTube/Facebook, Live-Show-Produktion und Audio-Mixing.',
+      p15_name: 'Liquidsoap',
+      p15_desc: 'Leistungsstarke Audio-Scripting-Engine hinter AzuraCast und LibreTime — erweiterte Playlists, Übergänge, Live-Eingabe und benutzerdefinierte Stream-Logik.'
     },
     websites: {
       tag: 'Digitale Präsenz',
@@ -1553,43 +1635,43 @@ const RadioTechI18n = (() => {
       badge1: '⚡ Schnelle Lieferung',
       badge2: '🌍 Weltweit verfügbar',
       badge3: '💬 Antwort in 2–4 Stunden',
-      badge4: '🔒 Sicher & Zuverlässig'
+      badge4: '🔒 Sicher &amp; Zuverlässig'
     },
     contact: {
       tag: 'Kontakt aufnehmen',
       title_part1: 'Sag uns, was',
-      title_part2: 'du brauchst',
-      desc: 'Beschreibe dein Projekt und wir melden uns mit einem klaren Plan und ehrlichem Angebot — normalerweise innerhalb von 2–4 Stunden.',
-      h3: 'Lass uns etwas Großes bauen',
-      info_desc: 'Ob du eine schnelle Reparatur, einen vollständigen Radio-Launch, eine mobile App oder ein Hosting-Business brauchst — wir sind für dich da.',
-      whatsapp_action: 'Auf WhatsApp chatten →',
+      title_part2: 'Du brauchst',
+      desc: 'Beschreibe dein Projekt oder Problem und wir melden uns mit einem klaren Plan — normalerweise innerhalb von 2–4 Stunden.',
+      h3: 'Lass uns etwas Großartiges bauen',
+      info_desc: 'Egal ob du eine schnelle Reparatur, eine vollständige Stationseinrichtung, eine mobile App oder ein Hosting-Business benötigst — wir sind hier um zu helfen.',
+      whatsapp_action: 'WhatsApp-Chat starten →',
       email_action: 'Eine E-Mail senden →',
       response_label: 'Antwortzeit',
       response_desc: 'Normalerweise innerhalb von 2–4 Stunden',
       badge1: '🌍 Weltweiter Service',
       badge2: '⚡ Schnelle Lieferung',
-      badge3: '🔒 Sicher & Zuverlässig',
+      badge3: '🔒 Sicher &amp; Zuverlässig',
       form_name: 'Vollständiger Name',
       form_email: 'E-Mail-Adresse',
       form_whatsapp: 'WhatsApp-Nummer',
-      form_url: 'Website / Station URL',
+      form_url: 'Website / Stations-URL',
       form_project: 'Projekttyp',
-      form_message: 'Beschreibe dein Problem oder Projekt',
+      form_message: 'Beschreibe Dein Problem oder Projekt',
       form_name_ph: 'Dein vollständiger Name',
-      form_email_ph: 'du@deinstation.de',
-      form_whatsapp_ph: '+49 1XX XXXXXXXX',
-      form_url_ph: 'https://deinstation.de',
-      form_message_ph: 'Bitte beschreibe, was du brauchst — je mehr Details, desto schneller können wir helfen.',
+      form_email_ph: 'dein@deinsender.com',
+      form_whatsapp_ph: '+49 XXX XXXXXXX',
+      form_url_ph: 'https://deinsender.com',
+      form_message_ph: 'Bitte beschreibe was du brauchst — je mehr Details, desto schneller können wir helfen.',
       form_submit: 'Nachricht senden',
       form_sending: 'Wird gesendet…',
-      select_ph: 'Projekttyp auswählen…',
+      select_ph: 'Projekttyp wählen…',
       success_title: 'Nachricht gesendet!',
       success_desc: 'Wir melden uns innerhalb von 2–4 Stunden.',
       error_title: 'Etwas ist schiefgelaufen.',
       error_desc: 'Bitte schreibe uns direkt an'
     },
     footer: {
-      tagline: 'Komplette End-to-End-Lösungen für Online-Radiostationen, Broadcaster, DJs, Medienunternehmen und Radio-Hosting-Unternehmen weltweit.',
+      tagline: 'Vollständige End-to-End-Lösungen für Online-Radiosender, Broadcaster, DJs, Medienunternehmen und Radio-Hosting-Unternehmen weltweit.',
       services_title: 'Leistungen',
       contact_title: 'Kontakt',
       copyright: 'Alle Rechte vorbehalten.'
@@ -1598,7 +1680,9 @@ const RadioTechI18n = (() => {
 
   }; // end t
 
-    function get(key) {
+  let current = DEFAULT;
+
+  function get(key) {
     const parts = key.split('.');
     let val = t[current];
     for (const p of parts) { val = val && val[p]; }
@@ -1658,7 +1742,7 @@ const RadioTechI18n = (() => {
   }
 
   function initSwitcher() {
-    const toggle = document.querySelector('.lang-toggle');
+    const toggle   = document.querySelector('.lang-toggle');
     const dropdown = document.getElementById('lang-dropdown');
     if (!toggle || !dropdown) return;
 
@@ -1684,9 +1768,14 @@ const RadioTechI18n = (() => {
     dropdown.addEventListener('keydown', e => {
       const opts = [...dropdown.querySelectorAll('.lang-option')];
       const idx  = opts.indexOf(document.activeElement);
-      if (e.key === 'ArrowDown') { e.preventDefault(); opts[(idx + 1) % opts.length].focus(); }
-      if (e.key === 'ArrowUp')   { e.preventDefault(); opts[(idx - 1 + opts.length) % opts.length].focus(); }
-      if (e.key === 'Escape')    { toggle.setAttribute('aria-expanded','false'); dropdown.hidden = true; toggle.focus(); }
+      if (e.key === 'ArrowDown')  { e.preventDefault(); opts[(idx + 1) % opts.length].focus(); }
+      if (e.key === 'ArrowUp')    { e.preventDefault(); opts[(idx - 1 + opts.length) % opts.length].focus(); }
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const lang = document.activeElement.dataset.lang;
+        if (lang) { setLang(lang); toggle.setAttribute('aria-expanded', 'false'); dropdown.hidden = true; toggle.focus(); }
+      }
+      if (e.key === 'Escape') { toggle.setAttribute('aria-expanded', 'false'); dropdown.hidden = true; toggle.focus(); }
     });
 
     document.addEventListener('click', e => {
@@ -1697,17 +1786,14 @@ const RadioTechI18n = (() => {
     });
   }
 
-  function init() {
-    let lang = DEFAULT;
-    try { lang = localStorage.getItem('rts_lang') || DEFAULT; } catch (_) {}
-    if (!SUPPORTED.includes(lang)) {
-      const b = (navigator.language || '').split('-')[0];
-      lang = SUPPORTED.includes(b) ? b : DEFAULT;
-    }
+  document.addEventListener('DOMContentLoaded', () => {
+    let saved;
+    try { saved = localStorage.getItem('rts_lang'); } catch (_) {}
+    const lang = (SUPPORTED.includes(saved)) ? saved : DEFAULT;
     setLang(lang);
     initSwitcher();
-  }
+  });
 
-  return { init, setLang, get };
+  return { setLang, get, applyAll };
 
 })();

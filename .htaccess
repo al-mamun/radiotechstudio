@@ -1,0 +1,55 @@
+Options -Indexes
+RewriteEngine On
+
+# ── Force HTTPS ──────────────────────────────────────────────────────────────
+# Uncomment when SSL is active on your live server:
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# ── Remove .html extension (clean URLs) ──────────────────────────────────────
+# If the request is not already a real file or directory:
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Try appending .html
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# ── Redirect .html requests to clean URL (canonicalisation) ──────────────────
+RewriteCond %{THE_REQUEST} \s/(.+?)\.html[\s?]
+RewriteRule ^ /%1 [R=301,L]
+
+# ── Trailing-slash normalisation (remove trailing slash on non-dirs) ──────────
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
+# ── Default document ─────────────────────────────────────────────────────────
+DirectoryIndex index.html
+
+# ── Custom error pages ───────────────────────────────────────────────────────
+ErrorDocument 404 /index.html
+
+# ── Security headers ─────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# ── Compression ──────────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json text/xml application/xml
+</IfModule>
+
+# ── Browser caching ──────────────────────────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css                  "access plus 1 month"
+  ExpiresByType application/javascript    "access plus 1 month"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  ExpiresByType image/webp                "access plus 1 year"
+  ExpiresByType font/woff2                "access plus 1 year"
+  ExpiresByType application/xml           "access plus 1 day"
+</IfModule>

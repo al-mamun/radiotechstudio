@@ -803,6 +803,9 @@ input, textarea, select {
 .platform-icon--radioboss { background: linear-gradient(135deg, #ff6b35, #c0392b); color: #fff; box-shadow: 0 4px 16px rgba(255,107,53,0.4); }
 .platform-icon--sam      { background: linear-gradient(135deg, #16a34a, #15803d); color: #fff; box-shadow: 0 4px 16px rgba(22,163,74,0.4); }
 .platform-icon--butt     { background: linear-gradient(135deg, #0ea5e9, #0369a1); color: #fff; box-shadow: 0 4px 16px rgba(14,165,233,0.4); }
+.platform-icon--live365  { background: linear-gradient(135deg, #2563eb, #1d4ed8); color: #fff; box-shadow: 0 4px 16px rgba(37,99,235,0.4); }
+.platform-icon--obs      { background: linear-gradient(135deg, #6366f1, #4338ca); color: #fff; box-shadow: 0 4px 16px rgba(99,102,241,0.4); }
+.platform-icon--liq      { background: linear-gradient(135deg, #d97706, #b45309); color: #fff; box-shadow: 0 4px 16px rgba(217,119,6,0.4); }
 .platform-card h3 { font-family: var(--font-display); font-size: var(--fs-base); font-weight: 700; color: #fff; margin-bottom: 0.5rem; position: relative; z-index: 1; }
 .platform-card p { font-size: var(--fs-base); color: var(--clr-text-muted); line-height: 1.7; position: relative; z-index: 1; }
 
@@ -2147,10 +2150,9 @@ input, textarea, select {
 /* ── Thank You header overrides (fixed instead of sticky) ── */
 .page-thankyou .header {
   position: fixed;
-  height: 68px;
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
+  width: 100%;
+}
+.page-thankyou .header-inner {
   justify-content: space-between;
 }
 
@@ -2161,15 +2163,16 @@ input, textarea, select {
   gap: 0.4rem;
   font-size: var(--fs-sm);
   font-weight: 600;
-  color: var(--blue);
+  color: var(--clr-blue);
   border: 1.5px solid rgba(0,212,255,0.3);
   padding: 0.5em 1.2em;
   border-radius: var(--radius-md);
+  text-decoration: none;
   transition: all var(--transition-base);
 }
 .header-home:hover {
   background: rgba(0,212,255,0.08);
-  border-color: var(--blue);
+  border-color: var(--clr-blue);
 }
 .header-home svg { width: 16px; height: 16px; }
 
@@ -2592,7 +2595,10 @@ canvas#particles {
 .ticker-badge--obs  { background: rgba(99,102,241,0.15); color: #818cf8; }
 .ticker-badge--wp   { background: rgba(59,130,246,0.15); color: #60a5fa; }
 .ticker-badge--ff   { background: rgba(16,185,129,0.15); color: #10b981; }
-.ticker-badge--liq  { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.ticker-badge--liq     { background: rgba(245,158,11,0.15); color: #f59e0b; }
+.ticker-badge--sam     { background: rgba(22,163,74,0.15); color: #4ade80; }
+.ticker-badge--butt    { background: rgba(14,165,233,0.15); color: #38bdf8; }
+.ticker-badge--live365 { background: rgba(37,99,235,0.15); color: #60a5fa; }
 
 /* ==========================================================================
    38. About Section — Structured Layout

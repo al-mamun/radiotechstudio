@@ -6,14 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="theme-color" content="#050914" />
 
-  <title>Radio Knowledge Base — Guides, Fixes &amp; Tutorials | RadioTech Studio</title>
+  <title>Radio Setup Guides, Fixes &amp; Tutorials | RadioTech Studio</title>
   <meta name="description" content="Free guides and tutorials on radio automation, streaming server setup, AzuraCast, RadioBOSS, Icecast, Shoutcast, metadata fixes, VPS configuration, and more." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
   <link rel="canonical" href="https://radiotechstudio.com/blog" />
+  <link rel="alternate" hreflang="x-default" href="https://radiotechstudio.com/blog" />
+  <link rel="alternate" hreflang="en" href="https://radiotechstudio.com/blog" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://radiotechstudio.com/blog" />
-  <meta property="og:title" content="Radio Knowledge Base — Guides &amp; Tutorials | RadioTech Studio" />
+  <meta property="og:title" content="Radio Setup Guides, Fixes &amp; Tutorials | RadioTech Studio" />
   <meta property="og:description" content="Free expert guides on radio automation, streaming, AzuraCast, metadata, VPS setup and more." />
   <meta property="og:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
   <meta property="og:site_name" content="RadioTech Studio" />
@@ -25,7 +27,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Radio Knowledge Base — Guides &amp; Tutorials | RadioTech Studio" />
+  <meta name="twitter:title" content="Radio Setup Guides, Fixes &amp; Tutorials | RadioTech Studio" />
   <meta name="twitter:description" content="Free guides and tutorials on radio automation, streaming server setup, AzuraCast, RadioBOSS, Icecast, Shoutcast, metadata fixes, VPS configuration, and more." />
   <meta name="twitter:image" content="https://radiotechstudio.com/assets/images/og-image.png" />
   <meta name="twitter:image:alt" content="RadioTech Studio — Radio Setup &amp; Streaming Experts" />
@@ -60,7 +62,7 @@
   <!-- ===== HEADER ===== -->
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="index.html" class="logo" aria-label="RadioTech Studio Home">
+      <a href="/" class="logo" aria-label="RadioTech Studio Home">
         <div class="logo-icon">
           <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <circle cx="20" cy="20" r="18" stroke="url(#lgB)" stroke-width="2"/>
@@ -76,12 +78,12 @@
         </div>
       </a>
       <nav class="nav-desktop" aria-label="Main navigation">
-        <a href="index.html#solutions" class="nav-link">Services</a>
-        <a href="index.html#platforms" class="nav-link">Platforms</a>
-        <a href="index.html#pricing" class="nav-link">Pricing</a>
-        <a href="index.html#about" class="nav-link">About</a>
-        <a href="blog.html" class="nav-link" aria-current="page">Blog</a>
-        <a href="index.html#contact" class="nav-link">Contact</a>
+        <a href="#solutions" class="nav-link" data-i18n="nav.services">Services</a>
+        <a href="#platforms" class="nav-link" data-i18n="nav.platforms">Platforms</a>
+        <a href="#pricing" class="nav-link" data-i18n="nav.pricing">Pricing</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+        <a href="/blog" class="nav-link" aria-current="page" data-i18n="nav.blog">Blog</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
       </nav>
       <!-- Language Switcher -->
       <div class="lang-switcher" role="navigation" aria-label="Language selector">
@@ -100,20 +102,20 @@
       </div>
 
       <div class="header-actions">
-        <a href="index.html#contact" class="btn btn-primary header-cta">Start Your Project</a>
+        <a href="#contact" class="btn btn-primary header-cta" data-i18n="nav.cta">Start Your Project</a>
         <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
     <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
-      <a href="index.html#solutions" class="nav-mobile-link">Services</a>
-      <a href="index.html#platforms" class="nav-mobile-link">Platforms</a>
-      <a href="index.html#pricing" class="nav-mobile-link">Pricing</a>
-      <a href="index.html#about" class="nav-mobile-link">About</a>
-      <a href="blog.html" class="nav-mobile-link">Blog</a>
-      <a href="index.html#contact" class="nav-mobile-link">Contact</a>
-      <a href="index.html#contact" class="btn btn-primary nav-mobile-cta">Start Your Project</a>
+      <a href="#solutions" class="nav-mobile-link" data-i18n="nav.services">Services</a>
+      <a href="#platforms" class="nav-mobile-link" data-i18n="nav.platforms">Platforms</a>
+      <a href="#pricing" class="nav-mobile-link" data-i18n="nav.pricing">Pricing</a>
+      <a href="#about" class="nav-mobile-link" data-i18n="nav.about">About</a>
+      <a href="/blog" class="nav-mobile-link" data-i18n="nav.blog">Blog</a>
+      <a href="#contact" class="nav-mobile-link" data-i18n="nav.contact">Contact</a>
+      <a href="#contact" class="btn btn-primary nav-mobile-cta" data-i18n="nav.cta">Start Your Project</a>
     </nav>
   </header>
 
@@ -122,7 +124,7 @@
     <!-- Hero -->
     <section class="blog-hero">
       <div class="container blog-hero-inner">
-        <span class="section-tag">Knowledge Base</span>
+        <span class="section-tag" data-i18n="blog.tag">Knowledge Base</span>
         <h1 class="blog-hero-title">Radio Guides, Fixes &amp; <span class="gradient-text">Tutorials</span></h1>
         <p class="blog-hero-desc">Practical, technical articles on radio automation, streaming servers, VPS setup, metadata fixes, and more — written by engineers who do this every day.</p>
       </div>
@@ -134,7 +136,7 @@
         <div class="blog-grid">
 
           <!-- Article 1 -->
-          <a href="blog/azuracast-vps-docker-install.html" class="blog-card">
+          <a href="/blog/azuracast-vps-docker-install" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-cat">Cloud Radio</span>
               <span class="blog-read-time">
@@ -146,12 +148,12 @@
             <p class="blog-card-desc">Step-by-step guide to deploying AzuraCast on any Linux VPS using Docker — including SSL, AutoDJ, Liquidsoap, and remote DJ access setup.</p>
             <div class="blog-card-footer">
               <span class="blog-card-date">May 2026</span>
-              <span class="blog-card-link">Read guide →</span>
+              <span class="blog-card-link" data-i18n="blog.read_more">Read guide →</span>
             </div>
           </a>
 
           <!-- Article 2 -->
-          <a href="blog/radioboss-scheduler-fix.html" class="blog-card">
+          <a href="/blog/radioboss-scheduler-fix" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-cat cat-troubleshoot">Troubleshooting</span>
               <span class="blog-read-time">
@@ -163,12 +165,12 @@
             <p class="blog-card-desc">Playlists not switching, jingles looping at wrong times, AutoDJ stuck? Here are the 7 most common RadioBOSS scheduler problems and exactly how to fix them.</p>
             <div class="blog-card-footer">
               <span class="blog-card-date">May 2026</span>
-              <span class="blog-card-link">Read guide →</span>
+              <span class="blog-card-link" data-i18n="blog.read_more">Read guide →</span>
             </div>
           </a>
 
           <!-- Article 3 -->
-          <a href="blog/icecast-vs-shoutcast.html" class="blog-card">
+          <a href="/blog/icecast-vs-shoutcast" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-cat cat-streaming">Streaming</span>
               <span class="blog-read-time">
@@ -180,12 +182,12 @@
             <p class="blog-card-desc">A clear, honest comparison of Icecast and Shoutcast — licensing, features, performance, metadata handling, and which one is right for your station in 2026.</p>
             <div class="blog-card-footer">
               <span class="blog-card-date">May 2026</span>
-              <span class="blog-card-link">Read guide →</span>
+              <span class="blog-card-link" data-i18n="blog.read_more">Read guide →</span>
             </div>
           </a>
 
           <!-- Article 4 -->
-          <a href="blog/fix-radio-metadata-now-playing.html" class="blog-card">
+          <a href="/blog/fix-radio-metadata-now-playing" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-cat cat-troubleshoot">Troubleshooting</span>
               <span class="blog-read-time">
@@ -197,12 +199,12 @@
             <p class="blog-card-desc">Song titles not updating in your web player, mobile app, or radio directories? This guide walks through every layer of the metadata chain and how to diagnose each one.</p>
             <div class="blog-card-footer">
               <span class="blog-card-date">May 2026</span>
-              <span class="blog-card-link">Read guide →</span>
+              <span class="blog-card-link" data-i18n="blog.read_more">Read guide →</span>
             </div>
           </a>
 
           <!-- Article 5 -->
-          <a href="blog/youtube-24-7-radio-streaming-obs-ffmpeg.html" class="blog-card">
+          <a href="/blog/youtube-24-7-radio-streaming-obs-ffmpeg" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-cat cat-streaming">Streaming</span>
               <span class="blog-read-time">
@@ -214,12 +216,12 @@
             <p class="blog-card-desc">Complete guide to setting up a continuous 24/7 visual radio stream on YouTube Live — covering OBS Studio setup, FFmpeg automation, auto-restart scripts, and VPS workflow.</p>
             <div class="blog-card-footer">
               <span class="blog-card-date">May 2026</span>
-              <span class="blog-card-link">Read guide →</span>
+              <span class="blog-card-link" data-i18n="blog.read_more">Read guide →</span>
             </div>
           </a>
 
           <!-- Article 6 -->
-          <a href="blog/radio-hosting-business-setup-guide.html" class="blog-card">
+          <a href="/blog/radio-hosting-business-setup-guide" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-cat cat-business">Business</span>
               <span class="blog-read-time">
@@ -231,12 +233,12 @@
             <p class="blog-card-desc">Everything you need to launch a radio hosting business — VPS infrastructure, Centova Cast or Everest Cast, WHMCS billing, hosting packages, pricing strategy, and first clients.</p>
             <div class="blog-card-footer">
               <span class="blog-card-date">May 2026</span>
-              <span class="blog-card-link">Read guide →</span>
+              <span class="blog-card-link" data-i18n="blog.read_more">Read guide →</span>
             </div>
           </a>
 
           <!-- Article 7 -->
-          <a href="blog/radiodj-complete-setup-guide.html" class="blog-card">
+          <a href="/blog/radiodj-complete-setup-guide" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-cat cat-automation">Automation</span>
               <span class="blog-read-time">
@@ -248,12 +250,12 @@
             <p class="blog-card-desc">From fresh install to live broadcast — how to set up RadioDJ including database configuration, music categories, rotation rules, jingle scheduling, and encoder setup.</p>
             <div class="blog-card-footer">
               <span class="blog-card-date">May 2026</span>
-              <span class="blog-card-link">Read guide →</span>
+              <span class="blog-card-link" data-i18n="blog.read_more">Read guide →</span>
             </div>
           </a>
 
           <!-- Article 8 -->
-          <a href="blog/fix-radio-stream-disconnecting.html" class="blog-card">
+          <a href="/blog/fix-radio-stream-disconnecting" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-cat cat-troubleshoot">Troubleshooting</span>
               <span class="blog-read-time">
@@ -265,12 +267,12 @@
             <p class="blog-card-desc">Stream drops, listener timeouts, AutoDJ going silent — the most common causes of radio stream disconnections and how to diagnose and fix each one permanently.</p>
             <div class="blog-card-footer">
               <span class="blog-card-date">May 2026</span>
-              <span class="blog-card-link">Read guide →</span>
+              <span class="blog-card-link" data-i18n="blog.read_more">Read guide →</span>
             </div>
           </a>
 
           <!-- Article 9 -->
-          <a href="blog/live-dj-broadcasting-butt-mixxx-sam-broadcaster.html" class="blog-card">
+          <a href="/blog/live-dj-broadcasting-butt-mixxx-sam-broadcaster" class="blog-card">
             <div class="blog-card-meta">
               <span class="blog-cat cat-streaming">Streaming</span>
               <span class="blog-read-time">
@@ -282,7 +284,7 @@
             <p class="blog-card-desc">Step-by-step guide to going live on your radio station — configure BUTT, Mixxx, or SAM Broadcaster to stream to Icecast, Shoutcast, or AzuraCast in minutes.</p>
             <div class="blog-card-footer">
               <span class="blog-card-date">May 2026</span>
-              <span class="blog-card-link">Read guide →</span>
+              <span class="blog-card-link" data-i18n="blog.read_more">Read guide →</span>
             </div>
           </a>
 
@@ -297,7 +299,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="index.html" class="logo footer-logo" aria-label="RadioTech Studio">
+          <a href="/" class="logo footer-logo" aria-label="RadioTech Studio">
             <div class="logo-icon" aria-hidden="true">
               <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="20" cy="20" r="18" stroke="url(#footerGradB)" stroke-width="2"/>
@@ -315,37 +317,15 @@
         <nav class="footer-col" aria-label="Services">
           <h4>Services</h4>
           <ul>
-            <li><a href="index.html#solutions">Radio Automation</a></li>
-            <li><a href="index.html#solutions">Cloud Platforms</a></li>
-            <li><a href="index.html#solutions">Streaming Servers</a></li>
-            <li><a href="index.html#pricing">Pricing</a></li>
-            <li><a href="blog.html">Knowledge Base</a></li>
+            <li><a href="#solutions">Radio Automation</a></li>
+            <li><a href="#solutions">Cloud Platforms</a></li>
+            <li><a href="#solutions">Streaming Servers</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="/blog">Knowledge Base</a></li>
           </ul>
         </nav>
         <nav class="footer-col" aria-label="Contact">
           <h4>Contact</h4>
           <ul>
             <li><a href="mailto:hello@radiotechstudio.com">hello@radiotechstudio.com</a></li>
-            <li><a href="https://wa.me/8801718020102" target="_blank" rel="noopener">WhatsApp: +880 1718 020102</a></li>
-            <li><a href="index.html#faq">FAQ</a></li>
-            <li><a href="index.html#about">About Us</a></li>
-            <li><a href="index.html#contact">Start a Project</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <span id="currentYear"></span> RadioTech Studio. All rights reserved.</p>
-        <p>Built for radio professionals worldwide. · <a href="mailto:hello@radiotechstudio.com">hello@radiotechstudio.com</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" hidden>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
-  </button>
-  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-
-  <script src="assets/js/i18n.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+            <li><a href="https://wa.me/8801718020102" target="_blank" rel="no
