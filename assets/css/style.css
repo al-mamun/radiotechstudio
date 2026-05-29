@@ -3050,6 +3050,7 @@ canvas#particles {
   border: none;
   outline: none;
   animation: chat-btn-in 0.5s ease both;
+  overflow: visible;
 }
 
 .chat-btn:nth-child(1) { animation-delay: 0.1s; }
@@ -3060,8 +3061,11 @@ canvas#particles {
   to   { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-.chat-btn:hover {
+.chat-btn:hover,
+.chat-btn:focus-visible {
   transform: translateY(-4px) scale(1.1);
+  outline: 2px solid #fff;
+  outline-offset: 3px;
 }
 
 .chat-btn svg {
@@ -3088,7 +3092,7 @@ canvas#particles {
   box-shadow: 0 8px 30px rgba(0,132,255,0.55);
 }
 
-/* Tooltip */
+/* Tooltip label */
 .chat-btn::before {
   content: attr(data-tooltip);
   position: absolute;
@@ -3108,6 +3112,7 @@ canvas#particles {
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255,255,255,0.08);
 }
+/* Tooltip arrow */
 .chat-btn::after {
   content: '';
   position: absolute;
@@ -3121,37 +3126,32 @@ canvas#particles {
   transition: opacity 0.2s ease;
 }
 .chat-btn:hover::before,
-.chat-btn:hover::after {
+.chat-btn:focus-visible::before,
+.chat-btn:hover::after,
+.chat-btn:focus-visible::after {
   opacity: 1;
 }
 
-/* Pulse ring on WhatsApp */
-.chat-btn--wa::after {
-  content: '';
+/* WhatsApp pulse ring — separate span element, no conflict with ::after tooltip */
+.chat-btn--wa .pulse-ring {
   position: absolute;
-  inset: -4px;
+  inset: -5px;
   border-radius: 50%;
   border: 2px solid rgba(37,211,102,0.5);
   animation: wa-pulse 2s ease-out infinite;
   pointer-events: none;
-  opacity: 1;
-  transform: none;
-  right: auto; top: auto;
-  border-left-color: transparent;
 }
 @keyframes wa-pulse {
   0%   { transform: scale(1);   opacity: 0.7; }
   70%  { transform: scale(1.35);opacity: 0; }
   100% { transform: scale(1.35);opacity: 0; }
 }
-.chat-btn--wa:hover::after { animation: none; opacity: 0; }
-
-/* Tooltip for WA needs to override the ::after pulse ring */
-.chat-btn--wa { overflow: visible; }
+.chat-btn--wa:hover .pulse-ring { opacity: 0; animation-play-state: paused; }
 
 @media (max-width: 480px) {
   .chat-buttons { bottom: 5rem; right: 1.25rem; }
   .chat-btn { width: 46px; height: 46px; }
   .chat-btn svg { width: 22px; height: 22px; }
   .chat-btn::before { display: none; }
+  .chat-btn::after  { display: none; }
 }
