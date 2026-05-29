@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
 <style>
-:root{--clr-bg:#050914;--clr-bg-2:#080e1e;--clr-bg-card:rgba(10,18,38,.8);--clr-border:rgba(0,212,255,.12);--clr-blue:#00d4ff;--clr-violet:#7c3aed;--clr-text:#e2e8f0;--clr-text-muted:#94a3b8;--grad-primary:linear-gradient(135deg,#00d4ff 0%,#7c3aed 100%);--font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--font-display:'Space Grotesk','Inter',sans-serif;--fs-sm:.875rem;--fs-base:1rem;--fs-md:1.125rem;--fs-xl:1.5rem;--radius-md:12px;--radius-lg:18px;--radius-full:9999px;--transition-base:.3s ease;--header-h:70px}
+:root{--clr-bg:#050914;--clr-bg-2:#080e1e;--clr-bg-card:rgba(10,18,38,.8);--clr-border:rgba(0,212,255,.12);--clr-border-hover:rgba(0,212,255,.3);--clr-blue:#00d4ff;--clr-cyan:#00f5d4;--clr-violet:#7c3aed;--clr-text:#e2e8f0;--clr-text-muted:#94a3b8;--grad-primary:linear-gradient(135deg,#00d4ff 0%,#7c3aed 100%);--font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--font-display:'Space Grotesk','Inter',sans-serif;--fs-xs:.75rem;--fs-sm:.875rem;--fs-base:1rem;--fs-md:1.125rem;--fs-xl:1.5rem;--radius-sm:8px;--radius-md:12px;--radius-lg:18px;--radius-xl:24px;--radius-full:9999px;--transition-fast:.15s ease;--transition-base:.3s ease;--transition-slow:.5s ease;--header-h:70px;--space-xs:.5rem;--space-sm:.75rem;--space-md:1.25rem;--space-lg:2rem;--space-xl:3rem;--space-2xl:5rem;--shadow-card:0 4px 24px rgba(0,0,0,.4)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
 body{font-family:var(--font-sans);background-color:var(--clr-bg);color:var(--clr-text);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
@@ -12,24 +12,53 @@ a{color:inherit;text-decoration:none}
 button{cursor:pointer;border:none;background:none;font-family:inherit}
 ul,ol{list-style:none}
 .container{width:100%;max-width:1280px;margin:0 auto;padding:0 1.5rem}
-.header{position:fixed;top:0;left:0;right:0;width:100%;z-index:1000;height:var(--header-h);display:flex;align-items:center;transition:all .3s ease}
+.skip-link{position:absolute;top:-100%;left:1rem;background:var(--clr-blue);color:#000;padding:.5rem 1rem;border-radius:0 0 8px 8px;font-weight:600;z-index:9999}
+.skip-link:focus{top:0}
+.bg-wrap{position:fixed;inset:0;z-index:-1;background:var(--clr-bg)}
+/* Header */
+.header{position:fixed;top:0;left:0;right:0;width:100%;z-index:1000;height:var(--header-h);display:flex;align-items:center;background:transparent;transition:all .3s ease}
 .header-inner{display:flex;align-items:center;justify-content:space-between;width:100%;height:var(--header-h)}
 .logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
 .logo-icon{width:40px;height:40px;flex-shrink:0}
-.logo-brand{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;display:block}
-.logo-sub{font-size:.7rem;color:var(--clr-blue);letter-spacing:.08em;text-transform:uppercase;display:block}
-.skip-link{position:absolute;top:-100%;left:1rem;background:var(--clr-blue);color:#000;padding:.5rem 1rem;border-radius:0 0 8px 8px;font-weight:600;z-index:9999}
-.skip-link:focus{top:0}
-#hero{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:var(--header-h)}
+.logo-brand{font-family:var(--font-display);font-size:var(--fs-md);font-weight:800;background:var(--grad-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block}
+.logo-sub{font-size:var(--fs-xs);font-weight:500;color:var(--clr-text-muted);letter-spacing:.05em;display:block}
+.header-actions{display:flex;align-items:center;gap:var(--space-sm);flex-shrink:0}
+.nav-desktop{display:none}
+.hamburger{display:flex;flex-direction:column;gap:5px;padding:8px;border-radius:var(--radius-sm);transition:background var(--transition-fast)}
+.hamburger span{display:block;width:22px;height:2px;background:var(--clr-text);border-radius:2px;transition:all var(--transition-base);transform-origin:center}
+.nav-mobile{display:flex;flex-direction:column;gap:0;background:rgba(5,9,20,.98);border-top:1px solid var(--clr-border);padding:1rem 0;max-height:0;overflow:hidden;transition:max-height var(--transition-slow)}
+/* Buttons */
 .btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-sans);font-size:var(--fs-sm);font-weight:600;padding:.7em 1.5em;border-radius:var(--radius-md);border:1.5px solid transparent;transition:all var(--transition-base);cursor:pointer;text-decoration:none;white-space:nowrap;position:relative;overflow:hidden}
 .btn-primary{background:var(--grad-primary);color:#fff;box-shadow:0 4px 20px rgba(0,212,255,.25)}
 .btn-outline{background:transparent;color:var(--clr-blue);border-color:rgba(0,212,255,.4)}
-.bg-wrap{position:fixed;inset:0;z-index:-1;background:var(--clr-bg)}
+.header-cta{font-size:var(--fs-xs);padding:.6em 1.3em}
+/* Hero */
+.hero{min-height:calc(100vh - var(--header-h));display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;padding:var(--space-2xl) 0 var(--space-xl)}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.hero-glow{position:absolute;border-radius:50%;filter:blur(80px);opacity:.4;animation:glow-float 8s ease-in-out infinite}
+.hero-glow-1{width:500px;height:500px;background:radial-gradient(circle,rgba(0,212,255,.3),transparent 70%);top:-100px;left:-100px}
+.hero-glow-2{width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,.3),transparent 70%);top:50%;right:-80px;animation-delay:-3s}
+.hero-glow-3{width:300px;height:300px;background:radial-gradient(circle,rgba(0,245,212,.2),transparent 70%);bottom:0;left:40%;animation-delay:-6s}
+@keyframes glow-float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-30px) scale(1.05)}}
+.hero-inner{display:grid;grid-template-columns:1fr;align-items:center;gap:var(--space-xl);position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:var(--fs-xs);font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--clr-cyan);background:rgba(0,245,212,.08);border:1px solid rgba(0,245,212,.25);padding:.4em 1em;border-radius:var(--radius-full);margin-bottom:var(--space-sm);width:fit-content}
+.badge-dot{width:8px;height:8px;background:var(--clr-cyan);border-radius:50%;animation:pulse-dot 2s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero-title{font-family:var(--font-display);font-size:clamp(1.6rem,3.25vw,3rem);font-weight:900;line-height:1.1;color:#fff;margin-bottom:var(--space-md)}
+.hero-desc{font-size:clamp(var(--fs-base),1.5vw,var(--fs-md));color:var(--clr-text-muted);max-width:560px;margin-bottom:var(--space-lg);line-height:1.8}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:var(--space-lg)}
+.trust-badges{display:flex;flex-wrap:wrap;gap:.6rem}
+.trust-badge{display:inline-flex;align-items:center;gap:.4rem;font-size:var(--fs-xs);font-weight:600;color:var(--clr-text-muted);background:rgba(255,255,255,.04);border:1px solid var(--clr-border);padding:.35em .8em;border-radius:var(--radius-full)}
+.trust-badge svg{width:14px;height:14px;color:var(--clr-blue)}
+/* AOS */
 [data-aos]{opacity:0;transition:opacity .7s ease,transform .7s ease}
 [data-aos="fade-up"]{transform:translateY(30px)}
 [data-aos].aos-animate{opacity:1;transform:none}
+/* Lang switcher placeholder */
+.lang-switcher{position:relative}
+.lang-btn{display:flex;align-items:center;gap:.4rem;font-size:var(--fs-xs);font-weight:600;color:var(--clr-text-muted);padding:.4em .8em;border-radius:var(--radius-sm);border:1px solid var(--clr-border);background:rgba(255,255,255,.03);cursor:pointer;transition:all var(--transition-fast)}
 </style>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#050914" />
   <title>RadioBOSS Scheduler Not Working? 7 Fixes | RadioTech Studio</title>
   <meta name="description" content="Playlists not switching, jingles looping at wrong times, AutoDJ stuck? Here are the 7 most common RadioBOSS scheduler problems and exactly how to fix them." />
@@ -61,8 +90,6 @@ ul,ol{list-style:none}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/responsive.css" />
   <link rel="stylesheet" href="../assets/css/blog.css" />
   <script type="application/ld+json">
   {
@@ -94,12 +121,11 @@ ul,ol{list-style:none}
     ]
   }
   </script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-S6FRJEZZ4P');
-  </script>
+<!-- Async stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../assets/css/style.css"></noscript>
+  <link rel="stylesheet" href="../assets/css/responsive.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="../assets/css/responsive.css"></noscript>
 </head>
 <body>
 
