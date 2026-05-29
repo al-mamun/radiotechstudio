@@ -3021,3 +3021,137 @@ canvas#particles {
 /* Scroll-to-top button */
 .is-rtl .scroll-top { right: auto; left: 1.5rem; }
 
+
+/* ==========================================================================
+   Chat Buttons — WhatsApp & Facebook Messenger
+   ========================================================================== */
+.chat-buttons {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: 98;
+}
+
+.chat-btn {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  animation: chat-btn-in 0.5s ease both;
+}
+
+.chat-btn:nth-child(1) { animation-delay: 0.1s; }
+.chat-btn:nth-child(2) { animation-delay: 0.2s; }
+
+@keyframes chat-btn-in {
+  from { opacity: 0; transform: scale(0.5) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.chat-btn:hover {
+  transform: translateY(-4px) scale(1.1);
+}
+
+.chat-btn svg {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+/* WhatsApp */
+.chat-btn--wa {
+  background: #25d366;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+}
+.chat-btn--wa:hover {
+  box-shadow: 0 8px 30px rgba(37,211,102,0.55);
+}
+
+/* Facebook Messenger */
+.chat-btn--fb {
+  background: linear-gradient(135deg, #0084ff 0%, #0057ff 100%);
+  box-shadow: 0 4px 20px rgba(0,132,255,0.4);
+}
+.chat-btn--fb:hover {
+  box-shadow: 0 8px 30px rgba(0,132,255,0.55);
+}
+
+/* Tooltip */
+.chat-btn::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(10,15,30,0.92);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.chat-btn::after {
+  content: '';
+  position: absolute;
+  right: calc(100% + 6px);
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-left-color: rgba(10,15,30,0.92);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.chat-btn:hover::before,
+.chat-btn:hover::after {
+  opacity: 1;
+}
+
+/* Pulse ring on WhatsApp */
+.chat-btn--wa::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(37,211,102,0.5);
+  animation: wa-pulse 2s ease-out infinite;
+  pointer-events: none;
+  opacity: 1;
+  transform: none;
+  right: auto; top: auto;
+  border-left-color: transparent;
+}
+@keyframes wa-pulse {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  70%  { transform: scale(1.35);opacity: 0; }
+  100% { transform: scale(1.35);opacity: 0; }
+}
+.chat-btn--wa:hover::after { animation: none; opacity: 0; }
+
+/* Tooltip for WA needs to override the ::after pulse ring */
+.chat-btn--wa { overflow: visible; }
+
+@media (max-width: 480px) {
+  .chat-buttons { bottom: 5rem; right: 1.25rem; }
+  .chat-btn { width: 46px; height: 46px; }
+  .chat-btn svg { width: 22px; height: 22px; }
+  .chat-btn::before { display: none; }
+}
