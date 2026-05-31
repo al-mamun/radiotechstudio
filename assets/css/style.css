@@ -3256,6 +3256,8 @@ canvas#particles {
 /* reCAPTCHA widget styling */
 .g-recaptcha {
   margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
 }
 .g-recaptcha iframe {
   border-radius: var(--radius-md);
