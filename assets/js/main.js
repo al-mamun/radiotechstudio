@@ -313,6 +313,53 @@ function initFAQ() {
 /* ==========================================================================
    11. Contact Form Validation & Submission
    ========================================================================== */
+/* ==========================================================================
+   reCAPTCHA — lazy load on first form interaction
+   ========================================================================== */
+function initLazyRecaptcha() {
+  const form = qs('#contactForm');
+  if (!form) return;
+
+  let recaptchaLoaded = false;
+
+  function loadRecaptcha() {
+    if (recaptchaLoaded) return;
+    recaptchaLoaded = true;
+
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js?render=explicit&onload=_rcLoaded';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+
+    window._rcLoaded = function() {
+      const widget = qs('#recaptchaWidget');
+      if (!widget) return;
+      widget.innerHTML = '';
+      grecaptcha.render('recaptchaWidget', {
+        sitekey: '6Le32wQtAAAAAPFLddugShQY42CzYQVn20Z9f44z',
+        theme: 'dark',
+        size: 'normal'
+      });
+    };
+  }
+
+  // Load on first interaction with any form field
+  const fields = form.querySelectorAll('input, select, textarea');
+  fields.forEach(el => {
+    el.addEventListener('focus', loadRecaptcha, { once: true, passive: true });
+  });
+
+  // Also load when contact section scrolls into view
+  const contactSection = qs('#contact');
+  if (contactSection && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) { loadRecaptcha(); io.disconnect(); }
+    }, { threshold: 0.1 });
+    io.observe(contactSection);
+  }
+}
+
 function initContactForm() {
   const form    = qs('#contactForm');
   if (!form) return;
@@ -683,6 +730,7 @@ function init() {
   initSmoothScroll();
   initScrollTop();
   initAOS();
+  initLazyRecaptcha();
   initWaveCanvas();
   initListenersCounter();
   initFAQ();

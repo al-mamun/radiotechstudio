@@ -209,7 +209,6 @@
     gtag('js', new Date());
     gtag('config', 'G-S6FRJEZZ4P');
   </script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
@@ -1678,11 +1677,8 @@
               <span class="field-error" id="messageError" role="alert" aria-live="assertive"></span>
             </div>
             <div class="form-group">
-              <div class="g-recaptcha"
-                data-sitekey="6Le32wQtAAAAAPFLddugShQY42CzYQVn20Z9f44z"
-                data-theme="dark"
-                data-size="normal"
-                id="recaptchaWidget">
+              <div id="recaptchaWidget" style="min-height:78px;display:flex;align-items:center;justify-content:center;">
+                <span style="font-size:0.75rem;color:var(--clr-text-dim);">reCAPTCHA will load when you start filling the form</span>
               </div>
               <span class="field-error" id="recaptchaError" role="alert"></span>
             </div>
