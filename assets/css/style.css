@@ -3299,7 +3299,7 @@ canvas#particles {
 .logo-text-premium {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 3px;
   line-height: 1;
 }
@@ -3307,6 +3307,8 @@ canvas#particles {
   display: flex;
   align-items: baseline;
   gap: 0;
+  width: 100%;
+  justify-content: flex-start;
 }
 .lw-radio {
   font-family: var(--font-display);
