@@ -2429,6 +2429,9 @@ canvas#particles {
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 .ty-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   font-size: var(--fs-xs);
   font-weight: 600;
   color: var(--dim);
@@ -2437,6 +2440,7 @@ canvas#particles {
   padding: 0.3em 0.9em;
   border-radius: var(--radius-full);
 }
+.ty-trust-item svg { flex-shrink: 0; }
 
 /* ── Wave decoration ── */
 .ty-wave {
