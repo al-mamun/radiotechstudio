@@ -376,6 +376,18 @@ function initContactForm() {
       return;
     }
 
+    // reCAPTCHA v2 validation
+    const recaptchaEl = qs('#recaptchaError', form);
+    if (typeof grecaptcha !== 'undefined') {
+      const token = grecaptcha.getResponse();
+      if (!token) {
+        if (recaptchaEl) recaptchaEl.textContent = 'Please complete the CAPTCHA verification.';
+        qs('#recaptchaWidget')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+      if (recaptchaEl) recaptchaEl.textContent = '';
+    }
+
     // Disable button and show sending state
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Sending…';

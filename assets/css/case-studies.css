@@ -929,3 +929,11 @@
   .csp-results-grid { grid-template-columns: 1fr; }
   .csp-meta-row { flex-direction: column; gap: 1rem; }
 }
+
+/* Card title as link */
+.cs-card-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.cs-card-title a:hover { color: var(--clr-blue); }

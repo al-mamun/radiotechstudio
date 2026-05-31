@@ -300,10 +300,10 @@ const RadioTechI18n = (() => {
       desc: 'Send your project details and we\'ll reply with a clear technical plan and an honest quote — no jargon, no over-promising, just a solution that works for your station and your budget.',
       btn_start: 'Request a Quote',
       btn_services: 'View All Services',
-      badge1: '⚡ Fast Turnaround',
-      badge2: '🌍 Available Worldwide',
-      badge3: '💬 Response in 2–4 Hours',
-      badge4: '🔒 Secure &amp; Reliable'
+      badge1: 'Fast Turnaround',
+      badge2: 'Available Worldwide',
+      badge3: 'Response in 2–4 Hours',
+      badge4: 'Secure &amp; Reliable'
     },
     contact: {
       tag: 'Get In Touch',
@@ -316,9 +316,9 @@ const RadioTechI18n = (() => {
       email_action: 'Send an email →',
       response_label: 'Response Time',
       response_desc: 'Usually within 2–4 hours',
-      badge1: '🌍 Worldwide Service',
-      badge2: '⚡ Fast Turnaround',
-      badge3: '🔒 Secure &amp; Reliable',
+      badge1: 'Worldwide Service',
+      badge2: 'Fast Turnaround',
+      badge3: 'Secure &amp; Reliable',
       form_name: 'Full Name',
       form_email: 'Email Address',
       form_whatsapp: 'WhatsApp Number',
@@ -633,10 +633,10 @@ const RadioTechI18n = (() => {
       desc: 'أرسل تفاصيل مشروعك وسنرد بخطة تقنية واضحة وعرض سعر صادق — بدون مصطلحات معقدة، فقط حل يناسب محطتك وميزانيتك.',
       btn_start: 'طلب عرض سعر',
       btn_services: 'عرض جميع الخدمات',
-      badge1: '⚡ تسليم سريع',
-      badge2: '🌍 خدمة عالمية',
-      badge3: '💬 رد خلال 2–4 ساعات',
-      badge4: '🔒 آمن وموثوق'
+      badge1: ' تسليم سريع',
+      badge2: ' خدمة عالمية',
+      badge3: ' رد خلال 2–4 ساعات',
+      badge4: ' آمن وموثوق'
     },
     contact: {
       tag: 'تواصل معنا',
@@ -649,9 +649,9 @@ const RadioTechI18n = (() => {
       email_action: 'إرسال بريد إلكتروني ←',
       response_label: 'وقت الاستجابة',
       response_desc: 'عادةً خلال 2–4 ساعات',
-      badge1: '🌍 خدمة عالمية',
-      badge2: '⚡ تسليم سريع',
-      badge3: '🔒 آمن وموثوق',
+      badge1: ' خدمة عالمية',
+      badge2: ' تسليم سريع',
+      badge3: ' آمن وموثوق',
       form_name: 'الاسم الكامل',
       form_email: 'البريد الإلكتروني',
       form_whatsapp: 'رقم واتساب',
@@ -966,10 +966,10 @@ const RadioTechI18n = (() => {
       desc: 'Envoyez vos détails de projet et nous répondrons avec un plan technique clair et un devis honnête — sans jargon, juste une solution adaptée.',
       btn_start: 'Demander un devis',
       btn_services: 'Voir Tous les Services',
-      badge1: '⚡ Livraison Rapide',
-      badge2: '🌍 Service Mondial',
-      badge3: '💬 Réponse en 2–4 Heures',
-      badge4: '🔒 Sécurisé & Fiable'
+      badge1: ' Livraison Rapide',
+      badge2: ' Service Mondial',
+      badge3: ' Réponse en 2–4 Heures',
+      badge4: ' Sécurisé & Fiable'
     },
     contact: {
       tag: 'Contactez-Nous',
@@ -982,9 +982,9 @@ const RadioTechI18n = (() => {
       email_action: 'Envoyer un email →',
       response_label: 'Temps de Réponse',
       response_desc: 'Généralement en 2–4 heures',
-      badge1: '🌍 Service Mondial',
-      badge2: '⚡ Livraison Rapide',
-      badge3: '🔒 Sécurisé & Fiable',
+      badge1: ' Service Mondial',
+      badge2: ' Livraison Rapide',
+      badge3: ' Sécurisé & Fiable',
       form_name: 'Nom Complet',
       form_email: 'Adresse Email',
       form_whatsapp: 'Numéro WhatsApp',
@@ -1299,10 +1299,10 @@ const RadioTechI18n = (() => {
       desc: 'Envíanos los detalles de tu proyecto y responderemos con un plan técnico claro y presupuesto honesto — sin jerga, solo una solución que funcione.',
       btn_start: 'Solicitar presupuesto',
       btn_services: 'Ver Todos los Servicios',
-      badge1: '⚡ Entrega Rápida',
-      badge2: '🌍 Servicio Mundial',
-      badge3: '💬 Respuesta en 2–4 Horas',
-      badge4: '🔒 Seguro & Fiable'
+      badge1: ' Entrega Rápida',
+      badge2: ' Servicio Mundial',
+      badge3: ' Respuesta en 2–4 Horas',
+      badge4: ' Seguro & Fiable'
     },
     contact: {
       tag: 'Ponte en Contacto',
@@ -1315,9 +1315,9 @@ const RadioTechI18n = (() => {
       email_action: 'Enviar un email →',
       response_label: 'Tiempo de Respuesta',
       response_desc: 'Normalmente en 2–4 horas',
-      badge1: '🌍 Servicio Mundial',
-      badge2: '⚡ Entrega Rápida',
-      badge3: '🔒 Seguro & Fiable',
+      badge1: ' Servicio Mundial',
+      badge2: ' Entrega Rápida',
+      badge3: ' Seguro & Fiable',
       form_name: 'Nombre Completo',
       form_email: 'Dirección de Email',
       form_whatsapp: 'Número de WhatsApp',
@@ -1632,10 +1632,10 @@ const RadioTechI18n = (() => {
       desc: 'Sende uns deine Projektdetails und wir antworten mit einem klaren technischen Plan und einem ehrlichen Angebot — kein Fachjargon, nur eine Lösung, die funktioniert.',
       btn_start: 'Angebot anfordern',
       btn_services: 'Alle Leistungen ansehen',
-      badge1: '⚡ Schnelle Lieferung',
-      badge2: '🌍 Weltweit verfügbar',
-      badge3: '💬 Antwort in 2–4 Stunden',
-      badge4: '🔒 Sicher &amp; Zuverlässig'
+      badge1: ' Schnelle Lieferung',
+      badge2: ' Weltweit verfügbar',
+      badge3: ' Antwort in 2–4 Stunden',
+      badge4: ' Sicher &amp; Zuverlässig'
     },
     contact: {
       tag: 'Kontakt aufnehmen',
@@ -1648,9 +1648,9 @@ const RadioTechI18n = (() => {
       email_action: 'Eine E-Mail senden →',
       response_label: 'Antwortzeit',
       response_desc: 'Normalerweise innerhalb von 2–4 Stunden',
-      badge1: '🌍 Weltweiter Service',
-      badge2: '⚡ Schnelle Lieferung',
-      badge3: '🔒 Sicher &amp; Zuverlässig',
+      badge1: ' Weltweiter Service',
+      badge2: ' Schnelle Lieferung',
+      badge3: ' Sicher &amp; Zuverlässig',
       form_name: 'Vollständiger Name',
       form_email: 'E-Mail-Adresse',
       form_whatsapp: 'WhatsApp-Nummer',
@@ -1720,7 +1720,7 @@ const RadioTechI18n = (() => {
     const codes = { en: 'EN', ar: 'AR', fr: 'FR', es: 'ES', de: 'DE' };
     const flagEl = document.querySelector('.lang-flag');
     const codeEl = document.querySelector('.lang-code');
-    if (flagEl) flagEl.textContent = flags[lang] || '🌐';
+    if (flagEl) flagEl.textContent = flags[lang] || '';
     if (codeEl) codeEl.textContent = codes[lang] || lang.toUpperCase();
     document.querySelectorAll('.lang-option').forEach(opt => {
       opt.setAttribute('aria-selected', opt.dataset.lang === lang ? 'true' : 'false');
