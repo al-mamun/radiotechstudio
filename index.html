@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="theme-color" content="#050914" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon-192.png" />
   <meta name="facebook-domain-verification" content="xtzvwd8nz1mlywxcuirmdop4iltz1f" />
 
   <!-- Primary SEO -->
@@ -44,8 +49,8 @@
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" /></noscript>
 
   <!-- Critical resource preloads (Core Web Vitals) -->
   <!-- Stylesheets -->
@@ -219,24 +224,42 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <!-- Logo -->
-      <a href="#hero" class="logo" aria-label="RadioTech Studio Home">
+            <a href="#hero" class="logo" aria-label="RadioTech Studio Home">
         <div class="logo-icon">
           <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="20" cy="20" r="18" stroke="url(#logoGrad)" stroke-width="2"/>
-            <circle cx="20" cy="20" r="8" stroke="url(#logoGrad)" stroke-width="1.5"/>
-            <circle cx="20" cy="20" r="3" fill="url(#logoGrad)"/>
-            <line x1="20" y1="2" x2="20" y2="8" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round"/>
-            <defs>
-              <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#00d4ff"/>
-                <stop offset="1" stop-color="#7c3aed"/>
-              </linearGradient>
-            </defs>
-          </svg>
+          <defs>
+            <linearGradient id="igA" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00d4ff"/>
+              <stop offset="1" stop-color="#7c3aed"/>
+            </linearGradient>
+            <linearGradient id="igB" x1="40" y1="0" x2="0" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00d4ff" stop-opacity="0.6"/>
+              <stop offset="1" stop-color="#7c3aed" stop-opacity="0.6"/>
+            </linearGradient>
+            <linearGradient id="igC" x1="40" y1="0" x2="0" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#00d4ff" stop-opacity="0.25"/>
+              <stop offset="1" stop-color="#7c3aed" stop-opacity="0.25"/>
+            </linearGradient>
+          </defs>
+          <!-- Outer ring -->
+          <circle cx="20" cy="20" r="18" stroke="url(#igA)" stroke-width="1.5" stroke-dasharray="4 3" stroke-linecap="round"/>
+          <!-- Mid ring -->
+          <circle cx="20" cy="20" r="12" stroke="url(#igB)" stroke-width="1.5"/>
+          <!-- Inner ring -->
+          <circle cx="20" cy="20" r="7" stroke="url(#igA)" stroke-width="1.5"/>
+          <!-- Center dot -->
+          <circle cx="20" cy="20" r="2.5" fill="url(#igA)"/>
+          <!-- Signal line up -->
+          <line x1="20" y1="2" x2="20" y2="13" stroke="url(#igA)" stroke-width="1.5" stroke-linecap="round"/>
+          <!-- Tick marks on outer ring at cardinal points -->
+          <line x1="20" y1="2" x2="20" y2="4.5" stroke="url(#igA)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="38" y1="20" x2="35.5" y2="20" stroke="url(#igA)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="2" y1="20" x2="4.5" y2="20" stroke="url(#igA)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
         </div>
         <div class="logo-text">
-          <span class="logo-brand">RadioTech</span>
-          <span class="logo-sub">Studio</span>
+          <span class="logo-brand">RADIOTECH</span>
+          <span class="logo-sub">— STUDIO —</span>
         </div>
       </a>
 
@@ -1710,22 +1733,40 @@
         <div class="footer-brand">
           <a href="#hero" class="logo footer-logo" aria-label="RadioTech Studio">
             <div class="logo-icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="18" stroke="url(#footerGrad)" stroke-width="2"/>
-                <circle cx="20" cy="20" r="8" stroke="url(#footerGrad)" stroke-width="1.5"/>
-                <circle cx="20" cy="20" r="3" fill="url(#footerGrad)"/>
-                <line x1="20" y1="2" x2="20" y2="8" stroke="url(#footerGrad)" stroke-width="2" stroke-linecap="round"/>
-                <defs>
-                  <linearGradient id="footerGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#00d4ff"/>
-                    <stop offset="1" stop-color="#7c3aed"/>
-                  </linearGradient>
-                </defs>
-              </svg>
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="rBg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0a1628"/>
+              <stop offset="1" stop-color="#0d1f3c"/>
+            </linearGradient>
+            <linearGradient id="rGrad" x1="4" y1="4" x2="36" y2="36" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#60c8ff"/>
+              <stop offset="0.4" stop-color="#1e90e8"/>
+              <stop offset="1" stop-color="#0050c8"/>
+            </linearGradient>
+            <linearGradient id="rGrad2" x1="20" y1="20" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#1e90e8"/>
+              <stop offset="1" stop-color="#003a9e"/>
+            </linearGradient>
+          </defs>
+          <!-- Background rounded square -->
+          <rect width="40" height="40" rx="8" fill="url(#rBg)"/>
+          <!-- Stylized R mark -->
+          <!-- Vertical stem -->
+          <rect x="9" y="8" width="5" height="24" rx="1.5" fill="url(#rGrad)"/>
+          <!-- Top bowl of R -->
+          <path d="M14 8 h6 a7 7 0 0 1 0 14 h-6 z" fill="url(#rGrad)"/>
+          <!-- Inner cutout for bowl -->
+          <path d="M14 11 h5 a4 4 0 0 1 0 8 h-5 z" fill="url(#rBg)"/>
+          <!-- Diagonal leg of R (bottom right) -->
+          <path d="M20 22 L29 32 L25.5 32 L16.5 22 Z" fill="url(#rGrad2)"/>
+          <!-- Subtle glow overlay -->
+          <rect width="40" height="40" rx="8" fill="url(#rGrad)" opacity="0.04"/>
+        </svg>
             </div>
             <div class="logo-text">
-              <span class="logo-brand">RadioTech</span>
-              <span class="logo-sub">Studio</span>
+              <span class="logo-brand">RADIOTECH</span>
+              <span class="logo-sub">— STUDIO —</span>
             </div>
           </a>
           <p data-i18n="footer.tagline">Complete end-to-end solutions for online radio stations, broadcasters, DJs, media companies, and radio hosting businesses worldwide.</p>

@@ -326,7 +326,18 @@ input, textarea, select {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.logo-sub { font-size: var(--fs-xs); font-weight: 500; color: var(--clr-text-muted); letter-spacing: 0.05em; }
+.logo-sub {
+  font-family: 'Barlow Condensed', var(--font-sans), sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: var(--clr-text-dim);
+  text-transform: uppercase;
+  margin-top: 2px;
+  opacity: 0.8;
+  text-indent: 0.3em;
+  line-height: 1;
+}
 
 /* Desktop nav */
 .nav-desktop {
@@ -3283,3 +3294,88 @@ canvas#particles {
 .g-recaptcha iframe {
   border-radius: var(--radius-md);
 }
+
+/* Premium logo wordmark — 3D metallic effect */
+.logo-text-premium {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  line-height: 1;
+}
+.logo-wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+}
+.lw-radio {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-right: -0.04em;
+  -webkit-font-smoothing: antialiased;
+  /* Metallic silver gradient */
+  background: linear-gradient(180deg,
+    #ffffff 0%,
+    #e8f0fe 25%,
+    #c8d6f0 50%,
+    #a0b4d8 75%,
+    #8096c0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* 3D depth shadows */
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.6)) drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+.lw-tech {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  /* Blue metallic gradient matching the PNG */
+  background: linear-gradient(180deg,
+    #60c8ff 0%,
+    #1e9fe8 20%,
+    #0078d4 45%,
+    #0055b0 70%,
+    #003d8a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* 3D depth */
+  filter: drop-shadow(0 1px 2px rgba(0,0,80,0.7)) drop-shadow(0 2px 6px rgba(0,100,200,0.4));
+}
+.logo-studio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 2px;
+  width: 100%;
+}
+.ls-line {
+  display: block;
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent 0%, rgba(100,160,220,0.6) 100%);
+}
+.ls-line:last-child {
+  background: linear-gradient(90deg, rgba(100,160,220,0.6) 0%, transparent 100%);
+}
+.ls-word {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  color: #b0c4de;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 0 8px rgba(100,160,220,0.4);
+}
+
