@@ -283,6 +283,12 @@
     .partners-cta h2 { font-family: var(--font-display); font-size: clamp(1.75rem,4vw,2.75rem); font-weight: 800; color: #fff; margin-bottom: 1rem; }
     .partners-cta p { font-size: var(--fs-md); color: var(--clr-text-muted); max-width: 500px; margin: 0 auto 2.25rem; line-height: 1.8; }
 
+    /* Widget grid responsive */
+    .widget-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:1rem; align-items:stretch; }
+    @media (max-width:1200px) { .widget-grid { grid-template-columns:repeat(3,1fr); } }
+    @media (max-width:768px)  { .widget-grid { grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:480px)  { .widget-grid { grid-template-columns:minmax(0,290px); justify-content:center; } }
+
     @media (max-width:640px) {
       .partners-grid { grid-template-columns: 1fr; }
       .partners-stats { gap: 2rem; }
@@ -354,7 +360,7 @@
     <!-- Widget Showcase -->
     <section class="partners-section" style="padding-bottom:1rem;">
       <div class="container">
-        <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem;align-items:stretch;">
+        <div class="widget-grid" style="display:grid;gap:1rem;align-items:stretch;">
 
           <!-- RadioTech Studio widget -->
           <div style="display:flex;flex-direction:column;">
