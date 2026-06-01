@@ -327,10 +327,10 @@
       </nav>
       <div class="header-actions">
         <a href="/#contact" class="btn btn-primary header-cta">Start Your Project</a>
-        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
-    <nav class="nav-mobile" aria-label="Mobile navigation">
+    <nav class="nav-mobile" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
       <a href="/#solutions" class="nav-mobile-link">Services</a>
       <a href="/#platforms" class="nav-mobile-link">Platforms</a>
       <a href="/#pricing" class="nav-mobile-link">Pricing</a>
@@ -339,6 +339,7 @@
       <a href="/case-studies/" class="nav-mobile-link">Case Studies</a>
       <a href="/partners/" class="nav-mobile-link">Partners</a>
       <a href="/#contact" class="nav-mobile-link">Contact</a>
+      <a href="/#contact" class="btn btn-primary nav-mobile-cta">Start Your Project</a>
     </nav>
   </header>
 
@@ -578,5 +579,6 @@ function copyWidget(id, btn) {
   });
 }
 </script>
-<script defer src="../assets/js/main.js"></script>
+<script defer src="../assets/js/i18n.min.js"></script>
+<script defer src="../assets/js/main.min.js"></script>
 <script>document.getElementById('yr').textContent=new Date().getF
