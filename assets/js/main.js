@@ -14,6 +14,13 @@ const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 /* ==========================================================================
    1. Scroll Progress Bar
    ========================================================================== */
+window.addEventListener('scroll', () => {
+  const menu = document.getElementById('mobileMenu');
+  if (menu && !menu.classList.contains('open') && document.body.style.overflow === 'hidden') {
+    document.body.style.overflow = '';
+  }
+}, { passive: true });
+
 function initScrollProgress() {
   const bar = qs('#scrollProgress');
   if (!bar) return;
@@ -83,7 +90,8 @@ function initHamburger() {
     btn.setAttribute('aria-expanded', String(open));
     menu.setAttribute('aria-hidden', String(!open));
     menu.classList.toggle('open', open);
-    document.body.style.overflow = open ? 'hidden' : '';
+    // Only lock scroll on desktop (mobile overflow:hidden causes scroll stuck)
+    if (window.innerWidth > 768) document.body.style.overflow = open ? 'hidden' : '';
     if (open) {
       // Move focus to first focusable item in menu
       const first = getFocusable()[0];
@@ -111,7 +119,7 @@ function initHamburger() {
 
   // Close when a link is clicked
   qsa('.nav-mobile-link, .nav-mobile-cta', menu).forEach(l => {
-    l.addEventListener('click', () => toggle(false));
+    l.addEventListener('click', () => { toggle(false); document.body.style.overflow = ''; });
   });
 
   // Close on outside click (only when menu is open)

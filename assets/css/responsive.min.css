@@ -77,3 +77,8 @@
 }
 .dual-site-card div span{display:flex!important;align-items:center;gap:0.4rem;flex-direction:row;word-break:break-word}.dual-site-card div span svg{display:inline!important;flex-shrink:0;width:14px;height:14px}
 @media(max-width:768px){.chat-buttons{right:6px;bottom:6px;gap:.5rem}.chat-btn{width:42px;height:42px}.chat-btn svg{width:20px;height:20px}.scroll-top{right:6px;bottom:108px}}
+@media(max-width:768px){
+  *{-webkit-overflow-scrolling:touch}
+  html{scroll-behavior:auto}
+  .hero-glow,.hero-bg canvas{display:none}
+}
