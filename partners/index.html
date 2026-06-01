@@ -581,4 +581,31 @@ function copyWidget(id, btn) {
 </script>
 <script defer src="../assets/js/i18n.min.js"></script>
 <script defer src="../assets/js/main.min.js"></script>
-<script>document.getElementById('yr').textContent=new Date().getF
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script>
+// Hamburger menu fix for partners page
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var open = menu.classList.contains('open');
+    btn.classList.toggle('open', !open);
+    btn.setAttribute('aria-expanded', String(!open));
+    menu.setAttribute('aria-hidden', String(open));
+    menu.classList.toggle('open', !open);
+    document.body.style.overflow = !open ? 'hidden' : '';
+  }, true);
+  menu.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      menu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    });
+  });
+});
+</script>
+</body>
+</html>

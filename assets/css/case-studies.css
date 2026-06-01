@@ -937,3 +937,72 @@
   transition: color 0.2s ease;
 }
 .cs-card-title a:hover { color: var(--clr-blue); }
+
+/* ── Dual Site Grid (Nostalgie FM case study) ── */
+.dual-site-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.dual-site-card {
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.dual-site-card h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+.dual-site-card p {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+.dual-site-card-tag {
+  display: inline-flex;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.3em 0.8em;
+  border-radius: var(--radius-full);
+  align-self: flex-start;
+}
+.dual-site-card-tag.blue {
+  background: rgba(0,212,255,0.1);
+  border: 1px solid rgba(0,212,255,0.25);
+  color: var(--clr-blue);
+}
+.dual-site-card-tag.purple {
+  background: rgba(124,58,237,0.1);
+  border: 1px solid rgba(124,58,237,0.25);
+  color: var(--clr-violet-light);
+}
+.dual-site-card .site-link {
+  font-size: var(--fs-sm);
+  color: var(--clr-blue);
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: auto;
+  transition: color 0.2s;
+}
+.dual-site-card .site-link:hover { color: var(--clr-cyan); }
+.dual-site-card div span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  word-break: break-word;
+}
+.dual-site-card div span svg { flex-shrink: 0; }
+
+@media (max-width: 640px) {
+  .dual-site-grid { grid-template-columns: 1fr; }
+}

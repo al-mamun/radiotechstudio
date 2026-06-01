@@ -2,16 +2,78 @@
 
 @media(max-width:480px){
   .hero-client-logos-row{flex-wrap:wrap;justify-content:flex-start;gap:.5rem}
-  .hero-client-logo{width:80px;height:44px;flex-shrink:0}
+  .hero-client-logo{width:76px;height:42px;flex-shrink:0}
   .hero-desc{max-width:100%}
   .announcement-inner{padding:0 2.5rem}
   .announcement-bar p{font-size:var(--fs-xs)}
   .process-step{min-width:0}
   .solution-card{min-width:0}
   .ticker-track{overflow:hidden}
-  html,body{overflow-x:hidden;max-width:100vw}
 }
-@media(max-width:390px){
-  .hero-client-logo{width:72px;height:40px}
-  .hero-client-logos-row{gap:.35rem}
+@media(max-width:768px){.hero,.hero-inner,.hero-content,.container{max-width:100%;overflow-x:hidden;box-sizing:border-box}.hero-visual{display:flex;justify-content:center;width:100%;overflow:hidden;margin-top:1.5rem}.hero-visual .dashboard-card{max-width:320px;width:100%;font-size:0.85em}.hero-desc{max-width:100%!important;width:100%}.hero-title{word-break:break-word}}
+@media(max-width:600px){.contact-form{padding:1.25rem}.form-row{grid-template-columns:1fr}.contact-wrapper{gap:1.5rem}.contact-item{padding:.75rem .9rem}.recaptcha-wrap{transform:scale(0.85);transform-origin:left center}}
+@media(max-width:768px){
+  /* Contact section */
+  .contact-wrapper{overflow:hidden}
+  .contact-info{width:100%;max-width:100%;overflow:hidden}
+  .contact-form{width:100%;max-width:100%;overflow:hidden;box-sizing:border-box}
+  .contact-form input,.contact-form select,.contact-form textarea{width:100%;max-width:100%;box-sizing:border-box}
+  /* Service/solution cards */
+  .service-card,.solution-card,.problem-card{overflow:hidden;word-break:break-word}
+  .service-card p,.solution-card p,.problem-card p{overflow:hidden;text-overflow:ellipsis;word-break:break-word}
+  /* Stats strip */
+  .about-stats-strip,.contact-stats{overflow:hidden;flex-wrap:wrap;gap:.5rem}
+  .about-strip-stat,.contact-stat{min-width:0;flex-shrink:1}
+  /* About/info profile card */
+  .about-card,.contact-profile-card{overflow:hidden;max-width:100%}
+  /* General overflow prevention */
 }
+@media(max-width:600px){
+  .contact-form{padding:1.25rem}
+  .form-row{grid-template-columns:1fr}
+  .contact-form select{font-size:14px}
+  /* Fix select dropdown overflow */
+  .contact-form .form-group{overflow:hidden;max-width:100%}
+  .recaptcha-wrap{transform:scale(0.85);transform-origin:left center;overflow:hidden}
+}
+@media(max-width:768px){
+  /* Blog article page */
+  .article-layout{max-width:100%}
+  .article-prose{overflow-x:hidden;word-break:break-word}
+  .article-prose h2,.article-prose h3,.article-hero-title{word-break:break-word;overflow-wrap:break-word;hyphens:auto}
+  .article-prose pre{overflow-x:auto;max-width:100%;font-size:var(--fs-xs)}
+  .article-prose p,.article-prose li{overflow-wrap:break-word;word-break:break-word}
+  .article-prose .info-box,.article-prose .tip-box,.article-prose .warn-box{flex-direction:column;gap:.5rem;padding:1rem}
+  .article-inline-cta{padding:1.5rem 1.25rem}
+  .breadcrumb{overflow:hidden;flex-wrap:wrap}
+  .breadcrumb-current{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:200px}
+  /* Case study pages */
+  .csp-hero,.csp-solution,.cs-card{overflow-x:hidden;word-break:break-word}
+}
+@media(max-width:768px){
+  /* Service cards - prevent text from being hidden by chat buttons */
+  .service-card,.problem-card,.solution-card,.cards-grid-3,.platforms-grid{padding-right:0}
+  .service-card p,.problem-card p,.solution-card p{word-break:break-word;overflow-wrap:break-word;padding-right:0}
+  /* Chat buttons - smaller and less intrusive on mobile */
+  
+  
+  
+  /* Service/solution cards text */
+  .service-card-desc,.solution-card p,.problem-card-desc,.card-desc{overflow-wrap:break-word;word-break:break-word;padding-right:0}
+  /* Stats overflow */
+  .contact-stats-strip,.stats-strip{overflow:hidden}
+}
+@media(max-width:768px){}
+@media(max-width:1100px){
+  .service-card{overflow:visible}
+  .service-card p,.service-card h3,.card-tags{word-break:break-word;overflow-wrap:break-word;max-width:100%}
+  .card-tags{flex-wrap:wrap}
+  .cards-grid-3,.cards-grid{overflow:visible}
+}
+
+@media(max-width:768px){
+  .about-case-desc,.about-case-body strong{white-space:normal;overflow:visible;text-overflow:unset;word-break:break-word}
+  .about-case{align-items:flex-start}
+}
+.dual-site-card div span{display:flex!important;align-items:center;gap:0.4rem;flex-direction:row;word-break:break-word}.dual-site-card div span svg{display:inline!important;flex-shrink:0;width:14px;height:14px}
+@media(max-width:768px){.chat-buttons{right:6px;bottom:6px;gap:.5rem}.chat-btn{width:42px;height:42px}.chat-btn svg{width:20px;height:20px}.scroll-top{right:6px;bottom:108px}.container{padding-right:52px}}

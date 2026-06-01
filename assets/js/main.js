@@ -114,9 +114,9 @@ function initHamburger() {
     l.addEventListener('click', () => toggle(false));
   });
 
-  // Close on outside click
+  // Close on outside click (only when menu is open)
   document.addEventListener('click', e => {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) toggle(false);
+    if (menu.classList.contains('open') && !btn.contains(e.target) && !menu.contains(e.target)) toggle(false);
   });
 
   // Close on Escape
