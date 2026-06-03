@@ -21,6 +21,26 @@ window.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
+
+function initMobileLangDropdown() {
+  if (window.innerWidth > 768) return;
+  const toggle = document.querySelector('.lang-toggle');
+  const dropdown = document.getElementById('lang-dropdown');
+  if (!toggle || !dropdown) return;
+
+  function positionDropdown() {
+    const rect = toggle.getBoundingClientRect();
+    dropdown.classList.add('mobile-fixed');
+    dropdown.style.top = (rect.bottom + 4) + 'px';
+    dropdown.style.right = (window.innerWidth - rect.right) + 'px';
+    dropdown.style.left = 'auto';
+  }
+
+  toggle.addEventListener('click', () => {
+    setTimeout(positionDropdown, 0);
+  });
+}
+
 function initScrollProgress() {
   const bar = qs('#scrollProgress');
   if (!bar) return;

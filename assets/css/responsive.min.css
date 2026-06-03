@@ -84,6 +84,19 @@
 }
 /* Core Web Vitals - GPU compositing */
 .hero-glow,.ticker-list,.chat-btn,.scroll-top,.rts-border-spin,.pw-border-spin{will-change:transform}
-.announcement-bar,.header{contain:layout style}
+
 img{content-visibility:auto}
 @media(max-width:768px){.hero-glow,.hero-glow-1,.hero-glow-2,.hero-glow-3{display:none!important}}
+@media(max-width:768px){
+  .lang-dropdown.mobile-fixed{position:fixed!important;z-index:99999!important;min-width:140px;max-height:80vh;overflow-y:auto}
+  .lang-switcher{position:relative;z-index:9999!important}
+  .lang-toggle{padding:.3rem .5rem;gap:.25rem}
+  .header{z-index:9999!important;isolation:isolate}
+}
+
+@media(max-width:768px){
+  .is-rtl .logo{margin-right:0!important;margin-left:0!important}
+  .is-rtl .header-actions{margin-right:auto;order:1}
+  .is-rtl .lang-switcher{order:2}
+}
+@media(max-width:1100px){.nav-mobile:not(.open){border-top:none!important;padding:0!important}}
