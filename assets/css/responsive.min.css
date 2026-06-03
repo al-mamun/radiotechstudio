@@ -82,3 +82,8 @@
   html{scroll-behavior:auto}
   .hero-glow,.hero-bg canvas{display:none}
 }
+/* Core Web Vitals - GPU compositing */
+.hero-glow,.ticker-list,.chat-btn,.scroll-top,.rts-border-spin,.pw-border-spin{will-change:transform}
+.announcement-bar,.header{contain:layout style}
+img{content-visibility:auto}
+@media(max-width:768px){.hero-glow,.hero-glow-1,.hero-glow-2,.hero-glow-3{display:none!important}}
